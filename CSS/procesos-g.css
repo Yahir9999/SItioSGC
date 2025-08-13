@@ -1,0 +1,147 @@
+/* Diseño general para todas las areas de procesos*/
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Tarjeta donde contiene toda la info*/
+.general_container{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #a3bde2;
+}
+
+/* Diseño del diagrama*/
+.diagrama{
+    width: 70%;
+    height: 60%;
+    object-fit: contain;
+}
+
+/* Diseño del formato donde van los botones*/
+.formato{
+    width: 100%;
+    height: 20%;
+
+}
+
+
+/* Titulo del contenedor*/
+.titulo{
+    font-size: 2em;
+    font-weight: 600;
+    color: #1C2C5B;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;    
+}
+
+
+/* Clases a las cuales se les asigna un tamaño diferente al contenido que sale al dar click al boton*/
+
+/*Tamañ extra grande, para imagenes grandes*/
+.offcanvas-xlarge {
+    width: 70vw !important; 
+}
+
+/* Tamaño grande, para imagenes no muy grandes*/
+
+.offcanvas-large {
+    width: 60vw !important; 
+}
+
+
+
+/* Contenedor de los botones*/
+.contenedor {
+    width: 100%;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;           
+    justify-content: center;  
+    gap: 1em;
+    padding: 0 0 1em 0;                  
+}
+
+/* Diseño de los botones que muestran el submenu*/
+.btn {
+    background-color: #1C2C5B;
+    color: white;
+    border: none;
+    padding: 0.6em 1.5em;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.75rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    width: auto;
+    min-width: 220px;
+    max-width: 300px;
+    text-align: center;
+} 
+
+.btn:hover{
+    background-color: #141F44;
+    transform: scale(1.03);
+    color: white;
+}
+
+
+
+/* 📱 RESPONSIVO para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .img-offcanvas {
+    max-height: 50vh;
+  }
+}
+
+
+.img-ajustada {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+}
+
+
+/* Ajustar el tamalo de las imagenes*/
+.img-offcanvas {
+  width: 100%;
+  max-width: 100%;
+  max-height: 80vh; 
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+
+/* Linea divisora entre mi titulo y mis botones que me dirigen a cada formato*/
+.linea-divisora {
+  height: 2px;
+  background-color: #1e2e5e; /* Azul oscuro de tus botones */
+  margin: 20px auto;
+  width: 80%;
+}
+
+/* Modificacion del boton de descarga*/
+.boton_dowload{
+  width: 100%;
+}

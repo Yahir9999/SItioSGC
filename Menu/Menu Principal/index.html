@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../CSS/header_footer.css">
+    <link rel="stylesheet" href="../../CSS/index.css">
+    <title>Pagina Principal</title>
+    <script>
+        if(sessionStorage.getItem("logueado") !== "true"){
+            window.location.href = "../Inicio de Sesion/Inicio.html";
+        }
+    </script>
+
+</head>
+<!-- Contenedor general para todo el contenido de la pagina principal-->
+    <body>
+        <!--Header, el cual contiene el logo y nuestro menu-->
+        <header>
+            <!-- Logo empresarial-->
+            <div class="logo">
+
+            </div>
+
+            <!-- Seccion para el menu de navegación-->
+            <div class="menu">
+                <nav class="navbar navbar-expand-lg bg-white navbar-light">
+                <div class="container-fluid">
+                    <!-- Boton para regresar al menu principal-->
+                    <a class="navbar-brand" href="index.html">Inicio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <!-- Boton principal del menu despegable (para la seccion de procesos)-->
+                        <li class="nav-item dropdown custom-dropdown-hover">
+                            <a
+                              class="nav-link dropdown-toggle"
+                              href="procesoCEDIS.html"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                              onclick="window.location.href='procesoCEDIS.html'"
+                            >
+                              Procesos CEDIS
+                            </a>
+                        <!-- Submenu del menu despegable-->     
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../Procesos/recibo.html">Recibo</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/surtido.html">Surtido</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/activacion.html">Activacion</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/embarque.html">Embarque</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/reparaciones.html">Reparaciones</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/recuperacion.html">Recuperacion</a></li>
+                        </ul>
+                        </li>
+
+                        <!-- Boton principal del menu despegable (Para la seccion de la documentación)-->
+                        <li class="nav-item dropdown custom-dropdown-hover">
+                            <a
+                              class="nav-link dropdown-toggle"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              Documentacion
+                            </a>
+                         <!-- Submenu del menu despegable-->    
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="documentacion/documentacion_i.html">Interna</a></li>
+                            <li><a class="dropdown-item" href="documentacion/documentacion_soporte.html">Soporte</a></li>
+                        </ul>
+                        </li>
+
+                        <!-- Boton que nos dirige a la seccion de las instalaciones-->
+                        <li class="nav-item">
+                        <a class="nav-link" href="CEDIS.html">Nuestras instalaciones</a>
+                        </li>
+
+                        <!-- Boton que nos dirige a la seccion de los indicadores -->
+                        <li class="nav-item">
+                        <a class="nav-link" href="indicadores.html">Indicadores</a>
+                        </li>
+
+                        <!-- Boton que nos dirige a la seccion de comunicacion del sistema de gestion de calidad-->
+                        <li class="nav-item">
+                        <a class="nav-link" href="comunicacion.html">Comunicación SGC</a>
+                        </li>
+
+                    </ul>
+                    </div>
+                </div>
+                </nav>
+            </div>
+
+        </header>
+
+        <!-- Empieza el contenido de la pagina--> 
+        <main>
+            <!-- Seccion en la cual se pondra un titulo inicial de prsentacion-->
+            <div class="titulo">
+                
+            </div>
+
+            <!-- Carrusel con fotos de todos los CEDIS-->
+            <div class="carruseles_vento">
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="carousel-bg imagen1 d-block w-100">
+                            <video  id="videoBienvenida" class="ajuste_video" autoplay loop>
+                                <source src="../../Videos/¡Bienvenido a Vento!.mp4">
+                                Error al cargar el video
+                            </video>
+                        </div>
+                    </div>
+
+                    <!-- 
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <div class="carousel-bg imagen2 d-block w-100"></div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="carousel-bg imagen3 d-block w-100"></div>
+                    </div> 
+                    -->
+                </div>
+                <!--
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                -->
+                </div>
+            </div>
+
+            <!-- Forzamos a que el video se pase despues de que termine-->
+
+            <!--
+            <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const video = document.getElementById("videoBienvenida");
+                const carouselElement = document.getElementById("carouselExampleInterval");
+                const carousel = new bootstrap.Carousel(carouselElement);
+
+                // Cuando el video termina, pasa al siguiente slide
+                video.addEventListener("ended", function () {
+                carousel.next();
+                });
+
+                // Cuando se cambia de slide, revisa si es el slide del video
+                carouselElement.addEventListener("slid.bs.carousel", function (event) {
+                const index = event.to;
+                if (index === 0) { // Slide 0 = el del video
+                    video.currentTime = 0;
+                    video.play();
+                } else {
+                    video.pause(); // Opcional: pausa el video si te vas a otro slide
+                }
+                });
+            });
+            </script>
+            -->
+
+        </main>
+
+
+        <!-- Pie de pagina el cual contiene un texto de privacidad y divulgacion-->
+        <footer>
+            <div class="logo_informativo">
+
+            </div>
+
+            <!-- Texto de privacidad y divulgacion-->
+            <div class="mensaje">
+                <p class="parrafo_info">La presente información es confidencial y de uso exclusivo de los centros de distribución, se prohibe su reproducción, modificación, almacenamiento, o difusión a personas externas sin autorización previa.</p>
+            </div>
+        </footer>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <script defer src="../../Script/SegundoIngreso.js"></script>
+  <title>Inicio de Sesion - Añadir Usuario</title>
+</head>
+<body>
+
+  <section class="vh-100" style="background-color: #05427b;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-xl-6">
+          <div class="card" style="border-radius: 1rem;">
+            <div class="row g-0">
+              <div class="col-12 d-flex align-items-center"> 
+                <div class="card-body p-4 p-lg-5 text-black">
+
+                  <form id="loginform" autocomplete="off" method="post">
+
+                    <div class="d-flex justify-content-start mb-3 pb-1">
+                      <img src="../../Imagenes/imagen_logo.png" alt="Logo Vento" class="img-fluid w-50">
+                    </div>
+
+                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Iniciar Sesión</h5>
+
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <input type="email" id="correo" class="form-control form-control-lg" name="correo" />
+                      <label class="form-label" for="correo">Correo electrónico</label>
+                    </div>
+
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <input type="password" id="password" class="form-control form-control-lg" name="password" />
+                      <label class="form-label" for="password">Contraseña</label>
+                    </div>
+
+                    <div class="pt-1 mb-4">
+                      <button data-mdb-button-init data-mdb-ripple-init class="btn btn-dark btn-lg btn-block" type="submit">Ingresar</button>
+                    </div>
+
+                    <div class="pt-1 mb-4">
+                      <p id="notificacion"></p>
+                    </div>                    
+
+                  </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

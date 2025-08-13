@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Directorio</title>
+  <style>
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="imagenContainer"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const img = params.get('img');
+
+    if (img) {
+      const imgElement = document.createElement('img');
+      imgElement.src = `../../../Imagenes/${img}`;  // Ajusta esta ruta si es distinta
+      imgElement.alt = "Imagen cargada";
+      document.getElementById('imagenContainer').appendChild(imgElement);
+    } else {
+      document.getElementById('imagenContainer').innerText = "No se encontró imagen.";
+    }
+  </script>
+</body>
+</html>
+

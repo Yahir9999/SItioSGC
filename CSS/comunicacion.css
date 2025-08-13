@@ -1,0 +1,39 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor_informacion{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.contenedor_imagen{
+    width: 20vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor_imagen:empty{
+    display: none;
+}
+
+.contenedor_imagen img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/*
+.modal-content {
+    background-color: white !important;
+}
+*/    

@@ -1,0 +1,154 @@
+/* Modificamos el color de fondo, ademas que en este comando alineamos nuestras tarjetas de forma en que quepan las mas posibles y si no las pone debajo*/
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Edicion de las tarjetas, que contienen los elementos de las imagenes*/
+.card{
+    height: 65vh;
+    width: 30vw;
+}
+
+.imagen{
+    height: 50vh;
+    margin: 1em;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imagen1{
+    background-image: url(../Imagenes/Recibo.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.imagen2{
+    background-image: url(../Imagenes/Surtido.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;    
+}
+
+.imagen3{
+    background-image: url(../Imagenes/Activación.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.imagen4{
+    background-image: url(../Imagenes/Embarque.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.imagen5{
+    background-image: url(../Imagenes/Reparaciones.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.imagen6{
+    background-image: url(../Imagenes/Recuperación.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.diagrama{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6ebf9;
+    border: none;
+}
+
+/* Responsiva*/
+@media (max-width: 768px) {
+    .exap1, .exap2, .exap3 {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1em;
+    }
+
+    .card {
+        width: 90vw;
+        margin: 1em 0;
+        height: auto;
+    }
+
+    .imagen {
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+/*Prueba de tamaño para la asignacion de posiciones*/
+
+.boton_simbolo{
+    width: 90vw;
+    height: 10vh;
+}
+
+.exap1, .exap3{
+    width: 90vw;
+    height: 70vh;
+}
+
+.exap2{
+    width: 100vw;
+    height: 70vh;
+}
+
+.exap1, .exap2, .exap3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1em;
+    flex-wrap: wrap; /* por si no caben en una sola fila */
+}
+
+.btn {
+    background-color: #1C2C5B;
+    color: white;
+    border: none;
+    padding: 0.6em 1.5em;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    width: auto;
+    min-width: 220px;
+    max-width: 300px;
+    text-align: center;
+} 
+
+.btn:hover{
+    background-color: #141F44;
+    transform: scale(1.03);
+    color: white;
+}
+
+
+#offcanvasRight {
+    width: 50%; /* o el valor que quieras */
+} 

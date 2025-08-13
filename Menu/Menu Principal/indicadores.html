@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../CSS/header_footer.css">
+  <link rel="stylesheet" href="../../CSS/indicadores.css">
+  <script>
+        if(sessionStorage.getItem("logueado") !== "true"){
+            window.location.href = "../Inicio de Sesion/Inicio.html";
+        }
+  </script>  
+  <title>Indicadores</title>
+</head>
+
+<!-- Contenedor general para todo el contenido de la pagina principal-->
+<body>
+   <!--Header, el cual contiene el logo y nuestro menu-->
+        <header>
+
+          <!-- Logo empresarial-->
+            <div class="logo">
+
+            </div>
+
+            <!-- Seccion para el menu de navegación-->
+            <div class="menu">
+                <nav class="navbar navbar-expand-lg bg-white navbar-light">
+                <div class="container-fluid">
+
+                    <!-- Boton para regresar al menu principal-->
+                    <a class="navbar-brand" href="index.html">Inicio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <!-- Boton principal del menu despegable (para la seccion de procesos)-->
+                        <li class="nav-item dropdown custom-dropdown-hover">
+                            <a
+                              class="nav-link dropdown-toggle"
+                              href="procesoCEDIS.html"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                              onclick="window.location.href='procesoCEDIS.html'"
+                            >
+                              Procesos CEDIS
+                            </a>
+                        <!-- Submenu del menu despegable-->     
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../Procesos/recibo.html">Recibo</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/surtido.html">Surtido</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/activacion.html">Activacion</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/embarque.html">Embarque</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/reparaciones.html">Reparaciones</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/recuperacion.html">Recuperacion</a></li>
+                        </ul>
+                        </li>
+
+                        <!-- Boton principal del menu despegable (Para la seccion de la documentación)-->
+                        <li class="nav-item dropdown custom-dropdown-hover">
+                            <a
+                              class="nav-link dropdown-toggle"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              Documentacion
+                            </a>
+
+                         <!-- Submenu del menu despegable-->       
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="documentacion/documentacion_i.html">Interna</a></li>
+                            <li><a class="dropdown-item" href="documentacion/documentacion_soporte.html">Soporte</a></li>
+                        </ul>
+                        </li>
+
+                        <!-- Boton que nos dirige a la seccion de las instalaciones-->
+                        <li class="nav-item">
+                        <a class="nav-link" href="CEDIS.html">Nuestras instalaciones</a>
+                        </li>
+
+                         <!-- Boton que nos dirige a la seccion de los indicadores -->
+                        <li class="nav-item">
+                        <a class="nav-link active" href="indicadores.html">Indicadores</a>
+                        </li>
+
+                         <!-- Boton que nos dirige a la seccion de comunicacion del sistema de gestion de calidad-->
+                        <li class="nav-item">
+                        <a class="nav-link" href="comunicacion.html">Comunicación SGC</a>
+                        </li>
+
+                    </ul>
+                    </div>
+                </div>
+                </nav>
+            </div>
+        </header>
+
+    <!-- Empieza el contenido de la pagina-->     
+    <main>
+      <!-- Comienza la creacion de tarjetas que muestran los informes estadistucos de cada CEDI-->  
+      <div class="contenedor">
+        <!-- reporte de operaciones por estatus-->
+        <div class="custom-card">
+            <img src="../../Imagenes/Informe1 - AOPE.png" alt="Imagen de ejemplo">
+            <div class="card-body">
+              <h5 class="card-title">Reporte de Operaciones por Estatus</h5>
+              <p class="card-text">
+                Este reporte nos permite revisar la cantidad de SO que se encuentran en los diferentes estatus, esto con la finalidad de darle seguimiento a las unidades que cuentan con bastantes dias de antiguedad.
+              </p>
+              <a href="https://app.powerbi.com/view?r=eyJrIjoiOWI1YWNkY2QtMTU2Zi00MTEwLTg1N2UtYzVkZGJkNzI3NzNhIiwidCI6IjZhOTI1ZmE2LWE5N2ItNGY2OS04MTcyLThkN2YyYzVhNDRjNSIsImMiOjR9" target="_blank" class="btn">Visualizar reporte</a>
+            </div>
+        </div>
+
+        <!-- Reporte de ordenes de traslado por estatus-->
+        <div class="custom-card">
+            <div class="card-body">
+              <h5 class="card-title">Reporte de Ordenes de Traslado por Estatus</h5>
+              <p class="card-text">
+                Este indicador nos permite revisar la cantidad de TO que existe por estatus, ademas que esto es funcional para poder observar estos estatus por cada CEDI (Centro de Distribucion)
+              </p>
+              <a href="#" class="btn">Ver más</a>
+            </div>
+            <img src="../../Imagenes/Informe2 - ITOPE.png" alt="Imagen de ejemplo">
+        </div>
+
+        <!-- Reporte financiero-->
+        <div class="custom-card">
+            <img src="../../Imagenes/Informe3-AnalisisFinanciero.png" alt="Imagen de ejemplo">
+            <div class="card-body">
+              <h5 class="card-title">Analisis Financiero</h5>
+              <p class="card-text">
+                Este informe nos permite saber cual fue el gasto mensual de las ordenes de de compra (PO), ademas del estatus que en estas ordenes se encuentra, asi como poder visualizar este informe por CEDI (Centro de Distribucion)
+              </p>
+              <a href="#" class="btn">Ver más</a>
+            </div>
+        </div>
+          
+      </div>
+
+
+
+    </main> 
+
+    <!-- Pie de pagina el cual contiene un texto de privacidad y divulgacion-->
+    <footer>
+            <div class="logo_informativo">
+
+            </div>
+
+            <!-- Texto de privacidad y divulgacion-->
+            <div class="mensaje">
+                <p class="parrafo_info">La presente información es confidencial y de uso exclusivo de los centros de distribución, se prohibe su reproducción, modificación, almacenamiento, o difusión a personas externas sin autorización previa.</p>
+            </div>
+    </footer>
+
+    <!-- Cargando la seccion correspondiente para el funcionamiento de nuestro bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

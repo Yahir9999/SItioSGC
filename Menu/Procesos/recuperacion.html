@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../CSS/header_footer.css">
+  <link rel="stylesheet" href="../../CSS/procesos-g.css">
+  <script src="../../Script/canvas.js"  defer></script>
+  <title>Recuperación</title>
+</head>
+<body> 
+        <header>
+            <div class="logo">
+
+            </div>
+
+            <div class="menu">
+                <nav class="navbar navbar-expand-lg bg-white navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../Menu Principal/index.html">Inicio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <!-- Menu Despegable-->
+                        <li class="nav-item dropdown custom-dropdown-hover">
+                            <a
+                              class="nav-link active dropdown-toggle"
+                              href="../Menu Principal/procesoCEDIS.html"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                              onclick="window.location.href='../Menu Principal/procesoCEDIS.html'"
+                            >
+                              Procesos CEDIS
+                            </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="recibo.html">Recibo</a></li>
+                            <li><a class="dropdown-item" href="surtido.html">Surtido</a></li>
+                            <li><a class="dropdown-item" href="activacion.html">Activacion</a></li>
+                            <li><a class="dropdown-item" href="embarque.html">Embarque</a></li>
+                            <li><a class="dropdown-item" href="reparaciones.html">Reparaciones</a></li>
+                            <li><a class="dropdown-item" href="recuperacion.html">Recuperacion</a></li>
+                        </ul>
+                        </li>
+
+                        <!-- Menu despegable-->
+                        <li class="nav-item dropdown custom-dropdown-hover">
+                            <a
+                              class="nav-link dropdown-toggle"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              Documentacion
+                            </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../Menu Principal/documentacion/documentacion_i.html">Interna</a></li>
+                            <li><a class="dropdown-item" href="../Menu Principal/documentacion/documentacion_soporte.html">Soporte</a></li>
+                        </ul>
+                        </li>
+
+                        <!-- Menu individual-->
+                        <li class="nav-item">
+                        <a class="nav-link" href="../Menu Principal/CEDIS.html">Nuestras instalaciones</a>
+                        </li>
+
+                        <!-- Menu individual-->
+                        <li class="nav-item">
+                        <a class="nav-link" href="../Menu Principal/indicadores.html">Indicadores</a>
+                        </li>
+
+                        <!-- Menu individual-->
+                        <li class="nav-item">
+                        <a class="nav-link" href="../Menu Principal/comunicacion.html">Comunicación SGC</a>
+                        </li>
+
+                    </ul>
+                    </div>
+                </div>
+                </nav>
+            </div>
+        </header>
+
+    <main>
+        <div class="general_container">
+            <!-- Diagrama de flujo-->
+            <div class="diagrama">
+
+            </div>
+
+            <!-- Formatos-->
+            <div class="formato">
+                    <div class="titulo">
+                        <h2>Formatos utilizados en este proceso</h2>
+                    </div>
+
+                    <!-- Linea divisora-->
+                    <div class="linea-divisora"></div>
+
+                    <!-- En casa contenedor vamos a mandar el titulo del formato, la direccion de la imgen, tamaño (solo si es necesario), y la ruta para poder descargar el formato-->                
+                    <div class="contenedor">
+
+                        <!-- Reporte diario de recuperacion de madera  -->
+                        <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPDF1" aria-controls="offcanvasPDF">
+                            Reporte diario de recuperacion de madera
+                        </button>
+
+                        <!-- Reporte diario de recuperacion de madera  -->
+                        <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPDF2" aria-controls="offcanvasPDF">
+                            Reporte semanal de recuperacion de madera
+                        </button>
+
+                        <!-- Formato de devolucion de cuenta -->
+                        <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPDF3" aria-controls="offcanvasPDF">
+                            Formato de devolucion de madera
+                        </button>
+
+                    </div>
+    
+            </div>
+
+            <!-- Offcanvas para el reporte diario de recuperacion de madera -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF1" aria-labelledby="offcanvasPDFLabel" style="width: 50%;">
+                 <div class="offcanvas-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                        </div>
+                        <div class="offcanvas-body" style="padding: 0;">
+                            <iframe src="../../Documentos/Reporte diario del recuperador.pdf#toolbar=0&navpanes=0" width="85%" height="80%"></iframe>
+                            <div class="p-3">
+                                <a href="../../Documentos/Reporte diario del recuperador.pdf" class="btn w-100" download>
+                                    Descargar documento 
+                                </a>
+                            </div>
+                </div>
+            </div>
+
+            <!-- Offcanvas para el reporte semanal de recuperacion de madera -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF2" aria-labelledby="offcanvasPDFLabel" style="width: 50%;">
+                 <div class="offcanvas-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                        </div>
+                        <div class="offcanvas-body" style="padding: 0;">
+                            <iframe src="../../Documentos/Reporte semanal de recuperación de madera.pdf#toolbar=0&navpanes=0" width="85%" height="68%"></iframe>
+                            <div class="p-3">
+                                <a href="../../Documentos/Reporte semanal de recuperación de madera.pdf" class="btn w-100" download>
+                                    Descargar documento 
+                                </a>
+                            </div>
+                </div>
+            </div>
+ 
+            <!-- Offcanvas para el formato de devolucion de madera  -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF3" aria-labelledby="offcanvasPDFLabel" style="width: 50%;">
+                 <div class="offcanvas-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                        </div>
+                        <div class="offcanvas-body" style="padding: 0;">
+                            <iframe src="../../Documentos/Devolucion de madera.pdf#toolbar=0&navpanes=0" width="85%" height="80%"></iframe>
+                            <div class="p-3">
+                                <a href="../../Documentos/Devolucion de madera.pdf" class="btn w-100" download>
+                                    Descargar documento 
+                                </a>
+                            </div>
+                </div>
+            </div>
+            
+            
+        </div>    
+    </main>
+
+    <footer>
+            <div class="logo_informativo">
+
+            </div>
+            <div class="mensaje">
+                <p class="parrafo_info">La presente información es confidencial y de uso exclusivo de los centros de distribución, se prohibe su reproducción, modificación, almacenamiento, o difusión a personas externas sin autorización previa.</p>
+            </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

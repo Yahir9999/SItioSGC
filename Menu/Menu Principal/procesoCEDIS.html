@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../CSS/header_footer.css">
+  <link rel="stylesheet" href="../../CSS/procesoCEDIS.css"> 
+  <script>
+        if(sessionStorage.getItem("logueado") !== "true"){
+            window.location.href = "../Inicio de Sesion/Inicio.html";
+        }
+  </script>
+  <title>Procedimientos</title>
+</head>
+
+<!-- Contenedor general para todo el contenido de la pagina principal-->
+<body> 
+  <!--Header, el cual contiene el logo y nuestro menu-->
+        <header>
+          <!-- Logo empresarial-->
+            <div class="logo">
+
+            </div>
+
+            <!-- Seccion para el menu de navegación-->
+            <div class="menu">
+                <nav class="navbar navbar-expand-lg bg-white navbar-light">
+                <div class="container-fluid">
+                  <!-- Boton para regresar al menu principal-->
+                    <a class="navbar-brand" href="index.html">Inicio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <!-- Boton principal del menu despegable (para la seccion de procesos)-->
+                        <li class="nav-item dropdown custom-dropdown-hover">
+                            <a
+                              class="nav-link active dropdown-toggle"
+                              href="procesoCEDIS.html"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                              onclick="window.location.href='procesoCEDIS.html'"
+                            >
+                              Procesos CEDIS
+                            </a>
+
+                        <!-- Submenu del menu despegable-->      
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../Procesos/recibo.html">Recibo</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/surtido.html">Surtido</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/activacion.html">Activacion</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/embarque.html">Embarque</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/reparaciones.html">Reparaciones</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/recuperacion.html">Recuperacion</a></li>
+                        </ul>
+                        </li>
+
+                        <!-- Boton principal del menu despegable (Para la seccion de la documentación)-->
+                        <li class="nav-item dropdown custom-dropdown-hover">
+                            <a
+                              class="nav-link dropdown-toggle"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              Documentacion
+                            </a>
+                        <!-- Submenu del menu despegable-->     
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="documentacion/documentacion_i.html">Interna</a></li>
+                            <li><a class="dropdown-item" href="documentacion/documentacion_soporte.html">Soporte</a></li>
+                        </ul>
+                        </li>
+
+                        <!-- Boton que nos dirige a la seccion de las instalaciones-->
+                        <li class="nav-item">
+                        <a class="nav-link" href="CEDIS.html">Nuestras instalaciones</a>
+                        </li>
+
+                        <!-- Boton que nos dirige a la seccion de los indicadores -->
+                        <li class="nav-item">
+                        <a class="nav-link" href="indicadores.html">Indicadores</a>
+                        </li>
+
+                        <!-- Boton que nos dirige a la seccion de comunicacion del sistema de gestion de calidad-->
+                        <li class="nav-item">
+                        <a class="nav-link" href="comunicacion.html">Comunicación SGC</a>
+                        </li>
+
+                    </ul>
+                    </div>
+                </div>
+                </nav>
+            </div>
+        </header>
+
+  <!-- Empieza el contenido de la pagina-->  
+    <main> 
+        <div class="boton_simbolo">
+          <div class="d-flex justify-content-end mb-3">
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+              Simbologia
+            </button> 
+          </div>
+
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <h5 id="offcanvasRightLabel">Simbologia utilizada</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <img id="offcanvasImage" src="../../Imagenes/Simbologia.svg" alt="" class="img-fluid">
+            </div>
+          </div>                       
+        </div>
+
+        <!-- Primera mitad del hexagono-->
+        <div class="exap1">
+          
+        <!--Imagen con un link que nos envia al apartado de recibo-->
+          <div class="card">
+              <div class="imagen imagen1">
+                
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">RECIBO Y ALMACENAMIENTO DE MERCANCIA</h5>
+                <p class="card-text">Recepción y verificación de mercancía para su registro y almacenamiento.</p>
+                <a href="../Procesos/recibo.html" class="btn">Visualizar diagrama</a>
+              </div>
+          </div>
+
+        <!--Imagen con un link que nos envia al apartado de surtido-->
+          <div class="card">
+            <div class="imagen imagen2">
+              
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">SURTIDO DE PEDIDOS</h5>
+              <p class="card-text">Preparación y asignación de mercancía de acuerdo con los pedidos solicitados.</p>
+              <a href="../Procesos/surtido.html" class="btn">Visualizar diagrama</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Segunda mitad del hexagono-->
+        <div class="exap2">
+
+          <!--Imagen con un link que nos envia al apartado de activacion-->
+          <div class="card"> 
+            <div class="imagen imagen3">
+              
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">ACTIVACION DE MOTOCICLETAS</h5>
+              <p class="card-text">Verificación de apariencia y funcionamiento para el registro de motocicletas como unidades activas.</p>
+              <a href="../Procesos/activacion.html" class="btn">Visualizar diagrama</a>
+            </div>
+          </div>
+
+        <!-- Imagen con el proceso-->
+         <div class="card diagrama">
+          <!-- Imagen en miniatura -->
+          <img src="../../Imagenes/Procesos CEDIS.svg" class="img-thumbnail" data-bs-toggle="modal" data-bs-target="#modalImagen" style="cursor:pointer;">
+
+          <!-- Modal de imagen -->
+          <div class="modal fade" id="modalImagen" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content bg-dark">
+                <div class="modal-body p-0">
+                  <img src="../../Imagenes/Procesos CEDIS.svg" class="img-fluid w-100" style="height: 100vh; object-fit: contain;">
+                </div>
+                <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+            </div> 
+          </div>
+
+         </div>  
+
+        <!--Imagen con un link que nos envia al apartado de embarque y logistica-->
+          <div class="card">
+            <div class="imagen imagen4">
+
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">EMBARQUE Y ENTREGA DE PEDIDOS</h5>
+              <p class="card-text">Preparación, carga y envío de mercancía para entrega a las agencias.</p>
+              <a href="../Procesos/embarque.html" class="btn">Visualizar diagrama</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="exap3">
+          <!--Imagen con un link que nos envia al apartado de embarque y logistica-->
+          <div class="card">
+            <div class="imagen imagen5">
+              
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">REPARACIONES</h5>
+              <p class="card-text">Inspección, diagnóstico y reparación de motocicletas para asegurar su disposición y venta.</p>
+              <a href="../Procesos/reparaciones.html" class="btn">Visualizar diagrama</a>
+            </div>
+          </div> 
+          
+        <!--Imagen con un link que nos envia al apartado de embarque y logistica-->
+          <div class="card">
+            <div class="imagen imagen6">
+              
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">RECUPERACION Y ENVIO DE ESTRUCTURAS</h5>
+              <p class="card-text">Desmontaje y envío de estructuras a planta para su reincorporación al embalaje de la mercancía.</p>
+              <a href="../Procesos/recuperacion.html" class="btn">Visualizar diagrama</a>
+            </div>
+          </div> 
+        </div>
+    </main>
+
+    <footer>
+            <div class="logo_informativo">
+
+            </div>
+            <div class="mensaje">
+                <p class="parrafo_info">La presente información es confidencial y de uso exclusivo de los centros de distribución, se prohibe su reproducción, modificación, almacenamiento, o difusión a personas externas sin autorización previa.</p>
+            </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

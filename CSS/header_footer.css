@@ -1,0 +1,124 @@
+/* Hacemos un reset a las configuraciones prederterminadas aplicadas por los navegadores*/
+
+*, 
+*::before, 
+*::after {
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;   /* hace que width/height incluyan padding y border */
+}
+
+/* Se les aplica una altura, para que sus hijos la puedan tomar como referencia */
+html, body { 
+    height: 100%; 
+}
+
+/*El body se convierte en columna flex, esto para poder hacer la asignacion de espacios */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Asignacion de tamaños, tomando base el tamaño padre (HTML y BODY)*/
+header{ 
+  min-height: 9vh;
+  background: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+main{ 
+  flex:1;
+  overflow-y:auto;
+  background-color: #e6ebf9;
+
+ }
+
+footer{
+    height: 8vh;  
+    background-color: #1C2C5B; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
+
+
+/* Vamos a editar la propia clase de bootstrap*/
+
+.navbar{
+  padding: 0 2em 0 0;
+}
+
+/* Logo en la parte del menu*/
+
+.logo{
+  height: 9vh;
+  width: 9vw;
+  background-image: url("../Imagenes/logoventoazul.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+  margin: 0 0 0 2em;
+}
+/* Mensaje de privacidad*/
+.mensaje {
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: center;
+
+  /* Estas tres líneas evitan desbordes */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+
+  /* Adaptabilidad a todo tipo de pantalla */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.mensaje p {
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+/* ✅ Extra: tamaño más pequeño en celulares */
+@media (max-width: 576px) {
+  .mensaje {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+}
+
+
+
+/* Haremos que al dar click al link este abra la otra pagina y al pasar el hovwr, se abra el submenu*/
+
+/* Hover para mostrar el dropdown */
+.custom-dropdown-hover:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* ajusta si se superpone */
+}
+
+/* Esto evita que el dropdown desaparezca si mueves el cursor a los elementos */
+.custom-dropdown-hover .dropdown-menu {
+  display: none;
+  transition: all 0.3s ease;
+  position: absolute;
+}
+
+/* Cambio del color en el hover al momento del dezpliegue del menu*/
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #0c227d; /* cambia el fondo al pasar el mouse */
+  color: #ffffff; /* cambia el color del texto */
+}
+
+/* Le damos tamaño a nuestra pagina WEB*/
+.parrafo_info{
+  font-size: 0.75em;
+}
