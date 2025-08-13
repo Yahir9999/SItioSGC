@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../CSS/header_footer.css">
-    <link rel="stylesheet" href="../../CSS/index.css">
+    <link rel="stylesheet" href="CSS/header_footer.css">
+    <link rel="stylesheet" href="CSS/index.css">
     <title>Pagina Principal</title>
     <script>
         if(sessionStorage.getItem("logueado") !== "true"){
-            window.location.href = "../Inicio de Sesion/Inicio.html";
+            window.location.href = "Menu/Inicio de Sesion/Inicio.html";
         }
     </script>
 
@@ -38,22 +38,22 @@
                         <li class="nav-item dropdown custom-dropdown-hover">
                             <a
                               class="nav-link dropdown-toggle"
-                              href="procesoCEDIS.html"
+                              href="Menu/Menu Principal/procesoCEDIS.html"
                               role="button"
                               data-bs-toggle="dropdown"
                               aria-expanded="false"
-                              onclick="window.location.href='procesoCEDIS.html'"
+                              onclick="window.location.href='Menu/Menu Principal/procesoCEDIS.html'"
                             >
                               Procesos CEDIS
                             </a>
                         <!-- Submenu del menu despegable-->     
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../Procesos/recibo.html">Recibo</a></li>
-                            <li><a class="dropdown-item" href="../Procesos/surtido.html">Surtido</a></li>
-                            <li><a class="dropdown-item" href="../Procesos/activacion.html">Activacion</a></li>
-                            <li><a class="dropdown-item" href="../Procesos/embarque.html">Embarque</a></li>
-                            <li><a class="dropdown-item" href="../Procesos/reparaciones.html">Reparaciones</a></li>
-                            <li><a class="dropdown-item" href="../Procesos/recuperacion.html">Recuperacion</a></li>
+                            <li><a class="dropdown-item" href="Menu/Procesos/recibo.html">Recibo</a></li>
+                            <li><a class="dropdown-item" href="Menu/Procesos/surtido.html">Surtido</a></li>
+                            <li><a class="dropdown-item" href="Menu/Procesos/activacion.html">Activacion</a></li>
+                            <li><a class="dropdown-item" href="Menu/Procesos/embarque.html">Embarque</a></li>
+                            <li><a class="dropdown-item" href="Menu/Procesos/reparaciones.html">Reparaciones</a></li>
+                            <li><a class="dropdown-item" href="Menu/Procesos/recuperacion.html">Recuperacion</a></li>
                         </ul>
                         </li>
 
@@ -69,24 +69,24 @@
                             </a>
                          <!-- Submenu del menu despegable-->    
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="documentacion/documentacion_i.html">Interna</a></li>
-                            <li><a class="dropdown-item" href="documentacion/documentacion_soporte.html">Soporte</a></li>
+                            <li><a class="dropdown-item" href="Menu/Menu Principal/documentacion/documentacion_i.html">Interna</a></li>
+                            <li><a class="dropdown-item" href="Menu/Menu Principal/documentacion/documentacion_soporte.html">Soporte</a></li>
                         </ul>
                         </li>
 
                         <!-- Boton que nos dirige a la seccion de las instalaciones-->
                         <li class="nav-item">
-                        <a class="nav-link" href="CEDIS.html">Nuestras instalaciones</a>
+                        <a class="nav-link" href="Menu/Menu Principal/CEDIS.html">Nuestras instalaciones</a>
                         </li>
 
                         <!-- Boton que nos dirige a la seccion de los indicadores -->
                         <li class="nav-item">
-                        <a class="nav-link" href="indicadores.html">Indicadores</a>
+                        <a class="nav-link" href="Menu/Menu Principal/indicadores.html">Indicadores</a>
                         </li>
 
                         <!-- Boton que nos dirige a la seccion de comunicacion del sistema de gestion de calidad-->
                         <li class="nav-item">
-                        <a class="nav-link" href="comunicacion.html">Comunicación SGC</a>
+                        <a class="nav-link" href="Menu/Menu Principal/comunicacion.html">Comunicación SGC</a>
                         </li>
 
                     </ul>

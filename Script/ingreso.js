@@ -38,7 +38,7 @@ loginForm.addEventListener("submit", async (e) => {
       //Condicion para redireccionar a nuestra pagina principal, esto solo en caso de que el correo y la contraseña sean iguales, ademas que  esten en el registro de las cuentas
       
       setTimeout(() => {
-        window.location.href = "../../Menu/Menu Principal/index.html"; 
+        window.location.href = "../../index.html"; 
       }, 1500);
 
     } else {
