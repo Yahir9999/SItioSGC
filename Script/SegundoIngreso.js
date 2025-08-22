@@ -25,7 +25,7 @@ loginform.addEventListener("submit", function (e) {
 
     // Redirigir tras 1 segundo, para mas comodidad
     setTimeout(() => {
-      window.location.href = "../Menu/Inicio de Sesion/RegistroVisitantes.html";
+      window.location.href = "../../Menu/Inicio de Sesion/RegistroVisitantes.html";
     }, 1000);
   } else {
 

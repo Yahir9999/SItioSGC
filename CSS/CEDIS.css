@@ -9,7 +9,7 @@ main{
 
 .republica{
   width: 90vw;
-  height: 70vh;
+  height: 110vh;
   background-color: white;
   background-image: url(../Imagenes/imagen_republica.png);
   background-position: center;
@@ -22,8 +22,8 @@ main{
 /* Boton que nos muestra informacion de CEDI camarones*/
 .boton{
   position: relative;
-  left: 53%;
-  top: 66%;    
+  left: 54%;
+  top: 67%;    
 }
 
 /* Boton que nos muestra informacion de CEDI toluca*/
@@ -38,7 +38,7 @@ main{
 .boton3{
   position: relative;
   left: 45%;
-  top: 61%;
+  top: 63%;
 
 }
 
@@ -121,51 +121,59 @@ button:hover .texto-hover-arriba {
 /* Responsividad para pantallas menores a 768px (tablets y móviles) */
 @media screen and (max-width: 768px) {
 
+  .republica{
+    height: 50vh;
+  }
+
   .boton {
-    left: 30%;
-    top: 70%;
+    left: 54%;
+    top: 64%;
     transform: scale(0.8);
   }
 
   .boton2 {
-    left: 50%;
-    top: 54%;
+    left: 43%;
+    top: 64%;
     transform: scale(0.8);
   }
 
   .boton3 {
-    left: -5%;
-    top: 62%;
+    left: 38%;
+    top: 59%;
     transform: scale(0.8);
   }
 }
 
 /* Responsividad para pantallas menores a 480px (móviles pequeños) */
 @media screen and (max-width: 480px) {
+  .republica{
+    height: 40vh;
+    margin: 0;
+  }
 
   .boton {
-    left: 30%;
-    top: 63%;
+    left: 51%;
+    top: 57%;
     transform: scale(0.7);
   }
 
   .boton2 {
-    left: 30%;
-    top: 50%;
+    left: 33%;
+    top: 55%;
     transform: scale(0.7);
   }
 
   .boton3 {
-    left: -45%;
-    top: 55%;
+    left: 23%;
+    top: 50%;
     transform: scale(0.7);
   }
 }
 
 
 .imagen_boton2{
-  width: 20px;
-  height: 40px;
+  width: 40px;
+  height: 60px;
 }
 
 /*Prueba de texto hover*/
@@ -186,3 +194,4 @@ button:hover .texto-hover-arriba {
 button:hover .texto-hover {
     opacity: 1; /* visible al pasar el mouse */
 }
+

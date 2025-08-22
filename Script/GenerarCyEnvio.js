@@ -1,57 +1,54 @@
-// Referencia de los elementos, obtenemos el formulario y el parametro de notificacion
-
 const registroformulario = document.getElementById("registro");
 const mensaje = document.getElementById("notificacion");
-
-//Escuchar (Validar), el envio de nuestro formulario 
 
 registroformulario.addEventListener("submit", function(e){
     e.preventDefault();
 
-    //Guardamos las variables que se guadaron del formulario y creamos una nueva con un numero aleatorio, esto para poder incluirlo en la contraseña 
-
-    const correo = document.getElementById("Correo").value.trim();
+    // Obtenemos los valores del formulario
     const nombre = document.getElementById("Nombre").value.trim();
     const apellido = document.getElementById("Apellido").value.trim();
-    let numeroid = Math.floor(Math.random()*101);
+    const puesto = document.getElementById("Puesto").value.trim();
+    const correo = document.getElementById("Correo").value.trim();
 
-    //Seleccionamos las dos primeras letras del nombre, las dos del apellido y el numero aleatorio, haciendo esta union un solo string
+    // Creamos un número aleatorio para la contraseña
+    const numeroid = Math.floor(Math.random() * 101);
+
+    // Generamos la contraseña: primeras 3 letras del nombre + primeras 3 del apellido + número aleatorio
     const password = `${nombre.substring(0,3).toUpperCase()}${apellido.substring(0,3).toUpperCase()}${numeroid}`;
 
-    //Creamos el form para poder enviar nuestros datos 
-    const formData = new FormData();
+    // Preparamos los datos a enviar al Apps Script
+    const data = new URLSearchParams();
+    data.append("accion", "guardar");
+    data.append("correo", correo);
+    data.append("puesto", puesto);
+    data.append("password", password);
 
-    //La accion que v a ser enviada a nuestro App Script
+    // URL de tu Web App de Google Apps Script
+    const url = "https://script.google.com/macros/s/AKfycbyJN4tNeGtHEsz77MzKrBvIFP76lpP4L_XFLHhCwyWreKNQQKWqiewVDkCfhSw6Qrv1Gw/exec";
 
-    formData.append("accion", "guardar");
-    formData.append("correo", correo);
-    formData.append("password", password);
-
-    //Enviar al SCRIPT
-    fetch("https://script.google.com/macros/s/AKfycby6n_SvMetq-aInSCjZNDXUffOWLCP7p8ie7MSnCHZEeHNkOBXjs07ek8JW8PW4N59G/exec", {method: 'POST', body: formData})
+    fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: data
+    })
+    .then(response => response.json())
     .then(response => {
-
-        //Condicional que compara el resultado de lo enviado, con lo que se tiene en nuestro ducomento de sheets
-        if(response.ok){
-
-            //Mandandos un mensaje via el ID de nuestro item en HTML y este muestra lo que mandamos aqui
-            mensaje.textContent = "Registro exitoso";
+        if(response.resultado){
+            mensaje.textContent = `Registro exitoso. Contraseña: ${password}`;
             mensaje.style.color = "green";
             setTimeout(() => {
                 registroformulario.reset();
-                window.location.href = "../../Menu/Inicio de Sesion/Inicio.html";
+                window.location.href = "../../Menu/Inicio de Sesion/Inicio.html"; 
             }, 2000);
         } else {
-            throw new Error("Error en la respuesta");
+            mensaje.textContent = response.error || "Error desconocido";
+            mensaje.style.color = "red";
         }
-
     })
     .catch(error => {
-
-        //Lo mismo que arriba, pero este notifica cuando hay un error al resgistrar
         mensaje.textContent = "Error al dar de alta, intente nuevamente";
         mensaje.style.color = "red";
+        console.error(error);
     });
-
-
 });
+

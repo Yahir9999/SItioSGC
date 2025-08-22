@@ -1,147 +1,296 @@
-/* Diseño general para todas las areas de procesos*/
+ /* Diseño general para todas las areas de procesos*/
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1rem;
+            min-height: 100vh;
+        }
 
-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
+        /* Tarjeta donde contiene toda la info*/
+        .general_container {
+            width: 90%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #a3bde2;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+        }
 
-/* Tarjeta donde contiene toda la info*/
-.general_container{
-  width: 90%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  background-color: #a3bde2;
-}
+        /* Contenedor del diagrama mejorado */
+        .diagrama-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 1em 0;
+        }
 
-/* Diseño del diagrama*/
-.diagrama{
-    width: 70%;
-    height: 60%;
-    object-fit: contain;
-}
+        /* Diseño del diagrama mejorado*/
+        .diagrama {
+            max-width: 100%;
+            height: auto;
+            max-height: 50vh;
+            object-fit: contain;
+            border: 2px solid #1C2C5B;
+            border-radius: 8px;
+            background-color: white;
+            padding: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
 
-/* Diseño del formato donde van los botones*/
-.formato{
-    width: 100%;
-    height: 20%;
+        .diagrama:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
 
-}
+        /* Diseño del formato donde van los botones*/
+        .formato {
+            width: 100%;
+            height: 20%;
+        }
 
+        /* Titulo del contenedor*/
+        .titulo h2 {
+            font-size: 1.5em;
+            font-weight: 300px;
+            color: #1C2C5B;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
 
-/* Titulo del contenedor*/
-.titulo{
-    font-size: 2em;
-    font-weight: 600;
-    color: #1C2C5B;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;    
-}
+        /* Clases a las cuales se les asigna un tamaño diferente al contenido que sale al dar click al boton*/
 
+        /*Tamaño extra grande, para imagenes grandes*/
+        .offcanvas-xlarge {
+            width: 70vw !important;
+        }
 
-/* Clases a las cuales se les asigna un tamaño diferente al contenido que sale al dar click al boton*/
+        /* Tamaño grande, para imagenes no muy grandes*/
+        .offcanvas-large {
+            width: 60vw !important;
+        }
 
-/*Tamañ extra grande, para imagenes grandes*/
-.offcanvas-xlarge {
-    width: 70vw !important; 
-}
+        /* Contenedor de los botones*/
+        .contenedor {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1em;
+            padding: 0 0 1em 0;
+        }
 
-/* Tamaño grande, para imagenes no muy grandes*/
+        /* Diseño de los botones que muestran el submenu*/
+        .btn {
+            background-color: #1C2C5B;
+            color: white;
+            border: none;
 
-.offcanvas-large {
-    width: 60vw !important; 
-}
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            width: auto;
+            min-width: 220px;
+            max-width: 300px;
+            text-align: center;
+        }
 
+        .btn:hover {
+            background-color: #141F44;
+            transform: scale(1.03);
+            color: white;
+        }
 
+        /* 📱 RESPONSIVO para pantallas pequeñas */
+        @media screen and (max-width: 600px) {
+            .contenedor {
+                flex-direction: column;
+                align-items: center;
+            }
 
-/* Contenedor de los botones*/
-.contenedor {
-    width: 100%;
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;           
-    justify-content: center;  
-    gap: 1em;
-    padding: 0 0 1em 0;                  
-}
+            .btn {
+                width: 80%;
+            }
+            
+            .titulo {
+                font-size: 1.5em;
+            }
+            
+            .general_container {
+                width: 95%;
+                padding: 1rem;
+            }
+        }
 
-/* Diseño de los botones que muestran el submenu*/
-.btn {
-    background-color: #1C2C5B;
-    color: white;
-    border: none;
-    padding: 0.6em 1.5em;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 0.75rem;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    width: auto;
-    min-width: 220px;
-    max-width: 300px;
-    text-align: center;
-} 
+        @media screen and (max-width: 768px) {
+            .img-offcanvas {
+                max-height: 50vh;
+            }
+            
+            .diagrama {
+                max-height: 40vh;
+            }
+        }
 
-.btn:hover{
-    background-color: #141F44;
-    transform: scale(1.03);
-    color: white;
-}
+        .img-ajustada {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
 
+        /* Ajustar el tamaño de las imagenes*/
+        .img-offcanvas {
+            width: 100%;
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            display: block;
+            margin: auto;
+        }
 
+        /* Linea divisora entre mi titulo y mis botones que me dirigen a cada formato*/
+        .linea-divisora {
+            height: 2px;
+            background-color: #1e2e5e; /* Azul oscuro de tus botones */
+            margin: 20px auto;
+            width: 80%;
+        }
 
-/* 📱 RESPONSIVO para pantallas pequeñas */
-@media screen and (max-width: 600px) {
-  .contenedor {
-    flex-direction: column;
-    align-items: center;
-  }
+        /* Modificacion del boton de descarga*/
+        .boton_dowload {
+            width: 100%;
+        }
 
-  .btn {
-    width: 80%;
-  }
-}
+        /* Contenedor general del boton*/
+        .botonapp {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
 
-@media screen and (max-width: 768px) {
-  .img-offcanvas {
-    max-height: 50vh;
-  }
-}
+        /* Boton que contendra una imagen, junto a un texto que diga descargar */
+        .imagen_boton {
+            width: 10%;
+            height: 55%;
+            border-radius: 50%;
+            background-color: azure;
+        }
 
+        /* Contenedor del texto */
+        .texto {
+            width: 50%;
+            height: 55%;
+            text-align: left;
+        }
 
-.img-ajustada {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; 
-}
+        /* logo para apartado de netsuite*/
+        .logo_netsuite {
+            background-image: url(../Imagenes/logo_netsuite.SVG);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
 
+        .logo_ventonet {
+            background-image: url(../Imagenes/logo_ventonet.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
-/* Ajustar el tamalo de las imagenes*/
-.img-offcanvas {
-  width: 100%;
-  max-width: 100%;
-  max-height: 80vh; 
-  object-fit: contain;
-  display: block;
-  margin: auto;
-}
-
-
-/* Linea divisora entre mi titulo y mis botones que me dirigen a cada formato*/
-.linea-divisora {
-  height: 2px;
-  background-color: #1e2e5e; /* Azul oscuro de tus botones */
-  margin: 20px auto;
-  width: 80%;
-}
-
-/* Modificacion del boton de descarga*/
-.boton_dowload{
-  width: 100%;
-}
+        .logo_scanit{
+            background-image: url(../Imagenes/logo_scanit.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        /* MODAL DE DIAGRAMA A GRANDE - MEJORADO */
+        .modal-diagrama .modal-dialog {
+            max-width: 95vw;
+            max-height: 95vh;
+            margin: 1rem auto;
+            width: auto;
+        }
+        
+        .modal-diagrama .modal-content {
+            background-color: rgba(0,0,0,0.85);
+            height: 95vh;
+            border: none;
+            border-radius: 10px;
+        }
+        
+        .modal-diagrama .modal-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .modal-diagrama .modal-body img {
+            object-fit: contain;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+        }
+        
+        .modal-diagrama .btn-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 1000;
+            background: white;
+            opacity: 0.8;
+            border-radius: 50%;
+            padding: 0.5rem;
+        }
+        
+        .modal-diagrama .btn-close:hover {
+            opacity: 1;
+        }
+        
+        /* Efecto de zoom suave al abrir el modal */
+        .modal-diagrama .modal-body img {
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+        
+        .modal-diagrama.show .modal-body img {
+            transform: scale(1);
+        }
+        
+        /* Para pantallas muy grandes */
+        @media (min-width: 1600px) {
+            .modal-diagrama .modal-dialog {
+                max-width: 85vw;
+            }
+        }
+        
+        /* Para tablets y móviles en landscape */
+        @media (max-height: 600px) and (orientation: landscape) {
+            .modal-diagrama .modal-dialog {
+                max-height: 90vh;
+            }
+            
+            .modal-diagrama .modal-content {
+                height: 90vh;
+            }
+        }
+    

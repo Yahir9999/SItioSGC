@@ -21,7 +21,7 @@ loginForm.addEventListener("submit", async (e) => {
 
   //Manejo de excepciones
   try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycby6n_SvMetq-aInSCjZNDXUffOWLCP7p8ie7MSnCHZEeHNkOBXjs07ek8JW8PW4N59G/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbyJN4tNeGtHEsz77MzKrBvIFP76lpP4L_XFLHhCwyWreKNQQKWqiewVDkCfhSw6Qrv1Gw/exec", {
       method: "POST",
       body: formData,
     });

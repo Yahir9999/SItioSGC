@@ -39,10 +39,10 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="recibo.html">Recibo</a></li>
                             <li><a class="dropdown-item" href="surtido.html">Surtido</a></li>
-                            <li><a class="dropdown-item" href="activacion.html">Activacion</a></li>
+                            <li><a class="dropdown-item" href="activacion.html">Activación</a></li>
                             <li><a class="dropdown-item" href="embarque.html">Embarque</a></li>
                             <li><a class="dropdown-item" href="reparaciones.html">Reparaciones</a></li>
-                            <li><a class="dropdown-item" href="recuperacion.html">Recuperacion</a></li>
+                            <li><a class="dropdown-item" href="recuperacion.html">Recuperación</a></li>
                         </ul>
                         </li>
 
@@ -54,7 +54,7 @@
                               data-bs-toggle="dropdown"
                               aria-expanded="false"
                             >
-                              Documentacion
+                              Documentación
                             </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="../Menu Principal/documentacion/documentacion_i.html">Interna</a></li>
@@ -86,9 +86,28 @@
 
     <main>
         <div class="general_container">
-            <!-- Diagrama de flujo-->
-            <div class="diagrama">
 
+            <!-- Diagrama de flujo-->
+            <div class="diagrama-container">
+                <img src="../../DocumentosProceso/Diagramas/Procesos CEDIS-RECUPERACIÓN Y ENVÍO DE ESTRUCTURAS.svg" 
+                     class="diagrama"
+                     data-bs-toggle="modal"
+                     data-bs-target="#modalImagen"
+                     alt="Diagrama de proceso CEDIS-SURTIDO DE PEDIDOS">
+            </div>
+
+            <!-- Modal para el diagrama a pantalla completa - MEJORADO -->
+            <div class="modal fade modal-diagrama" id="modalImagen" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <img src="../../DocumentosProceso/Diagramas/Procesos CEDIS-RECUPERACIÓN Y ENVÍO DE ESTRUCTURAS.svg" 
+                                 class="img-fluid" 
+                                 alt="Diagrama completo de proceso">
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                </div>
             </div>
 
             <!-- Formatos-->
@@ -103,19 +122,19 @@
                     <!-- En casa contenedor vamos a mandar el titulo del formato, la direccion de la imgen, tamaño (solo si es necesario), y la ruta para poder descargar el formato-->                
                     <div class="contenedor">
 
-                        <!-- Reporte diario de recuperacion de madera  -->
+                        <!-- Reporte diario de recuperacion de estructuras  -->
                         <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPDF1" aria-controls="offcanvasPDF">
-                            Reporte diario de recuperacion de madera
+                            Reporte diario de recuperación de estructuras
                         </button>
 
-                        <!-- Reporte diario de recuperacion de madera  -->
+                        <!-- Reporte semanal de recuperacion de estructuras  -->
                         <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPDF2" aria-controls="offcanvasPDF">
-                            Reporte semanal de recuperacion de madera
+                            Reporte semanal de recuperación de estructuras
                         </button>
 
-                        <!-- Formato de devolucion de cuenta -->
+                        <!-- Devolucion de estructuras -->
                         <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPDF3" aria-controls="offcanvasPDF">
-                            Formato de devolucion de madera
+                            Devolución de estructuras
                         </button>
 
                     </div>
@@ -128,25 +147,25 @@
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
                         </div>
                         <div class="offcanvas-body" style="padding: 0;">
-                            <iframe src="../../Documentos/Reporte diario del recuperador.pdf#toolbar=0&navpanes=0" width="85%" height="80%"></iframe>
+                            <img src="../../Documentos/imagenes-procesos/reporte diario de recuperacion de estructuras.png" alt=""  width="80%" height="88%">
                             <div class="p-3">
-                                <a href="../../Documentos/Reporte diario del recuperador.pdf" class="btn w-100" download>
-                                    Descargar documento 
+                                <a href="https://docs.google.com/spreadsheets/d/1CHN8cDQM1_RLkoh8mubJWEL-I1g6C1_nRukjjLYawXk/copy?gid=0#gid=0" class="btn w-100" target="_blank">
+                                    Abrir documento 
                                 </a>
                             </div>
                 </div>
             </div>
 
             <!-- Offcanvas para el reporte semanal de recuperacion de madera -->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF2" aria-labelledby="offcanvasPDFLabel" style="width: 50%;">
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF2" aria-labelledby="offcanvasPDFLabel" style="width: 60%;">
                  <div class="offcanvas-header">
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
                         </div>
                         <div class="offcanvas-body" style="padding: 0;">
-                            <iframe src="../../Documentos/Reporte semanal de recuperación de madera.pdf#toolbar=0&navpanes=0" width="85%" height="68%"></iframe>
+                            <img src="../../Documentos/imagenes-procesos/reporte semanal de recuperacion de estructuras.png" alt="" width="90%" height="68%">
                             <div class="p-3">
-                                <a href="../../Documentos/Reporte semanal de recuperación de madera.pdf" class="btn w-100" download>
-                                    Descargar documento 
+                                <a href="https://docs.google.com/spreadsheets/d/1E7a9-DB8ERhcfNgGyVoWW70COaM0jtUG0-MV5nursBY/copy?gid=0#gid=0" class="btn w-100" target="_blank">
+                                    Abrir documento 
                                 </a>
                             </div>
                 </div>
@@ -158,9 +177,9 @@
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
                         </div>
                         <div class="offcanvas-body" style="padding: 0;">
-                            <iframe src="../../Documentos/Devolucion de madera.pdf#toolbar=0&navpanes=0" width="85%" height="80%"></iframe>
+                            <iframe src="../../Documentos/DEVOLUCIÓN DE MADERA.pdf#toolbar=0&navpanes=0" width="85%" height="80%"></iframe>
                             <div class="p-3">
-                                <a href="../../Documentos/Devolucion de madera.pdf" class="btn w-100" download>
+                                <a href="../../Documentos/DEVOLUCIÓN DE MADERA.pdf" class="btn w-100" download>
                                     Descargar documento 
                                 </a>
                             </div>
@@ -176,7 +195,7 @@
 
             </div>
             <div class="mensaje">
-                <p class="parrafo_info">La presente información es confidencial y de uso exclusivo de los centros de distribución, se prohibe su reproducción, modificación, almacenamiento, o difusión a personas externas sin autorización previa.</p>
+                <p class="parrafo_info">La presente información es confidencial y de uso exclusivo de los centros de distribución, se prohíbe su reproducción, modificación, almacenamiento, o difusión a personas externas sin autorización previa.</p>
             </div>
     </footer>
 

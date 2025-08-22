@@ -20,23 +20,31 @@
                 alt="Foto de moto">
 
             <div class="card-body p-4 p-md-5">
-                <h3 class="mb-4 pb-2 pb-md-0 mb-md-4 px-md-2">Datos de Registro</h3>
+                <h3 class="mb-4 pb-2 pb-md-0 mb-md-4 px-md-2">Datos de registro</h3>
 
                 <form class="px-md-2" method="post" id="registro">
 
+                <!-- Seccion para introducir el nombre-->    
                 <div class="form-outline mb-3">
+                    <label class="form-label" for="Nombre">Nombre:</label>
                     <input type="text" id="Nombre" name="Nombre" class="form-control" autocomplete="off"/>
-                    <label class="form-label" for="Nombre">Nombre</label>
                 </div>
 
+                <!-- Seccion para introducir el apellido-->
                 <div class="form-outline mb-3">
+                    <label class="form-label" for="Apellido">Apellido:</label>
                     <input type="text" id="Apellido" name="Apellido" class="form-control" autocomplete="off"/>
-                    <label class="form-label" for="Apellido">Apellido</label>
+                </div>
+
+                <!-- Seccion para conocer cual es el area perteneciente -->
+                 <div class="form-outline mb-3">
+                    <label class="form-label" for="Puesto">Puesto:</label>
+                    <input type="text" id="Puesto" name="Puesto" class="form-control" autocomplete="off"/>
                 </div>
 
                 <div class="form-outline mb-3">
+                    <label class="form-label" for="Correo">Correo electrónico:</label>
                     <input type="mail" id="Correo" name="Correo" class="form-control" autocomplete="off"/>
-                    <label class="form-label" for="Correo">Correo electronico</label>
                 </div>                
                 
                 <button type="submit" class="btn btn-dark btn-lg mb-5">Agregar visitante</button>

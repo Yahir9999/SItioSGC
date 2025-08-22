@@ -39,10 +39,10 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="recibo.html">Recibo</a></li>
                             <li><a class="dropdown-item" href="surtido.html">Surtido</a></li>
-                            <li><a class="dropdown-item" href="activacion.html">Activacion</a></li>
+                            <li><a class="dropdown-item" href="activacion.html">Activación</a></li>
                             <li><a class="dropdown-item" href="embarque.html">Embarque</a></li>
                             <li><a class="dropdown-item" href="reparaciones.html">Reparaciones</a></li>
-                            <li><a class="dropdown-item" href="recuperacion.html">Recuperacion</a></li>
+                            <li><a class="dropdown-item" href="recuperacion.html">Recuperación</a></li>
                         </ul>
                         </li>
 
@@ -54,7 +54,7 @@
                               data-bs-toggle="dropdown"
                               aria-expanded="false"
                             >
-                              Documentacion
+                              Documentación
                             </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="../Menu Principal/documentacion/documentacion_i.html">Interna</a></li>
@@ -84,76 +84,85 @@
             </div>
         </header>
 
-    <main>
+<main> 
         <div class="general_container">
             <!-- Diagrama de flujo-->
-            <div class="diagrama">
-                <img src="../../DocumentosProceso/Diagramas/Procesos CEDIS-SURTIDO DE PEDIDOS.drawio.svg"
-                    class="img-ajustada"
-                    data-bs-toggle="modal"
-                    data-bs-target="#modalImagen"
-                    style="cursor:pointer;">
+            <div class="diagrama-container">
+                <img src="../../DocumentosProceso/Diagramas/Procesos CEDIS-SURTIDO DE PEDIDOS.svg" 
+                     class="diagrama"
+                     data-bs-toggle="modal"
+                     data-bs-target="#modalImagen"
+                     alt="Diagrama de proceso CEDIS-SURTIDO DE PEDIDOS">
+            </div>
 
-                <div class="modal fade" id="modalImagen" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-fullscreen">
-                        <div class="modal-content bg-dark">
-                        <div class="modal-body p-0">
-                            <img src="../../DocumentosProceso/Diagramas/Procesos CEDIS-SURTIDO DE PEDIDOS.drawio.svg"
-                                class="img-fluid w-100"
-                                style="height: 100vh; object-fit: contain;">
+            <!-- Modal para el diagrama a pantalla completa - MEJORADO -->
+            <div class="modal fade modal-diagrama" id="modalImagen" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <img src="../../DocumentosProceso/Diagramas/Procesos CEDIS-SURTIDO DE PEDIDOS.svg" 
+                                 class="img-fluid" 
+                                 alt="Diagrama completo de proceso">
                         </div>
-                        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
-                                data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                        </div>
-                    </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                     </div>
                 </div>
+            </div>
 
             <!-- Formatos-->
             <div class="formato">
-                    <div class="titulo">
-                        <h2>Formatos utilizados en este proceso</h2>
-                    </div>
-                    
-                    <!-- Linea divisora-->
-                    <div class="linea-divisora"></div>
+                <div class="titulo">
+                    <h2>Formatos utilizados en este proceso</h2>
+                </div>
+                
+                <!-- Linea divisora-->
+                <div class="linea-divisora"></div>
 
-                    <!-- En casa contenedor vamos a mandar el titulo del formato, la direccion de la imgen, tamaño (solo si es necesario), y la ruta para poder descargar el formato-->
-                    <div class="contenedor">
-                    <!-- Formato de hoja de surtido para TO -->
+                <!-- En cada contenedor vamos a mandar el titulo del formato, la direccion de la imagen, tamaño (solo si es necesario), y la ruta para poder descargar el formato-->
+                <div class="contenedor">
 
+                    <!-- Marbete de mercancia surtida-->
                     <button class="btn open-offcanvas" 
-                            data-img="../../Documentos/imagenes-procesos/Hoja-Surtido.png"
-                            data-size="large" 
-                            data-download="../../Documentos/Hoja de surtido de TO.xlsx">
-                    Hoja de surtido para TO 
-                    </button>
+                            data-img="../../Documentos/imagenes-procesos/mercancia_surtida.png"
+                            data-size="large"
+                            data-download="#">
+                    Marbete "marcancia surtida"
+                    </button> 
+                    
+                    <!-- Boton que nos manda la link de la app-->
+                    <a href="https://play.google.com/store/apps/details?id=com.tecit.android.bluescanner.office&hl=es_MX" class="botonapp btn" target="_blank">
+                        <div class="imagen_boton logo_scanit"></div>
+                        <div class="texto">
+                            <p>Scan-IT</p>
+                        </div>
+                    </a>
 
-                    <!-- Bitacora de seguimiento para TO-->
+                    <!-- Boton que nos manda la link de NetSuite-->
+                    <a href="https://system.netsuite.com/pages/customerlogin.jsp" class="botonapp btn" target="_blank">
+                        <div class="imagen_boton logo_netsuite"></div>
+                        <div class="texto">
+                            <p>NetSuite </p>
+                        </div>
+                    </a>
+
+                    <!-- Marbete para la activacion-->
                     <button class="btn open-offcanvas" 
                             data-img="../../Documentos/imagenes-procesos/bitacora-seguimientoo-to.png"
-                            data-size="xlarge" 
+                            data-size="xlarge"
                             data-download="#">
                     Bitacora de seguimiento TO
-                    </button>
+                    </button> 
 
-                    <!-- Marberte para la activacion-->
+                    <!-- Marbete para la activacion-->
                     <button class="btn open-offcanvas" 
                             data-img="../../Documentos/imagenes-procesos/marberte-amarillo.png"
                             data-download="#">
-                    Marbete para activación
+                    Marbete "para activar"
                     </button> 
-
-                    <!-- Marberte de mercancia surtida-->
-                    <button class="btn open-offcanvas" 
-                            data-img="../../Documentos/imagenes-procesos/mercancia_surtida.png"
-                            data-size="large" 
-                            data-download="#">
-                    Marbete de mercancia surtida
-                    </button> 
-                    </div>
-
+                </div>
             </div>
+
+            <!-- Seccion donde el canvas recibe la informacion de los botones para poder mostrarla -->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="dynamicOffcanvas" aria-labelledby="dynamicOffcanvasLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="dynamicOffcanvasLabel">Título por defecto</h5>
@@ -161,7 +170,18 @@
                 </div>
                 <div class="offcanvas-body">
                     <img id="offcanvasImage" src="" alt="" class="img-offcanvas">
-                    <a id="offcanvasDownload" href="#" class="btn boton_dowload" download="">Descargar</a>
+                    <a id="offcanvasDownload" href="#" class="btn boton_dowload mt-3" download="">Descargar</a>
+                </div>
+            </div>
+
+            <!-- Genera un canvas, pero este contiene un iframe con un documento pdf -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF1" aria-labelledby="offcanvasPDFLabel" style="width: 70%;">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasPDFLabel">Bitácora de seguimiento TO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                </div>
+                <div class="offcanvas-body" style="padding: 0;">
+                    <iframe src="" width="100%" height="100%"></iframe>
                 </div>
             </div>
         </div>     
