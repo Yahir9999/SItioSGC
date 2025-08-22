@@ -17,7 +17,7 @@ main {
 
 /* Offcanvas responsivo */
 #offcanvasRight {
-    width: 80% !important; /* Más ancho en móviles */
+    width: 60% !important; /* Más ancho en móviles */
 }
 
 /* Contenedores de las tarjetas */

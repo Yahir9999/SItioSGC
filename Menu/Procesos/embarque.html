@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="../../CSS/header_footer.css">
   <link rel="stylesheet" href="../../CSS/procesos-g.css">
   <script src="../../Script/canvas.js"  defer></script>
+    <script>
+        if(sessionStorage.getItem("logueado") !== "true"){
+            window.location.href = "../Inicio de Sesion/Inicio.html";
+        }
+  </script>
   <title>Embarque</title>
 </head>
 <body>  

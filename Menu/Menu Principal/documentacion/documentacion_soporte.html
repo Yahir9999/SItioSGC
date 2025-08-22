@@ -10,6 +10,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
   <script src="../../../Script/modal_documentacion.js"></script>
+    <script>
+        if(sessionStorage.getItem("logueado") !== "true"){
+            window.location.href = "../../Inicio de Sesion/Inicio.html";
+        }
+  </script>
   <title>Documentacion de Soporte</title>
 </head>
 <body>
