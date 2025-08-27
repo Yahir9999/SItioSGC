@@ -195,3 +195,9 @@ button:hover .texto-hover {
     opacity: 1; /* visible al pasar el mouse */
 }
 
+/* Contenedor de botones*/
+.contenedor_botones{
+  display: flex;
+  justify-content: space-between;
+
+}

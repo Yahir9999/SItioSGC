@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     item.addEventListener("click", function() {
       selectedPdf = this.getAttribute("data-pdf");
     });
-  });
+  }); 
 
   loginBtn.addEventListener("click", async function() {
     const usuario = username.value.trim();
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const puesto = userRow[1]; // Columna "puesto"
 
         if (puesto === "Gerente") {
-          // ✅ Usuario correcto y con puesto Gerente
+          // Usuario correcto y con puesto Gerente
           const modalElement = document.getElementById("loginModal");
           const modalInstance = bootstrap.Modal.getInstance(modalElement) || new bootstrap.Modal(modalElement);
           modalInstance.hide();

@@ -11,18 +11,21 @@
                     const direccion = button.getAttribute('data-direction');
                     const iframe = button.getAttribute('data-iframe');
                     const directorio = button.getAttribute('data-directorio');
+                    const layout = button.getAttribute('data-layout');
 
                     // Obtener elementos del modal
                     const titulo_cedi = document.getElementById('tituloModal');
-                    const direccion_cedi = document.getElementById('direccionModal');
+                    const direccion_cedi = document.getElementById('UbicacionCEDI');
                     const iframe_cedi = document.getElementById('modaliFrame');
                     const directorios_cedis = document.getElementById('directorioModal');
+                    const layout_cedis = document.getElementById('Layout');
 
                     // Asignar valores
                     titulo_cedi.textContent = titulo;
                     direccion_cedi.textContent = direccion;
                     iframe_cedi.src = iframe;
                     directorios_cedis.href = directorio;
+                    layout_cedis.href = layout;
 
                     // Mostrar modal
                     modal.show();
