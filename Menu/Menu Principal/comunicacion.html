@@ -75,9 +75,21 @@
                         </ul>
                         </li>
 
-                        <!-- Boton que nos dirige a la seccion de las instalaciones-->
-                        <li class="nav-item">
-                        <a class="nav-link" href="CEDIS.html">Nuestras instalaciones</a>
+                        <!-- Boton principal del menu principal que nos enseña los apartados de nuestros CEDIS-->
+                        <li class="nav-item dropdown custom-dropdown-hover">
+                            <a
+                              class="nav-link dropdown-toggle"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              Nosotros
+                            </a>
+                         <!-- Submenu del menu despegable-->    
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../Menu Principal/CEDIS.html">Presencia CEDIS</a></li>
+                            <li><a class="dropdown-item" href="../Menu Principal/estructura_cedis.html">Estructura CEDIS</a></li>
+                        </ul>
                         </li>
 
                         <!-- Boton que nos dirige a la seccion de los indicadores -->
@@ -138,6 +150,53 @@
                     </div> 
                 </div>
                 </div>
+
+            <!-- Miniatura de la imagen--> 
+                <div class="contenedor_imagen">
+                    <img src="../../DocumentosProceso/comunicado-1.jpeg" class="img-thumbnail" 
+                    data-bs-toggle="modal" data-bs-target="#modalCarrusel" style="cursor:pointer;">
+
+                <!-- Modal -->
+                <div class="modal fade" id="modalCarrusel" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content">
+                    <div class="modal-body">
+
+                        <!-- Carrusel dentro del modal -->
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+                        </div>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                            <img src="../../DocumentosProceso/comunicado-1.jpeg" class="d-block w-100" alt="Imagen 1">
+                            </div>
+                            <div class="carousel-item">
+                            <img src="../../DocumentosProceso/comunicado-2.jpeg" class="d-block w-100" alt="Imagen 2">
+                            </div>
+                            <div class="carousel-item">
+                            <img src="../../DocumentosProceso/comunicado-3.jpeg" class="d-block w-100" alt="Imagen 3">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                        </div>
+                        <!-- Fin del carrusel -->
+
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                </div>   
 
                 
         </div>

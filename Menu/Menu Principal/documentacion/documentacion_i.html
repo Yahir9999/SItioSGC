@@ -17,32 +17,37 @@
   <title>Documentacion Interna</title>
 </head>
 <body>
+        <!--Header, el cual contiene el logo y nuestro menu-->
         <header>
-            <div class="logo"> 
+            <!-- Logo empresarial-->
+            <div class="logo">
 
             </div>
 
+            <!-- Seccion para el menu de navegación-->
             <div class="menu">
                 <nav class="navbar navbar-expand-lg bg-white navbar-light">
                 <div class="container-fluid">
+                    <!-- Boton para regresar al menu principal-->
                     <a class="navbar-brand" href="../../../index.html">Inicio</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
-                        <!-- Menu Despegable-->
+                        <!-- Boton principal del menu despegable (para la seccion de procesos)-->
                         <li class="nav-item dropdown custom-dropdown-hover">
                             <a
                               class="nav-link dropdown-toggle"
-                              href="../procesoCEDIS.html"
+                              href="../../Menu Principal/procesoCEDIS.html"
                               role="button"
                               data-bs-toggle="dropdown"
                               aria-expanded="false"
-                              onclick="window.location.href='../procesoCEDIS.html'"
+                              onclick="window.location.href='../../Menu Principal/procesoCEDIS.html'"
                             >
                               Procesos CEDIS
                             </a>
+                        <!-- Submenu del menu despegable-->     
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="../../Procesos/recibo.html">Recibo</a></li>
                             <li><a class="dropdown-item" href="../../Procesos/surtido.html">Surtido</a></li>
@@ -53,7 +58,7 @@
                         </ul>
                         </li>
 
-                        <!-- Menu despegable-->
+                        <!-- Boton principal del menu despegable (Para la seccion de la documentación)-->
                         <li class="nav-item dropdown custom-dropdown-hover">
                             <a
                               class="nav-link dropdown-toggle"
@@ -63,25 +68,38 @@
                             >
                               Documentación
                             </a>
+                         <!-- Submenu del menu despegable-->    
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="documentacion_i.html">Interna</a></li>
-                            <li><a class="dropdown-item" href="documentacion_soporte.html">Soporte</a></li>
+                            <li><a class="dropdown-item" href="../../Menu Principal/documentacion/documentacion_i.html">Interna</a></li>
+                            <li><a class="dropdown-item" href="../../Menu Principal/documentacion/documentacion_soporte.html">Soporte</a></li>
                         </ul>
                         </li>
 
-                        <!-- Menu individual-->
-                        <li class="nav-item">
-                        <a class="nav-link" href="../CEDIS.html">Nuestras instalaciones</a>
-                        </li> 
-
-                        <!-- Menu individual-->
-                        <li class="nav-item">
-                        <a class="nav-link" href="../indicadores.html">Indicadores</a>
+                        <!-- Boton principal del menu principal que nos enseña los apartados de nuestros CEDIS-->
+                        <li class="nav-item dropdown custom-dropdown-hover">
+                            <a
+                              class="nav-link dropdown-toggle"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              Nosotros
+                            </a>
+                         <!-- Submenu del menu despegable-->    
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../../Menu Principal/CEDIS.html">Presencia CEDIS</a></li>
+                            <li><a class="dropdown-item" href="../../Menu Principal/estructura_cedis.html">Estructura CEDIS</a></li>
+                        </ul>
                         </li>
 
-                        <!-- Menu individual-->
+                        <!-- Boton que nos dirige a la seccion de los indicadores -->
                         <li class="nav-item">
-                        <a class="nav-link active" href="../comunicacion.html">Comunicación SGC</a>
+                        <a class="nav-link" href="../../Menu Principal/indicadores.html">Indicadores</a>
+                        </li>
+
+                        <!-- Boton que nos dirige a la seccion de comunicacion del sistema de gestion de calidad-->
+                        <li class="nav-item">
+                        <a class="nav-link" href="../../Menu Principal/comunicacion.html">Comunicación SGC</a>
                         </li>
 
                     </ul>
@@ -89,7 +107,9 @@
                 </div>
                 </nav>
             </div>
+
         </header>
+
 
     <main>
       <!-- Conteniedo de las politicas-->

@@ -70,9 +70,21 @@
                         </ul>
                         </li>
 
-                        <!-- Menu individual-->
-                        <li class="nav-item">
-                        <a class="nav-link" href="../CEDIS.html">Nuestras instalaciones</a>
+                        <!-- Boton principal del menu principal que nos enseña los apartados de nuestros CEDIS-->
+                        <li class="nav-item dropdown custom-dropdown-hover">
+                            <a
+                              class="nav-link dropdown-toggle"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              Nosotros
+                            </a>
+                         <!-- Submenu del menu despegable-->    
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../../Menu Principal/CEDIS.html">Presencia CEDIS</a></li>
+                            <li><a class="dropdown-item" href="../../Menu Principal/estructura_cedis.html">Estructura CEDIS</a></li>
+                        </ul>
                         </li>
 
                         <!-- Menu individual-->
@@ -152,6 +164,13 @@
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseExample5"
                       data-bs-parent="#accordionExample">Politica de administración y uso de caja chica</a></li>
+
+              <!-- Opción que nos va a permitir descargar el documento para requisión de compra-->  
+               <li><a class="dropdown-item" 
+                      href="../../../DocumentosProceso/Requisición de compra.xlsx"
+                      download="Formato_requision_compra.xlsx">
+                    Formato de requisión de compra
+               </a></li>      
             </ul>
           </div>
         </div>
@@ -167,17 +186,30 @@
               <span class="visually-hidden"> </span>
             </button>
               <ul class="dropdown-menu">
+
+                <!-- Selección para visualizar el documento en pdf de los movimientos de personal y ajustes salariales -->
                 <li><a class="dropdown-item" href="#" 
                         data-bs-target="#loginModal" 
                         data-bs-toggle="modal"
+                        data-action="view"
                         data-pdf="../../../Documentos/CH-NM-PR-03 Movimientos de personal y ajustes salariales en sistema V02.pdf#toolbar=0&navpanes=0">
                         Movimientos de personal y ajustes salarial</a></li>
-
+                
+                <!-- Selección para visualizar el documento en pdf de solicitud y comprobación de viaticos-->        
                 <li><a class="dropdown-item" href="#"
                         data-bs-target="#loginModal"
                         data-bs-toggle="modal"
+                        data-action="view"
                         data-pdf="../../../Documentos/PO-VI-DCH-02 Solicitud y Comprobación de Viáticos V02.pdf#toolbar=0&navpanes=0">
                         Solicitud y comprobación de viáticos</a></li>
+
+                <!-- selección para descargar el documento de solicitud y comprobación de viaticos-->
+                 <li><a class="dropdown-item" href="#"
+                        data-bs-target="#loginModal"
+                        data-bs-toggle="modal"
+                        data-action="download"
+                        data-file="../../../DocumentosProceso/Formato de solicitud, comprobación y reembolso de viáticos.xlsx">
+                        Solicitud y comprobación de viáticos (Formato)</a></li>        
               </ul>
           </div>
         </div>

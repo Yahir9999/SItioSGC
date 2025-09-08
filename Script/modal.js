@@ -12,6 +12,7 @@
                     const iframe = button.getAttribute('data-iframe');
                     const directorio = button.getAttribute('data-directorio');
                     const layout = button.getAttribute('data-layout');
+                    const tarifario = button.getAttribute("data-tarifario");
 
                     // Obtener elementos del modal
                     const titulo_cedi = document.getElementById('tituloModal');
@@ -19,6 +20,7 @@
                     const iframe_cedi = document.getElementById('modaliFrame');
                     const directorios_cedis = document.getElementById('directorioModal');
                     const layout_cedis = document.getElementById('Layout');
+                    const tarifario_cedis = document.getElementById('Tarifario');
 
                     // Asignar valores
                     titulo_cedi.textContent = titulo;
@@ -26,6 +28,7 @@
                     iframe_cedi.src = iframe;
                     directorios_cedis.href = directorio;
                     layout_cedis.href = layout;
+                    tarifario_cedis.href = tarifario;
 
                     // Mostrar modal
                     modal.show();
