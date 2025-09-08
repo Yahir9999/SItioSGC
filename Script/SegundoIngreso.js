@@ -4,7 +4,7 @@ const mensaje = document.getElementById("notificacion");
 
 // Datos de la cuenta principal que va a tener el ingreso para agregar cuentas
 const usuarioValido = {
-  correo: "sistemadegestiondecalidad@gmail.com",
+  correo: "sistemadegestiondecalidadvna@gmail.com",
   password: "SGCCEDIS2025"
 };
 
