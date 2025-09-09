@@ -1,0 +1,76 @@
+
+    /* Estilos generales */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f6fa;
+      color: #1c2c5b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Contenedor */
+    .mantenimiento {
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    /* Ícono animado */
+    .icono {
+      font-size: 6rem;
+      animation: giro 3s infinite linear;
+      margin-bottom: 1rem;
+    }
+
+    /* Título */
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      animation: subir 1.5s ease-in-out;
+    }
+
+    /* Texto secundario */
+    p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      opacity: 0.8;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    /* Animaciones */
+    @keyframes giro {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes subir {
+      0% { transform: translateY(40px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* Botón */
+    .btn {
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      background-color: #1c2c5b;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #2e448f;
+      transform: scale(1.05);
+    }
