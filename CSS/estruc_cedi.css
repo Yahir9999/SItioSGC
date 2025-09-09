@@ -1,26 +1,30 @@
 
 main{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1.5rem;
+    min-height: 80vh;
 }
 
 /* Titulo de la pagina principal del apartado*/
 .titulo{
-  width: 90vw;
-  height: 20vh;
-  color: white;
-  background-color: #1C2C5B;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Separa cada letra*/
-  letter-spacing: 5px;
-  font-family: "Archivo Black", sans-serif;
-  font-weight: 400;
-  font-style: normal; 
+    width: 100%;
+    min-height: 100px;
+    background-color: #1c2c5b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px; 
 }
 
 /* Contenedor general de todos los elementos */
@@ -44,23 +48,6 @@ main{
     justify-content: center;
 }
 
-.estructura_2 {
-    flex: 1 1 300px;
-    max-width: 350px; 
-    aspect-ratio: 1 / 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2em;
-    background: #f5f7ff;
-    border-left: 10px solid #1c2c5b; /* acento lateral */
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    color: #1c2c5b;
-}
-
-
-
 /* Imagen dentro de cada bloque */
 .estructura img{
     width: 100%;
@@ -82,18 +69,21 @@ main{
     max-width: 100%;
   }
 
-  .estructura_2{
-    flex: 1 1 100%;     
-    max-width: 100%;
-  }
-
 }
 
-/* Diseño para el texto que explica los tipos de organigramas */
-.estructura_2 p{
-  text-align: center;
-  font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
-  font-style: normal;
+/* Contenedor donde se explica lo relacionado con la estructura*/
+.informacion{
+    width: 100%;
+    min-height: 100px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
 }
 

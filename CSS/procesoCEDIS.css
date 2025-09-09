@@ -192,3 +192,6 @@ main {
 .imagen4 { background-image: url(../Imagenes/Embarque.svg); }
 .imagen5 { background-image: url(../Imagenes/Reparaciones.svg); }
 .imagen6 { background-image: url(../Imagenes/Recuperación.svg); }
+
+/* Botones dentro del modal que nos ayudan hacer zoom*/
+

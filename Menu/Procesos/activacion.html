@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../../CSS/header_footer.css">
   <link rel="stylesheet" href="../../CSS/procesos-g.css">
   <script src="../../Script/canvas.js"  defer></script>
+  <script src="../../Script/zoom.js" defer></script>
     <script>
         if(sessionStorage.getItem("logueado") !== "true"){
             window.location.href = "../Inicio de Sesion/Inicio.html";
@@ -113,17 +114,28 @@
             </div>
 
             <!-- Modal para el diagrama a pantalla completa - MEJORADO -->
+
             <div class="modal fade modal-diagrama" id="modalImagen" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <img src="../../DocumentosProceso/Diagramas/Procesos CEDIS-ACTIVACIÓN DE MOTOCICLETAS.svg" 
-                                 class="img-fluid" 
-                                 alt="Diagrama completo de proceso">
-                        </div>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                <div class="modal-body text-center" style="overflow: hidden; position: relative;">
+                    <div class="zoom-container" style="display: inline-block; cursor: grab;">
+                    <img src="../../DocumentosProceso/Diagramas/Procesos CEDIS-ACTIVACIÓN DE MOTOCICLETAS.svg" 
+                        class="zoomable"
+                        style="max-width: 90%; transform-origin: center center; transition: transform 0.2s ease;"
+                        alt="Diagrama completo de proceso">
+                    </div>
+
+                    <!-- Controles de zoom -->
+                    <div class="zoom-controls position-absolute bottom-0 end-0 m-3 d-flex flex-column gap-2">
+                    <button class="zoom-in">+</button>
+                    <button class="zoom-out">−</button>
+                    <button class="zoom-reset">↺</button>
                     </div>
                 </div>
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+                </div>
+            </div>
             </div>
 
             <!-- Formatos-->
