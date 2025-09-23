@@ -300,7 +300,6 @@
 /* Diseño del texto tipo carrusel */
 .contenedor_texto {
     height: 4vh;
-    margin: 0 0 20px 0;
     width: 80%;
     display: flex;
     align-items: center;
