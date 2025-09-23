@@ -184,10 +184,8 @@
                     </button> 
 
                     <!--  Checklist para motos  -->
-                    <button class="btn open-offcanvas" 
-                            data-img="../../Documentos/checklist_motos.png"
-                            data-download="#">
-                    Checklist para motos
+                    <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPDF2" aria-controls="offcanvasPDF">
+                    Checklist para motocicletas
                     </button>
                     
 
@@ -222,7 +220,7 @@
                 </div>
             </div>
 
-             <!-- Offcanvas para el reporte diario de recuperacion de madera -->
+             <!-- Offcanvas para el chelist de vehiculo -->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF1" aria-labelledby="offcanvasPDFLabel" style="width: 50%;">
                     <div class="offcanvas-header">
                                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
@@ -231,6 +229,21 @@
                                 <iframe src="../../Documentos/Checklist Vehiculos.pdf#toolbar=0&navpanes=0" width="85%" height="80%"></iframe>
                                 <div class="p-3">
                                     <a href="../../Documentos/Checklist Vehiculos.pdf" class="btn boton_dowload" download>
+                                        Descargar documento 
+                                    </a>
+                                </div>
+                            </div>
+            </div>
+
+            <!-- Offcanvas para el chelist de motocicletas  -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF2" aria-labelledby="offcanvasPDFLabel" style="width: 30%;">
+                    <div class="offcanvas-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                            </div>
+                            <div class="offcanvas-body" style="padding: 0;">
+                                <img src="../../Documentos/checklist_motos.png" alt="" width="85%" height="80%">
+                                <div class="p-3">
+                                    <a href="../../Documentos/checklist_motos.png" class="btn boton_dowload" download>
                                         Descargar documento 
                                     </a>
                                 </div>
