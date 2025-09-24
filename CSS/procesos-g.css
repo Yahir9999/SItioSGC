@@ -24,9 +24,10 @@
 
         /* Contenedor del diagrama mejorado */
         .diagrama-container {
-            width: 100%;
+            width: auto;
             display: flex;
             justify-content: center;
+            background-color: white;
             margin: 1em 0;
         }
 
