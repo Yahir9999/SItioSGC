@@ -117,26 +117,26 @@
             <!-- Modal para el diagrama a pantalla completa - MEJORADO -->
 
             <div class="modal fade modal-diagrama" id="modalImagen" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-xl">
-                <div class="modal-content">
-                <div class="modal-body text-center" style="overflow: hidden; position: relative;">
-                    <div class="zoom-container" style="display: inline-block; cursor: grab;">
-                    <img src="../../DocumentosProceso/Diagramas/Procesos CEDIS-RECIBO Y ALMACENAMIENTO DE MERCANCÍA.svg" 
-                        class="zoomable"
-                        style="max-width: 75%; transform-origin: center center; transition: transform 0.2s ease;"
-                        alt="Diagrama completo de proceso">
-                    </div>
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-body text-center" style="overflow: hidden; position: relative;">
+                            <div class="zoom-container" style="display: inline-block; cursor: grab;">
+                            <img src="../../DocumentosProceso/Diagramas/Procesos CEDIS-RECIBO Y ALMACENAMIENTO DE MERCANCÍA.svg" 
+                                class="zoomable"
+                                style="max-width: 70%; transform-origin: center center; transition: transform 0.2s ease;"
+                                alt="Diagrama completo de proceso">
+                            </div>
 
-                    <!-- Controles de zoom -->
-                    <div class="zoom-controls position-absolute bottom-0 end-0 m-3 d-flex flex-column gap-2">
-                    <button class="zoom-in">+</button>
-                    <button class="zoom-out">−</button>
-                    <button class="zoom-reset">↺</button>
+                            <!-- Controles de zoom -->
+                            <div class="zoom-controls position-absolute bottom-0 end-0 m-3 d-flex flex-column gap-2">
+                            <button class="zoom-in">+</button>
+                            <button class="zoom-out">−</button>
+                            <button class="zoom-reset">↺</button>
+                            </div>
+                        </div>
+                    <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
                     </div>
                 </div>
-                <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
-                </div>
-            </div>
             </div>
 
             <!-- Formatos-->
@@ -144,14 +144,14 @@
 
                 <!-- Texto informativo sobre el proceso-->
                 <div class="contenedor_texto">
-                <div class="carril">
-                    <span class="texto2">
-                    Es responsabilidad del dueño del proceso comunicar al área del Sistema de Gestión de Calidad (SGC) cualquier cambio o modificación en los procesos operativos de los CEDIS, con el fin de garantizar la actualización, vigencia y correcta difusión.          
-                    </span>
-                    <span class="texto2">
-                         Es responsabilidad del dueño del proceso comunicar al área del Sistema de Gestión de Calidad (SGC) cualquier cambio o modificación en los procesos operativos de los CEDIS, con el fin de garantizar la actualización, vigencia y correcta difusión.
-                    </span>
-                </div>
+                    <div class="carril">
+                        <span class="texto2">
+                        Es responsabilidad del dueño del proceso comunicar al área del Sistema de Gestión de Calidad (SGC) cualquier cambio o modificación en los procesos operativos de los CEDIS, con el fin de garantizar la actualización, vigencia y correcta difusión.          
+                        </span>
+                        <span class="texto2">
+                            Es responsabilidad del dueño del proceso comunicar al área del Sistema de Gestión de Calidad (SGC) cualquier cambio o modificación en los procesos operativos de los CEDIS, con el fin de garantizar la actualización, vigencia y correcta difusión.
+                        </span>
+                    </div>
                 </div>
 
                 <!-- Linea divisora-->
@@ -174,7 +174,7 @@
                     Control de recepción de mercancía
                     </button> 
 
-                    <!-- Control de recepcion de mercancía -->
+                    <!-- Reporte de incidencias de almacén -->
                     <button class="btn open-offcanvas" 
                             data-img="../../Documentos/imagenes-procesos/ReportedeIncidencias.png"
                             data-size="large" 
@@ -182,7 +182,7 @@
                     Reporte de incidencias de almacén
                     </button> 
 
-                    <!-- Marbete de mercancia surtida-->
+                    <!-- Código de colores PEPS -->
                     <button class="btn open-offcanvas" 
                             data-img="../../Imagenes/Código de colores PEPS.svg"
                             data-download="#">
@@ -205,7 +205,7 @@
                 </div>
             </div>
 
-            <!-- Genera un canvas, pero este contiene un iframe con un documento pdf -->
+            <!-- Genera un canvas, pero este contiene un iframe con un documento pdf
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF1" aria-labelledby="offcanvasPDFLabel" style="width: 70%;">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasPDFLabel">Bitácora de seguimiento TO</h5>
@@ -215,6 +215,7 @@
                     <iframe src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" width="100%" height="100%"></iframe>
                 </div>
             </div>
+             -->
         </div>     
     </main>
 
