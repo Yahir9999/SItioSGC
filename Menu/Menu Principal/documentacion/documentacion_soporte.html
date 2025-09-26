@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
   <script src="../../../Script/modal_documentacion.js"></script>
+
+  <!-- Apartado para poder evitar que se acceda directamente a cualquier pagina sin iniciar sesión, esto verifica si ya hubo un inicio de sesion, de lo contrario te envia al inicio de sesión -->
     <script>
         if(sessionStorage.getItem("logueado") !== "true"){
             window.location.href = "../../Inicio de Sesion/Inicio.html";
@@ -18,11 +20,14 @@
   <title>Documentacion de Soporte</title>
 </head>
 <body>
+        <!--Header, el cual contiene el logo y nuestro menu-->
         <header>
+            <!-- Logo empresarial-->
             <div class="logo">
 
             </div>
 
+            <!-- Seccion para el menu de navegación-->
             <div class="menu">
                 <nav class="navbar navbar-expand-lg bg-white navbar-light">
                 <div class="container-fluid">
@@ -32,7 +37,7 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
-                        <!-- Menu Despegable-->
+                        <!-- Boton principal del menu despegable (para la seccion de procesos)-->
                         <li class="nav-item dropdown custom-dropdown-hover">
                             <a
                               class="nav-link dropdown-toggle"
@@ -44,6 +49,7 @@
                             >
                               Procesos CEDIS
                             </a>
+                        <!-- Submenu del menu despegable-->
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="../../Procesos/recibo.html">Recibo</a></li>
                             <li><a class="dropdown-item" href="../../Procesos/surtido.html">Surtido</a></li>
@@ -54,7 +60,7 @@
                         </ul>
                         </li>
 
-                        <!-- Menu despegable-->
+                        <!-- Boton principal del menu despegable (Para la seccion de la documentación)-->
                         <li class="nav-item dropdown custom-dropdown-hover">
                             <a
                               class="nav-link dropdown-toggle"
@@ -64,6 +70,8 @@
                             >
                               Documentación
                             </a>
+
+                        <!-- Submenu del menu despegable-->    
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="documentacion_i.html">Interna</a></li>
                             <li><a class="dropdown-item" href="documentacion_soporte.html">Soporte</a></li>
@@ -87,12 +95,12 @@
                         </ul>
                         </li>
 
-                        <!-- Menu individual-->
+                        <!-- Boton que nos dirige a la seccion de los indicadores -->
                         <li class="nav-item">
                         <a class="nav-link" href="../indicadores.html">Indicadores</a>
                         </li>
 
-                        <!-- Menu individual-->
+                        <!-- Boton que nos dirige a la seccion de comunicacion del sistema de gestion de calidad-->
                         <li class="nav-item">
                         <a class="nav-link active" href="../comunicacion.html">Comunicación SGC</a>
                         </li>

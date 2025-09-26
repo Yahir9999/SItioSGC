@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="../../CSS/procesos-g.css">
   <script src="../../Script/canvas.js"  defer></script>
   <script src="../../Script/zoom.js" defer></script>
+
+  <!-- Apartado para poder evitar que se acceda directamente a cualquier pagina sin iniciar sesión, esto verifica si ya hubo un inicio de sesion, de lo contrario te envia al inicio de sesión -->
     <script>
         if(sessionStorage.getItem("logueado") !== "true"){
             window.location.href = "../Inicio de Sesion/Inicio.html";
@@ -24,13 +26,14 @@
             <div class="menu">
                 <nav class="navbar navbar-expand-lg bg-white navbar-light">
                 <div class="container-fluid">
+                    <!-- Link que nos lleva al inicio de nuestra pagina -->
                     <a class="navbar-brand" href="../../index.html">Inicio</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
-                        <!-- Menu Despegable-->
+                        <!-- Menu Despegable con todos los procesos de un CEDI -->
                         <li class="nav-item dropdown custom-dropdown-hover">
                             <a
                               class="nav-link active dropdown-toggle"
@@ -52,7 +55,7 @@
                         </ul>
                         </li>
 
-                        <!-- Menu despegable-->
+                        <!--  Menu despegable de los tipos de documentacion -->
                         <li class="nav-item dropdown custom-dropdown-hover">
                             <a
                               class="nav-link dropdown-toggle"
@@ -85,12 +88,12 @@
                         </ul>
                         </li>
 
-                        <!-- Menu individual-->
+                        <!-- Boton que nos manda a la seccion de indicadores -->
                         <li class="nav-item">
                         <a class="nav-link" href="../Menu Principal/indicadores.html">Indicadores</a>
                         </li>
 
-                        <!-- Menu individual-->
+                        <!-- Boton que nos manda a la seccion de comunicacion SGC -->
                         <li class="nav-item">
                         <a class="nav-link" href="../Menu Principal/comunicacion.html">Comunicación SGC</a>
                         </li>
@@ -114,7 +117,7 @@
                      alt="Diagrama de proceso CEDIS-SURTIDO DE PEDIDOS">
             </div>
 
-            <!-- Modal para el diagrama a pantalla completa - MEJORADO -->
+            <!-- Modal para el diagrama a pantalla completa -->
 
             <div class="modal fade modal-diagrama" id="modalImagen" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-xl">

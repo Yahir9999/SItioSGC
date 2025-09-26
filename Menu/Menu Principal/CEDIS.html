@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
   <script src="../../Script/modal.js" defer></script>
+
+  <!-- Apartado para poder evitar que se acceda directamente a cualquier pagina sin iniciar sesión, esto verifica si ya hubo un inicio de sesion, de lo contrario te envia al inicio de sesión -->
     <script>
         if(sessionStorage.getItem("logueado") !== "true"){
             window.location.href = "../Inicio de Sesion/Inicio.html";

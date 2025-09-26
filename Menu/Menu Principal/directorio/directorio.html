@@ -1,8 +1,11 @@
+<!-- Esta sección pertenece a la seccion PRESENCIA VENTO (CEDIS.html) -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <title>Directorio</title>
+
+  <!-- Estilo de la imagen que se va a mostrar en otra pagina completa al hacer click -->
   <style>
     img {
       max-width: 100%;
@@ -13,8 +16,11 @@
   </style>
 </head>
 <body>
+
+  <!-- Contenedor de la imagen -->
   <div id="imagenContainer"></div>
 
+  <!-- Script que permite que cada que hagamos click en los botones de directorio dentro del apartado donde se muestra toda la información de los CEDIS, carga la imagen y cuando se vuelve hacer click en otro apartado borra el actual y lo sustituuye por el nuevo, ya que esto se aplica para todos los menu -->
   <script>
     const params = new URLSearchParams(window.location.search);
     const img = params.get('img');
