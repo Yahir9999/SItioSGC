@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (userRow) {
         const puesto = userRow[1];
 
-        if (puesto === "Gerente") {
+        if (puesto.startsWith("Gerente")) {
           const modalElement = document.getElementById("loginModal");
           const modalInstance = bootstrap.Modal.getInstance(modalElement) || new bootstrap.Modal(modalElement);
           modalInstance.hide();

@@ -37,11 +37,19 @@ main{
   
 }
 
-/* Boton que nos muestra informacion de CEDI ixtapaluca*/
+/* Boton que nos muestra informacion de CEDI chalco*/
 .boton3{
   position: relative;
   left: 45%;
   top: 63%;
+
+}
+
+/* Boton que nos muestra informacion de CEDI villahermosa*/
+.boton4{
+  position: relative;
+  left: 61%;
+  top: 70%;
 
 }
 
