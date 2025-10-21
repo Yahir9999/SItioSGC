@@ -8,6 +8,7 @@ registroformulario.addEventListener("submit", function(e){
     const nombre = document.getElementById("Nombre").value.trim();
     const apellido = document.getElementById("Apellido").value.trim();
     const puesto = document.getElementById("Puesto").value.trim();
+    const ubicacion = document.getElementById("Ubicacion").value.trim();
     const correo = document.getElementById("Correo").value.trim();
 
     // Creamos un número aleatorio para la contraseña
@@ -21,6 +22,7 @@ registroformulario.addEventListener("submit", function(e){
     data.append("accion", "guardar");
     data.append("correo", correo);
     data.append("puesto", puesto);
+    data.append("ubicacion", ubicacion);
     data.append("password", password);
 
     // URL de tu Web App de Google Apps Script
