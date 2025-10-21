@@ -42,6 +42,22 @@
                     <input type="text" id="Puesto" name="Puesto" class="form-control" autocomplete="off"/>
                 </div>
 
+                 <!-- NUEVO CAMPO: Ubicación -->
+                <div class="form-outline mb-3">
+                    <label class="form-label" for="Ubicacion">Ubicación:</label>
+                    <select id="Ubicacion" name="Ubicacion" class="form-select" required>
+                        <option value="" selected disabled>Selecciona una ubicación</option>
+                        <option value="CEDI Camarones">CEDI Camarones</option>
+                        <option value="CEDI Toluca">CEDI Toluca</option>
+                        <option value="CEDI Chalco">CEDI Chalco</option>
+                        <option value="CEDI Tultepec">CEDI Tultepec</option>
+                        <option value="CEDI Irapuato">CEDI Irapuato</option>
+                        <option value="CEDI Villahermosa">CEDI Villahermosa</option>
+                        <option value="Corporativo">Corporativo</option>
+                    </select>
+                </div>
+
+                <!-- sección en la que se coloca el correo electronico -->
                 <div class="form-outline mb-3">
                     <label class="form-label" for="Correo">Correo electrónico:</label>
                     <input type="mail" id="Correo" name="Correo" class="form-control" autocomplete="off"/>
