@@ -30,7 +30,7 @@ registroformulario.addEventListener("submit", function(e){
 
     fetch(url, {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+
         body: data
     })
     .then(response => response.json())
