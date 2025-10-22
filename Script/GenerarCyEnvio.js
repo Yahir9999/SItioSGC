@@ -8,7 +8,7 @@ registroformulario.addEventListener("submit", function(e){
     const nombre = document.getElementById("Nombre").value.trim();
     const apellido = document.getElementById("Apellido").value.trim();
     const puesto = document.getElementById("Puesto").value.trim();
-    const ubicacion = document.getElementById("Ubicacion").value.trim();
+    const ubicacion = document.getElementById("ubicacion").value.trim();
     const correo = document.getElementById("Correo").value.trim();
 
     // Creamos un número aleatorio para la contraseña
