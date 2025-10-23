@@ -34,24 +34,24 @@ document.querySelectorAll('.zoom-container').forEach(contenedor => {
   });
 
   // Arrastrar imagen
-  contenedor.addEventListener('mousedown', e => {
-    isDragging = true;
-    startX = e.clientX - posX;
-    startY = e.clientY - posY;
-    contenedor.style.cursor = "grabbing";
-  });
+ // contenedor.addEventListener('mousedown', e => {
+ //   isDragging = true;
+  //  startX = e.clientX - posX;
+  //  startY = e.clientY - posY;
+   // contenedor.style.cursor = "grabbing";
+ // });
 
-  document.addEventListener('mouseup', () => {
-    isDragging = false;
-    contenedor.style.cursor = "grab";
-  });
+  //document.addEventListener('mouseup', () => {
+   // isDragging = false;
+   // contenedor.style.cursor = "grab";
+ // });
 
-  document.addEventListener('mousemove', e => {
-    if (!isDragging) return;
-    posX = e.clientX - startX;
-    posY = e.clientY - startY;
-    applyTransform();
-  });
+ // document.addEventListener('mousemove', e => {
+   // if (!isDragging) return;
+   // posX = e.clientX - startX;
+  //  posY = e.clientY - startY;
+  //  applyTransform();
+  //});
 
   // Reset automático al abrir el modal
   modal.addEventListener('shown.bs.modal', () => {
