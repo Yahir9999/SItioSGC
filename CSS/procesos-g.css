@@ -330,3 +330,47 @@
     100% { transform: translateX(-50%); } /* se mueve hasta la mitad */
 }
 
+/* boton cerrar */
+.close-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn::before,
+.close-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 2px;
+  background-color: #ccc;
+  transform-origin: center;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-btn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.close-btn:hover::before,
+.close-btn:hover::after {
+  background-color: white;
+}
+
