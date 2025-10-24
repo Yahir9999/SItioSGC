@@ -15,7 +15,7 @@ document.querySelectorAll('.zoom-container').forEach(container => {
     image.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
   }
 
-  // --- Arrastre ---
+  // --- Arrastre con mouse ---
   container.addEventListener('mousedown', e => {
     if (scale <= 1) return;
     isDragging = true;
@@ -32,7 +32,7 @@ document.querySelectorAll('.zoom-container').forEach(container => {
     applyTransform();
   });
 
-  document.addEventListener('mouseup', e => {
+  document.addEventListener('mouseup', () => {
     if (!isDragging) return;
     isDragging = false;
     image.style.cursor = "grab";
@@ -48,9 +48,8 @@ document.querySelectorAll('.zoom-container').forEach(container => {
     const zoomFactor = e.deltaY < 0 ? 1.1 : 0.9;
     const newScale = Math.min(Math.max(scale * zoomFactor, 1), 10);
 
-    // Ajusta la posición para zoom centrado en cursor
-    posX -= (offsetX) * (newScale / scale - 1);
-    posY -= (offsetY) * (newScale / scale - 1);
+    posX -= offsetX * (newScale / scale - 1);
+    posY -= offsetY * (newScale / scale - 1);
 
     scale = newScale;
     applyTransform();
@@ -69,9 +68,8 @@ document.querySelectorAll('.zoom-container').forEach(container => {
       posX = 0; posY = 0;
     }
 
-    // Centrar zoom en cursor
-    posX -= (offsetX) * (scale - 1);
-    posY -= (offsetY) * (scale - 1);
+    posX -= offsetX * (scale - 1);
+    posY -= offsetY * (scale - 1);
 
     applyTransform();
   });
@@ -106,7 +104,6 @@ document.querySelectorAll('.zoom-container').forEach(container => {
       );
       const newScale = Math.min(Math.max(initialScale * (newDistance / initialDistance), 1), 10);
 
-      // Zoom centrado en el punto medio de los dedos
       const centerX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
       const centerY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
       const rect = image.getBoundingClientRect();
@@ -123,14 +120,52 @@ document.querySelectorAll('.zoom-container').forEach(container => {
     }
   }, { passive: false });
 
-  container.addEventListener('touchend', e => {
+  container.addEventListener('touchend', () => {
     touchDragging = false;
   });
 
   // --- Reset al abrir modal ---
-  modal.addEventListener('shown.bs.modal', () => {
-    scale = 1; posX = 0; posY = 0;
-    applyTransform();
-  });
+  if (modal) {
+    modal.addEventListener('shown.bs.modal', () => {
+      scale = 1; posX = 0; posY = 0;
+      applyTransform();
+    });
+  }
+
+  // --- Botones de control ---
+  const controls = container.parentElement.querySelector('.zoom-controls');
+const btnIn = controls.querySelector('.zoom-in');
+const btnOut = controls.querySelector('.zoom-out');
+const btnReset = controls.querySelector('.zoom-reset');
+
+  if (btnIn) {
+    btnIn.addEventListener('click', () => {
+      const newScale = Math.min(scale * 1.2, 10);
+      posX -= (image.clientWidth / 2) * (newScale / scale - 1);
+      posY -= (image.clientHeight / 2) * (newScale / scale - 1);
+      scale = newScale;
+      applyTransform();
+    });
+  }
+
+  if (btnOut) {
+    btnOut.addEventListener('click', () => {
+      const newScale = Math.max(scale / 1.2, 1);
+      posX -= (image.clientWidth / 2) * (newScale / scale - 1);
+      posY -= (image.clientHeight / 2) * (newScale / scale - 1);
+      scale = newScale;
+      applyTransform();
+    });
+  }
+
+  if (btnReset) {
+    btnReset.addEventListener('click', () => {
+      scale = 1;
+      posX = 0;
+      posY = 0;
+      applyTransform();
+    });
+  }
 });
+
 
