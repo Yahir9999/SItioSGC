@@ -26,7 +26,7 @@ main{
 .boton{
   position: relative;
   left: 54%;
-  top: 67%;    
+  top: 70%;    
 }
 
 /* Boton que nos muestra informacion de CEDI toluca*/
@@ -37,11 +37,11 @@ main{
   
 }
 
-/* Boton que nos muestra informacion de CEDI chalco*/
+/* Boton que nos muestra informacion de CEDI chalco7 ixtapaluca*/
 .boton3{
   position: relative;
   left: 45%;
-  top: 63%;
+  top: 61%;
 
 }
 
@@ -51,6 +51,14 @@ main{
   left: 61%;
   top: 70%;
 
+}
+
+/* Boton que nos muestra informacion de CEDI Chalco*/
+.boton5{
+  position: relative;
+   left: 43%;
+  top: 65%;
+  
 }
 
 /* Contenido del modal*/
