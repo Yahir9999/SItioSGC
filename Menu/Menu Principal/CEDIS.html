@@ -122,8 +122,25 @@
          <div class="titulo">
             <h1>PRESENCIA CEDIS VENTO</h1>
          </div>
+
         <!-- Contenedor de mapa con links para abrir informacion de cada CEDI-->
          <div class="republica">
+             <!-- Contenedor del recuadro con botones TIPO A Y B-->
+        <div class="estructura-cedis">
+            <h2>Estructura de los centros de distribución</h2>
+
+                <div class="contenedor-botones-estructura">
+                <button class="btn-tipo" onclick="mostrarImagen('imgA')">TIPO A</button>
+                <button class="btn-tipo" onclick="mostrarImagen('imgB')">TIPO B</button>
+                </div>
+
+                <!-- Contenedor donde aparecerán las imágenes -->
+                <div id="contenedor-imagenes-cedis">
+                <img id="imgA" class="img-cedis oculto" src="../../DocumentosProceso/Cedi Tipo A.svg" alt="CEDIS Tipo A">
+                <img id="imgB" class="img-cedis oculto" src="../../DocumentosProceso/Cedi tipo B.svg" alt="CEDIS Tipo B">
+                </div>
+
+        </div>
             <!-- Button trigger modal para Camarones (CDMX) -->
             <button class="open-modal btn boton"
                     type="button" 

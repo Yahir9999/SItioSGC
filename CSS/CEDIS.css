@@ -19,6 +19,7 @@ main{
   background-repeat: no-repeat;
   background-size: contain;
   margin-top: 0.75em;
+  position: relative; 
 }
 
 
@@ -233,3 +234,107 @@ button:hover .texto-hover {
   justify-content: space-between;
 
 }
+
+
+/* Recuadro para botones A Y B */
+.estructura-cedis {
+  position: absolute;
+  top: 45px;      /* ajusta según donde quieras colocarlo */
+  right: 45px;     /* o right: 25px; si lo quieres en la esquina derecha */
+  z-index: 8;
+  width: 300px;
+  height: auto;
+  background: rgba(255,255,255,0.8);
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.25);
+}
+
+
+.estructura-cedis h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1c2c5b;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+/* Botones */
+.contenedor-botones-estructura {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-tipo {
+  background-color: #1c2c5b !important; /* azul sólido */
+  color: white !important;              /* texto visible */
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+  display: inline-block; /* asegura que siempre tenga caja visible */
+  opacity: 1 !important; /* por si algún estilo los estaba volviendo transparentes */
+}
+
+
+.btn-tipo:hover {
+  background-color: #273b75;
+  transform: scale(1.05);
+}
+
+/* Resposivo para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .estructura-cedis {
+    width: 250px;
+    height: auto;
+    top: 100px;
+    right: 10px;
+  }
+
+  .estructura-cedis h2 {
+    font-size: 14px;
+  }
+
+  .btn-tipo {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+}
+
+
+/* imagenes de botones a y b */
+#contenedor-imagenes-cedis {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.img-cedis {
+  width: 400px; /* ajusta a gusto */
+  max-width: 90%;
+  border-radius: 10px;
+  display: none;
+}
+
+/* Clase para esconder */
+.oculto {
+  display: none;
+}
+
+/* Clase para mostrar con animación suave */
+.mostrar {
+  display: block;
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+
