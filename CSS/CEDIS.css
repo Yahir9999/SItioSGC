@@ -61,6 +61,23 @@ main{
   
 }
 
+
+/* Boton que nos muestra informacion de CEDI tultepec*/
+.boton6{
+  position: relative;
+  left: 36%;
+  top: 68%;  
+  
+}
+
+/* Boton que nos muestra informacion de CEDI irapuato*/
+.boton7{
+  position: relative;
+   left: 28%;
+  top: 60%;  
+  
+}
+
 /* Contenido del modal*/
 .modal-contenedor{
   display: flex;
