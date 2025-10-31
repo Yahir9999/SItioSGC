@@ -235,13 +235,12 @@ button:hover .texto-hover {
 
 }
 
-
-/* Recuadro para botones A Y B */
+/* Contenedor de botones A y B*/
 .estructura-cedis {
   position: absolute;
-  top: 45px;      /* ajusta según donde quieras colocarlo */
-  right: 45px;     /* o right: 25px; si lo quieres en la esquina derecha */
-  z-index: 8;
+  top: 25px;      /* ajusta según donde quieras colocarlo */
+  right: 25px;     /* o right: 25px; si lo quieres en la esquina derecha */
+  z-index: 5;
   width: 300px;
   height: auto;
   background: rgba(255,255,255,0.8);
@@ -250,6 +249,9 @@ button:hover .texto-hover {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.estructura-cedis {
   backdrop-filter: blur(4px);
   box-shadow: 0px 4px 8px rgba(0,0,0,0.25);
 }
@@ -263,11 +265,7 @@ button:hover .texto-hover {
   text-transform: uppercase;
 }
 
-/* Botones */
-.contenedor-botones-estructura {
-  display: flex;
-  gap: 10px;
-}
+
 
 .btn-tipo {
   background-color: #1c2c5b !important; /* azul sólido */
@@ -282,29 +280,17 @@ button:hover .texto-hover {
   opacity: 1 !important; /* por si algún estilo los estaba volviendo transparentes */
 }
 
-
-.btn-tipo:hover {
-  background-color: #273b75;
-  transform: scale(1.05);
+.contenedor-botones-estructura {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: center;
+  opacity: 1 !important;
 }
 
-/* Resposivo para pantallas pequeñas */
-@media screen and (max-width: 768px) {
-  .estructura-cedis {
-    width: 250px;
-    height: auto;
-    top: 100px;
-    right: 10px;
-  }
 
-  .estructura-cedis h2 {
-    font-size: 14px;
-  }
 
-  .btn-tipo {
-    padding: 6px 14px;
-    font-size: 12px;
-  }
-  
-}
+
+
+
 
