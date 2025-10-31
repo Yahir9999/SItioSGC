@@ -126,39 +126,19 @@
         <!-- Contenedor de mapa con links para abrir informacion de cada CEDI-->
          <div class="republica">
              <!-- Contenedor del recuadro con botones TIPO A Y B-->
-        <div class="estructura-cedis">
-            <h2>Estructura de los centros de distribución</h2>
+            <div class="estructura-cedis">
+                <h2>Estructura de los centros de distribución</h2>
 
                 <div class="contenedor-botones-estructura">
                 <button class="btn-tipo" onclick="mostrarImagen('imgA')">TIPO A</button>
                 <button class="btn-tipo" onclick="mostrarImagen('imgB')">TIPO B</button>
                 </div>
 
-                <!-- Contenedor donde aparecerán las imágenes -->
-              <!--   <div id="contenedor-imagenes-cedis">
-                <img id="imgA" class="img-cedis oculto" src="../../DocumentosProceso/Cedi Tipo A.svg" alt="CEDIS Tipo A">
-                <img id="imgB" class="img-cedis oculto" src="../../DocumentosProceso/Cedi tipo B.svg" alt="CEDIS Tipo B">
-                 Modal imagen pantalla completa -->
-               <!--  <div id="modalImagen" class="modal-fullscreen">
-                <img id="imagenExpandida" class="img-expandida">
-                </div>-->
+                
 
-                </div>
+            </div>
 
-                                    <script>
-                function mostrarImagenPantalla(img) {
-                const modal = document.getElementById("modalImagen");
-                const imgTag = document.getElementById("imagenExpandida");
-                imgTag.src = img;
-                modal.style.display = "flex";
-                }
-
-                // cerrar al hacer click fuera de la imagen
-                document.getElementById("modalImagen").addEventListener("click", () => {
-                document.getElementById("modalImagen").style.display = "none";
-                });
-                </script>
-
+                                
 
         </div>
             <!-- Button trigger modal para Camarones (CDMX) -->
@@ -316,26 +296,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 
-                    <div id="modalImagen" class="modal-fullscreen">
-                <img id="imagenExpandida" class="img-expandida" src="">
-                </div>
+                    
 
-                                <script>
-                function mostrarImagenPantalla(ruta) {
-                const modal = document.getElementById("modalImagen");
-                const img = document.getElementById("imagenExpandida");
-
-                img.src = ruta;
-                modal.style.display = "flex";
-                }
-
-                // Cerrar haciendo click fuera de la imagen
-                document.getElementById("modalImagen").addEventListener("click", (e) => {
-                if (e.target === e.currentTarget) {
-                    e.currentTarget.style.display = "none";
-                }
-                });
-                </script>
+                               
 
 </body>
 </html>
