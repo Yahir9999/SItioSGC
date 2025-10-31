@@ -309,32 +309,32 @@ button:hover .texto-hover {
 
 
 /* imagenes de botones a y b */
-#contenedor-imagenes-cedis {
-  margin-top: 15px;
-  text-align: center;
+
+.modal-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+  z-index: 999999; /* por si el mapa es terco */
 }
 
-.img-cedis {
-  width: 400px; /* ajusta a gusto */
-  max-width: 90%;
+.img-expandida {
+  max-width: 90vw;
+  max-height: 90vh;
   border-radius: 10px;
-  display: none;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  animation: zoomIn 0.25s ease;
 }
 
-/* Clase para esconder */
-.oculto {
-  display: none;
-}
-
-/* Clase para mostrar con animación suave */
-.mostrar {
-  display: block;
-  animation: fadeIn 0.4s ease-in;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0; transform: scale(0.95);}
-  to {opacity: 1; transform: scale(1);}
+@keyframes zoomIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 
 
