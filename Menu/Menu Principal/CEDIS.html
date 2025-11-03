@@ -132,13 +132,16 @@
                 <div class="contenedor-botones-estructura">
                 <button class="btn-tipo" onclick="mostrarImagen('imgA')">TIPO A</button>
                 <button class="btn-tipo" onclick="mostrarImagen('imgB')">TIPO B</button>
-                
-                
-
                 </div>
+                    
+
 
         
             </div>
+
+            <div id="visorImagen" class="visor-cedis">
+                        <img id="imgMostrar" src="" alt="Imagen CEDI">
+                    </div>
 
                                 
 
@@ -301,7 +304,30 @@
                     
 
                                
-        
+    <script>function mostrarImagen(tipo) {
+    const visor = document.getElementById('visorImagen');
+    const img = document.getElementById('imgMostrar');
+
+    if (tipo === 'imgA') {
+        img.src = "../../DocumentosProceso/Cedi Tipo A.svg"; // Cambia por tu imagen real
+    } else if (tipo === 'imgB') {
+        img.src = "../../DocumentosProceso/Cedi Tipo B.svg"; // Cambia por tu imagen real
+    }
+
+    visor.style.display = "flex";
+}
+
+// Cerrar al hacer clic fuera de la imagen
+document.addEventListener('click', function(e) {
+    const visor = document.getElementById('visorImagen');
+    const img = document.getElementById('imgMostrar');
+
+    if (visor.style.display === "flex" && !img.contains(e.target) && !e.target.classList.contains('btn-tipo')) {
+        visor.style.display = "none";
+        img.src = "";
+    }
+});
+</script>
 
         
 
