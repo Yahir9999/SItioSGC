@@ -31,12 +31,22 @@ main {
 .politicas {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
+    flex-wrap: nowrap; /* ✅ Todo en una sola línea */
+    overflow-x: auto; /* ✅ Scroll si se salen */
+    justify-content: flex-start;
+    gap: 2rem;
     padding: 1rem 0;
 }
+
+.politicas::-webkit-scrollbar {
+  height: 8px;
+}
+
+.politicas::-webkit-scrollbar-thumb {
+  background: #1c2c5b;
+  border-radius: 4px;
+}
+
 
 /* Botones/documentos individuales */
 .boton {
