@@ -68,10 +68,23 @@
         margin-top: 1.5rem;
         }
 
+        h3 {
+            /* misma fuente moderna del texto cursivo */
+            font-size: 2rem; /* tamaño mediano */
+            font-weight: 500;  /* grosor intermedio */
+            text-align: center;            /* centrado */
+            text-transform: uppercase;           /* mantiene todas las letras en mayúscula */
+            color: #1C2C5B;                      /* color azul oscuro */
+            margin-bottom: 1rem; 
+            width: 100%;              /* Que el contenedor use todo el ancho */
+            display: flex;            /* Activamos flex */
+            justify-content: center;  /* Centramos horizontalmente */ 
+        }
+
         /* Titulo del contenedor*/
         .titulo h2 {
             /* misma fuente moderna del texto cursivo */
-            font-size: 1.3rem; /* tamaño mediano */
+            font-size: 1.1rem; /* tamaño mediano */
             font-weight: 500;  /* grosor intermedio */
             text-align: center;            /* centrado */
             text-transform: uppercase;           /* mantiene todas las letras en mayúscula */
@@ -392,3 +405,6 @@
   background-color: white;
 }
 
+/*  *{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 440; /* Para la opción más gruesa */

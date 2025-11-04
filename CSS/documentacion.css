@@ -31,33 +31,29 @@ main {
 .politicas {
     width: 100%;
     display: flex;
-    flex-wrap: nowrap; /* ✅ Todo en una sola línea */
-    overflow-x: auto; /* ✅ Scroll si se salen */
-    justify-content: flex-start;
-    gap: 2rem;
+    flex-wrap: wrap;  /* ✅ Permite que bajen sin scroll */
+    justify-content: center; /* ✅ Centra los botones */
+    gap: 1.5rem;
     padding: 1rem 0;
 }
 
-.politicas::-webkit-scrollbar {
-  height: 8px;
-}
 
-.politicas::-webkit-scrollbar-thumb {
-  background: #1c2c5b;
-  border-radius: 4px;
-}
+
+
+
 
 
 /* Botones/documentos individuales */
 .boton {
-    flex: 0 0 calc(25% - 1.5rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
+    
+   
     transition: transform 0.3s ease;
-    min-width: 200px;
+    
+
+    flex: 0 1 calc(20% - 1rem); /* ✅ 5 por fila aprox */
+    min-width: 150px; /* ✅ Evita que se deformen */
+    max-width: 180px;
+    text-align: center;
 }
 
 .boton:hover {
@@ -77,11 +73,11 @@ main {
 }
 
 .boton img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    height: auto; /* ✅ No se deforma */
+    object-fit: contain;
+    max-width: 150px; /* ✅ Se hacen más pequeñas */
 }
 
 /* Nombre del documento */
@@ -387,3 +383,12 @@ main {
         height: 35vh;
     }
 }        
+
+h2{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #1c2c5b;
+    text-align: center;
+    margin-top: 0.75rem;
+    line-height: 1.3;
+}
