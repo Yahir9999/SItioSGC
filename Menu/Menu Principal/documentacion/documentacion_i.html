@@ -142,8 +142,29 @@
                 <img src="../../../DocumentosProceso/Responsiva EPP-icono.png" alt=""  style="width: 200px; height: 200px;"> 
             </button>
           </p> 
-          <p class="nombre_doc">Entrega de EPP y uniforme CEDIS</p>
+          <p class="nombre_doc">Entrega de EPP y uniforme</p>
          </div>
+
+         <div class="boton">
+  <p class="d-inline-flex gap-1">
+    <button class="btn descargar" type="button">
+      <img src="../../../DocumentosProceso/Formato reembolso.png" alt=""  style="width: 200px; height: 200px;"> 
+    </button>
+  </p> 
+  <p class="nombre_doc">Comprobación para el reembolso de fondo fijo</p>
+</div>
+
+<script>
+document.querySelector('.descargar').addEventListener('click', function () {
+  const enlace = document.createElement('a');
+  enlace.href = '../../../DocumentosProceso/Comprobación para el reembolso de fondo fijo de CEDIS.xlsx'; // Ruta del archivo
+  enlace.download = 'Comprobación para el reembolso de fondo fijo de CEDIS.xlsx'; // Nombre con el que se descargará
+  enlace.click();
+});
+</script>
+
+
+        
 
          <div class="boton">
           <!-- Boton que despliquega el documento en pdf utilizado para la papeleria-->
@@ -152,6 +173,8 @@
                 <img src="../../../DocumentosProceso/Entrega de material y papelería.png" alt=""  style="width: 200px; height: 200px;"> 
             </button>
           </p> 
+
+          
           <p class="nombre_doc">Formato de entrega de material y papelería</p>
          </div>
 
@@ -162,7 +185,7 @@
                 <img src="../../../DocumentosProceso/entrada y salida del CEDI-icono.png" alt=""  style="width: 200px; height: 200px;"> 
             </button>
           </p> 
-          <p class="nombre_doc">Formato de vale de entrada y salida del CEDI</p>
+          <p class="nombre_doc">Formato de vale de entrada y salida</p>
          </div>
 
         <div class="boton">
@@ -209,6 +232,15 @@
                 </iframe>
               </div>
           </div>
+
+          <!-- Card desplegable del formato REEMBOLSO FIJO
+          <div class="collapse" id="collapseExample6" data-bs-parent="#accordionExample">
+              <div class="card card-body">
+                <iframe src="../../../Documentos/Comprobación para el reembolso de fondo fijo.pdf" frameborder="0" width="100%" height="100%">
+
+                </iframe>
+              </div>
+          </div> -->
 
           <!-- Card desplegable del formato para entrega de papaleria-->
           <div class="collapse" id="collapseExample2" data-bs-parent="#accordionExample">
