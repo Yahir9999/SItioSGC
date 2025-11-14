@@ -113,12 +113,42 @@
 
   <!-- Empieza el contenido de la pagina-->  
     <main> 
+      <!-- Modal: Procesos del centro de distribución -->
+<div class="modal fade" id="modalProcesos" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-dark">
+      <div class="modal-body d-flex justify-content-center align-items-center p-0">
+
+        <img src="../../Imagenes/Procesos CEDIS.svg"
+             class="img-fluid"
+             style="max-height: 90vh; object-fit: contain;">
+
+      </div>
+
+      <button type="button" 
+              class="btn-close btn-close-white position-absolute top-0 end-0 m-3" 
+              data-bs-dismiss="modal" 
+              aria-label="Cerrar"></button>
+    </div>
+  </div>
+</div>
+
         <div class="boton_simbolo">
-          <div class="d-flex justify-content-end mb-3">
-            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-              Simbología
-            </button>  
+          <div class="boton_simbolo d-flex justify-content-between align-items-center mb-3">
+
+              <!-- BOTÓN A LA IZQUIERDA QUE ABRE EL MODAL -->
+              <button class="btn" data-bs-toggle="modal" data-bs-target="#modalProcesos">
+                Procesos del centro de distribución
+              </button>
+
+              <!-- BOTÓN EXISTENTE DE SIMBOLOGÍA -->
+              <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                Simbología
+              </button>
+
           </div>
+
+
 
           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header">
@@ -128,109 +158,99 @@
             <div class="offcanvas-body">
               <img id="offcanvasImage" src="../../Imagenes/Simbologia.svg" alt="" class="img-fluid">
             </div>
-          </div>                       
+          </div>   
+                              
         </div>
 
-        <!-- Primera mitad del hexagono-->
-        <div class="exap1">
-          
-        <!--Imagen con un link que nos envia al apartado de recibo-->
-          <div class="card">
-              <div class="imagen imagen1">
-                
+        <!-- Contenedor único de tarjetas -->
+          <div class="contenedor-tarjetas">
+
+              <div class="card">
+                  <div class="imagen imagen1"></div>
+                  <div class="card-body">
+                      <p class="card-text">Recepción y verificación de la mercancía para su registro y almacenamiento.</p>
+                      <a href="../Procesos/recibo.html" class="btn">Visualizar diagrama</a>
+                  </div>
               </div>
-              <div class="card-body">
-                <p class="card-text">Recepción y verificación de la mercancía para su registro y almacenamiento.</p>
-                <a href="../Procesos/recibo.html" class="btn">Visualizar diagrama</a>
+
+              <div class="card">
+                  <div class="imagen imagen2"></div>
+                  <div class="card-body">
+                      <p class="card-text">Preparación y asignación de la mercancía de acuerdo con los pedidos solicitados.</p>
+                      <a href="../Procesos/surtido.html" class="btn">Visualizar diagrama</a>
+                  </div>
               </div>
-          </div>
 
-        <!--Imagen con un link que nos envia al apartado de surtido-->
-          <div class="card">
-            <div class="imagen imagen2">
-              
-            </div>
-            <div class="card-body">
-              <p class="card-text">Preparación y asignación de la mercancía de acuerdo con los pedidos solicitados.</p>
-              <a href="../Procesos/surtido.html" class="btn">Visualizar diagrama</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Segunda mitad del hexagono-->
-        <div class="exap2">
-
-          <!--Imagen con un link que nos envia al apartado de activacion-->
-          <div class="card"> 
-            <div class="imagen imagen3">
-              
-            </div>
-            <div class="card-body">
-              <p class="card-text">Verificación de apariencia y funcionamiento para el registro de motocicletas como unidades activas.</p>
-              <a href="../Procesos/activacion.html" class="btn">Visualizar diagrama</a>
-            </div>
-          </div>
-
-        <!-- Imagen con el proceso-->
-          <img src="../../Imagenes/Procesos CEDIS.svg" class="img-thumbnail image-card" data-bs-toggle="modal" data-bs-target="#modalImagen" style="cursor:pointer;">
-
-          <!-- Modal de imagen -->
-          <div class="modal fade" id="modalImagen" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-              <div class="modal-content bg-dark">
-                <div class="modal-body d-flex justify-content-center align-items-center p-0">
-                  <!-- Aquí ya se centra -->
-                  <img src="../../Imagenes/Procesos CEDIS.svg" 
-                      class="img-fluid" 
-                      style="max-height: 90vh; object-fit: contain;">
-                </div>
-                <button type="button" 
-                        class="btn-close btn-close-white position-absolute top-0 end-0 m-3" 
-                        data-bs-dismiss="modal" 
-                        aria-label="Cerrar"></button>
+              <div class="card">
+                  <div class="imagen imagen3"></div>
+                  <div class="card-body">
+                      <p class="card-text">Verificación de apariencia y funcionamiento para el registro de motocicletas como unidades activas.</p>
+                      <a href="../Procesos/activacion.html" class="btn">Visualizar diagrama</a>
+                  </div>
               </div>
-            </div>
+
+              <div class="card">
+                  <div class="imagen imagen4"></div>
+                  <div class="card-body">
+                      <p class="card-text">Preparación, carga y envío de la mercancía para entrega a las agencias.</p>
+                      <a href="../Procesos/embarque.html" class="btn">Visualizar diagrama</a>
+                  </div>
+              </div>
+
+              <div class="card">
+                  <div class="imagen imagen5"></div>
+                  <div class="card-body">
+                      <p class="card-text">Inspección, diagnóstico y reparación de motocicletas para asegurar su disposición y venta.</p>
+                      <a href="../Procesos/reparaciones.html" class="btn">Visualizar diagrama</a>
+                  </div>
+              </div>
+
+              <div class="card">
+                  <div class="imagen imagen6"></div>
+                  <div class="card-body">
+                      <p class="card-text">Desmontaje y envío de estructuras a planta para su reincorporación al embalaje de la mercancía.</p>
+                      <a href="../Procesos/recuperacion.html" class="btn">Visualizar diagrama</a>
+                  </div>
+              </div>
+
           </div>
 
+          <!-- SECCIÓN OSCURA CON 3 RECUADROS -->
+<div class="seccion-oscura">
 
- 
+    <div class="contenedor-tarjetas oscuro">
 
-        <!--Imagen con un link que nos envia al apartado de embarque y logistica--> 
-          <div class="card">
-            <div class="imagen imagen4">
-
-            </div>
+         <div class="card card-oscura">
+            <div class="imagen imagen7"></div>
             <div class="card-body">
-              <p class="card-text">Preparación, carga y envío de la mercancía para entrega a las agencias.</p>
-              <a href="../Procesos/embarque.html" class="btn">Visualizar diagrama</a>
+                <p class="card-text">Proceso para crear, registrar, modificar y cerrar órdenes de compra.</p>
+                <a href="../Procesos/gestionpo.html" class="btn btn-oscuro">Visualizar diagrama</a>
             </div>
-          </div>
-
         </div>
 
-        <div class="exap3">
-          <!--Imagen con un link que nos envia al apartado de embarque y logistica-->
-          <div class="card">
-            <div class="imagen imagen5">
-              
-            </div>
+        <!--<div class="card card-oscura">
+            <div class="imagen imagen8"></div>
             <div class="card-body">
-              <p class="card-text">Inspección, diagnóstico y reparación de motocicletas para asegurar su disposición y venta.</p>
-              <a href="../Procesos/reparaciones.html" class="btn">Visualizar diagrama</a>
+                <p class="card-text">Descripción del proceso 2 en la sección oscura.</p>
+                <a href="#" class="btn btn-oscuro">Visualizar diagrama</a>
             </div>
-          </div> 
-          
-        <!--Imagen con un link que nos envia al apartado de embarque y logistica-->
-          <div class="card">
-            <div class="imagen imagen6">
-              
-            </div>
-            <div class="card-body">
-              <p class="card-text">Desmontaje y envío de estructuras a planta para su reincorporación al embalaje de la mercancía.</p>
-              <a href="../Procesos/recuperacion.html" class="btn">Visualizar diagrama</a>
-            </div>
-          </div> 
         </div>
+
+        <div class="card card-oscura">
+            <div class="imagen imagen9"></div>
+            <div class="card-body">
+                <p class="card-text">Descripción del proceso 3 en la sección oscura.</p>
+                <a href="#" class="btn btn-oscuro">Visualizar diagrama</a>
+            </div>
+        </div> -->
+
+    </div>
+
+</div>
+
+
+
+       
     </main>
 
     <footer>

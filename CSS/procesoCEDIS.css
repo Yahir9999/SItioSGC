@@ -20,29 +20,11 @@ main {
     width: 60% !important; /* Más ancho en móviles */
 }
 
-/* Contenedores de las tarjetas */
-.exap1, .exap2, .exap3 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    width: 100%;
-}
 
-/* Estilos de tarjetas */
-.card {
-    flex: 1 1 300px; /* Flexibilidad para adaptarse */
-    max-width: 400px;
-    min-height: 300px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
+
 
 /* Espacio donde va la imagen del modal*/
-.image-card{
+.card-img-top {
     flex: 1 1 300px; /* Flexibilidad para adaptarse */
     max-width: 400px;
     min-height: 300px;
@@ -52,6 +34,7 @@ main {
     overflow: hidden;
     transition: transform 0.3s ease;   
 }
+
 
 .img-thumbnail {
 
@@ -192,6 +175,111 @@ main {
 .imagen4 { background-image: url(../Imagenes/Embarque.svg); }
 .imagen5 { background-image: url(../Imagenes/Reparaciones.svg); }
 .imagen6 { background-image: url(../Imagenes/Recuperación.svg); }
+.imagen7 { background-image: url(../Imagenes/gestionpo-imagen.png); }
 
 /* Botones dentro del modal que nos ayudan hacer zoom*/
+
+
+/* Contenedor general */
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 1rem;
+}
+
+/* Tarjetas */
+.card {
+    background: white;
+    max-width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagen dentro de la tarjeta SIN deformarla */
+.imagen {
+    height: 180px; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #e6ebf9;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+    .contenedor-tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+    }
+    
+    .imagen {
+        height: 150px;
+    }
+}
+
+
+/* Sección oscura completa */
+.seccion-oscura {
+    width: 100%;
+    background-color: #141F44;;   /* oscuro */
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Cambia el grid dentro de la zona oscura */
+.contenedor-tarjetas.oscuro {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Tarjeta dentro del área oscura */
+.card-oscura {
+    background: #2b2b2b;
+    color: white;
+    border: 1px solid #3a3a3a;
+}
+
+/* Texto blanco dentro de la sección oscura */
+.card-oscura .card-text {
+    color: #e0e0e0;
+}
+
+/* Botón para sección oscura */
+.btn-oscuro {
+    background-color: #4d4dff;
+    color: white;
+    border-radius: 50px;
+    padding: .4rem 1.2rem;
+    display: inline-block;
+    transition: .3s ease;
+}
+
+.btn-oscuro:hover {
+    background-color: #6a6aff;
+}
+
+/* Imágenes dentro de la sección oscura */
+.imagen7, .imagen8, .imagen9 {
+    height: 180px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #3a3a3a;
+}
+
+
 
