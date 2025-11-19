@@ -136,6 +136,16 @@
          </div>
 
          <div class="boton">
+            <!-- Boton que despliega el archivo pdf del formado de administracion y fondo fijo-->
+            <p class="d-inline-flex gap-1">
+              <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample" data-bs-parent="#accordionExample">
+                <img src="../../../DocumentosProceso/Politica de administracion.png" alt=""  style="width: 200px; height: 200px;"> 
+              </button>
+            </p>
+            <p class="nombre_doc">Política de administración y fondo fijo</p>
+         </div>
+
+         <div class="boton">
           <!-- Boton que despliquega el documento en pdf RESPONSIVA DE EPP-->
           <p class="d-inline-flex gap-1">
             <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4" data-bs-parent="#accordionExample">
@@ -146,22 +156,22 @@
          </div>
 
          <div class="boton">
-  <p class="d-inline-flex gap-1">
-    <button class="btn descargar" type="button">
-      <img src="../../../DocumentosProceso/Formato reembolso.png" alt=""  style="width: 200px; height: 200px;"> 
-    </button>
-  </p> 
-  <p class="nombre_doc">Comprobación para el reembolso de fondo fijo</p>
-</div>
+                <p class="d-inline-flex gap-1">
+                  <button class="btn descargar" type="button">
+                    <img src="../../../DocumentosProceso/Formato reembolso.png" alt=""  style="width: 200px; height: 200px;"> 
+                  </button>
+                </p> 
+                <p class="nombre_doc">Comprobación para el reembolso de fondo fijo</p>
+              </div>
 
-<script>
-document.querySelector('.descargar').addEventListener('click', function () {
-  const enlace = document.createElement('a');
-  enlace.href = '../../../DocumentosProceso/Comprobación para el reembolso de fondo fijo de CEDIS.xlsx'; // Ruta del archivo
-  enlace.download = 'Comprobación para el reembolso de fondo fijo de CEDIS.xlsx'; // Nombre con el que se descargará
-  enlace.click();
-});
-</script>
+              <script>
+              document.querySelector('.descargar').addEventListener('click', function () {
+                const enlace = document.createElement('a');
+                enlace.href = '../../../DocumentosProceso/Comprobación para el reembolso de fondo fijo de CEDIS.xlsx'; // Ruta del archivo
+                enlace.download = 'Comprobación para el reembolso de fondo fijo de CEDIS.xlsx'; // Nombre con el que se descargará
+                enlace.click();
+              });
+              </script>
 
 
         
@@ -177,6 +187,7 @@ document.querySelector('.descargar').addEventListener('click', function () {
           
           <p class="nombre_doc">Formato de entrega de material y papelería</p>
          </div>
+         
 
          <div class="boton">
           <!-- Boton que despliquega el documento en pdf de formato de vale de entrada-->
@@ -219,6 +230,16 @@ document.querySelector('.descargar').addEventListener('click', function () {
                 <div class="card card-body">
                   <!-- El articulo #toolbar=0&navpanes=0 sirven para poder ocultar los paneles de trabajo de un pdf y que solo este quede visible-->
                   <iframe src="../../../Documentos/PL- Política de orden y limpieza de los CEDIS.docx.pdf#toolbar=0&navpanes=0" frameborder="0" width="100%" height="100%">
+
+                  </iframe>
+                </div>
+          </div>
+
+           <!-- Card desplegable del formato de politica de administracion y fondo fijo-->
+        <div class="collapse" id="collapseExample6" data-bs-parent="#accordionExample">
+                <div class="card card-body">
+                  <!-- El articulo #toolbar=0&navpanes=0 sirven para poder ocultar los paneles de trabajo de un pdf y que solo este quede visible-->
+                  <iframe src="../../../Documentos/Política Administración y control del fondo fijo de CEDIS.pdf#toolbar=0&navpanes=0" frameborder="0" width="100%" height="100%">
 
                   </iframe>
                 </div>
