@@ -27,34 +27,70 @@ main {
 
 }
 
-/* Contenedor de políticas: todos en una sola línea sin scroll */
+.contenedor-secciones {
+   width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+
+
+.columna {
+    border: 2px solid #ccc;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+
+.columna h2 {
+   text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.boton {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.boton img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+
+/* Contenedor de políticas: todos en una sola línea sin scroll 
 .politicas {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;          /* ❗ Siempre en una sola línea */
-    justify-content: space-between;
+  /*  justify-content: space-between;
     align-items: center;
     gap: 1rem;
     padding: 1rem 0;
-}
+}*/
 
-/* Cada botón se ajusta automáticamente */
+/* Cada botón se ajusta automáticamente *
 .boton {
     flex: 1;                    /* ❗ Cada icono ocupa el mismo espacio */
-    max-width: 180px;           /* ❗ Tamaño máximo permitido */
-    min-width: 90px;            /* ❗ Tamaño mínimo antes de romper */
-    text-align: center;
-}
+    /*max-width: 180px;           /* ❗ Tamaño máximo permitido */
+   /* min-width: 90px;            /* ❗ Tamaño mínimo antes de romper */
+   /* text-align: center;
+} */
 
-/* Imagen responsive pero sin deformarse */
+/* Imagen responsive pero sin deformarse 
 .boton img {
     width: 100%;
     height: auto;
     object-fit: contain;
     max-width: 140px;           /* grande */
-    min-width: 70px;            /* pequeño si la pantalla es chica */
-    transition: transform 0.2s ease;
-}
+   /*  min-width: 70px;            /* pequeño si la pantalla es chica */
+  /*   transition: transform 0.2s ease;
+}*/
 
 
 

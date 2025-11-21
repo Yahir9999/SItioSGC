@@ -123,104 +123,114 @@
           <h1>DOCUMENTOS DE USO INTERNO</h1>
        </div>
 
-       <div class="politicas">
-        <!-- Contenedores para cada boton-->
-         <div class="boton">
-            <!-- Boton que despliega el archivo pdf del formado de la politica de orden y limpieza-->
-            <p class="d-inline-flex gap-1">
-              <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" data-bs-parent="#accordionExample">
-                <img src="../../../DocumentosProceso/Orden y limpieza.png" alt=""  style="width: 200px; height: 200px;"> 
-              </button>
-            </p>
-            <p class="nombre_doc">Política de orden y limpieza</p>
-         </div>
+       <div class="contenedor-secciones">
 
-         <div class="boton">
-            <!-- Boton que despliega el archivo pdf del formado de administracion y fondo fijo-->
-            <p class="d-inline-flex gap-1">
-              <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample" data-bs-parent="#accordionExample">
-                <img src="../../../DocumentosProceso/Politica de administracion.png" alt=""  style="width: 200px; height: 200px;"> 
-              </button>
-            </p>
-            <p class="nombre_doc">Política de administración y fondo fijo</p>
-         </div>
+            <!--<div class="politicas">-->
+            <!-- Contenedores para cada boton-->
 
-         <div class="boton">
-          <!-- Boton que despliquega el documento en pdf RESPONSIVA DE EPP-->
-          <p class="d-inline-flex gap-1">
-            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4" data-bs-parent="#accordionExample">
-                <img src="../../../DocumentosProceso/Responsiva EPP-icono.png" alt=""  style="width: 200px; height: 200px;"> 
-            </button>
-          </p> 
-          <p class="nombre_doc">Entrega de EPP y uniforme</p>
-         </div>
-
-         <div class="boton">
-                <p class="d-inline-flex gap-1">
-                  <button class="btn descargar" type="button">
-                    <img src="../../../DocumentosProceso/Formato reembolso.png" alt=""  style="width: 200px; height: 200px;"> 
+            <div class="columna">
+              <h2>POLÍTICAS</h2>
+              <div class="boton"> 
+                <!-- Boton que despliega el archivo pdf del formado de la politica de orden y limpieza--> 
+                <p class="d-inline-flex gap-1"> 
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" data-bs-parent="#accordionExample"> 
+                  <img src="../../../DocumentosProceso/Orden y limpieza.png" alt="" style="width: 200px; height: 200px;"> 
                   </button>
                 </p> 
-                <p class="nombre_doc">Comprobación para el reembolso de fondo fijo</p>
+                <p class="nombre_doc">Política de orden y limpieza</p> 
               </div>
 
-              <script>
-              document.querySelector('.descargar').addEventListener('click', function () {
-                const enlace = document.createElement('a');
-                enlace.href = '../../../DocumentosProceso/Comprobación para el reembolso de fondo fijo de CEDIS.xlsx'; // Ruta del archivo
-                enlace.download = 'Comprobación para el reembolso de fondo fijo de CEDIS.xlsx'; // Nombre con el que se descargará
-                enlace.click();
-              });
-              </script>
+              <div class="boton"> 
+                <!-- Boton que despliega el archivo pdf del formado de administracion y fondo fijo--> 
+                <p class="d-inline-flex gap-1"> 
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample" data-bs-parent="#accordionExample"> 
+                    <img src="../../../DocumentosProceso/Politica de administracion.png" alt="" style="width: 200px; height: 200px;"> 
+                  </button> 
+                </p> 
+                <p class="nombre_doc">Política de administración y fondo fijo</p> 
+              </div>
+            </div>
+
+            <div class="columna">
+              <h2>FORMATOS</h2>
+              <div class="boton">
+                <!-- Boton que despliquega el documento en pdf RESPONSIVA DE EPP-->
+                <p class="d-inline-flex gap-1">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4" data-bs-parent="#accordionExample">
+                      <img src="../../../DocumentosProceso/Responsiva EPP-icono.png" alt=""  style="width: 200px; height: 200px;"> 
+                  </button>
+                </p> 
+                <p class="nombre_doc">Entrega de EPP y uniforme</p>
+              </div>
+
+              <div class="boton">
+                      <p class="d-inline-flex gap-1">
+                        <button class="btn descargar" type="button">
+                          <img src="../../../DocumentosProceso/Formato reembolso.png" alt=""  style="width: 200px; height: 200px;"> 
+                        </button>
+                      </p> 
+                      <p class="nombre_doc">Comprobación para el reembolso de fondo fijo</p>
+                    </div>
+
+                    <script>
+                    document.querySelector('.descargar').addEventListener('click', function () {
+                      const enlace = document.createElement('a');
+                      enlace.href = '../../../DocumentosProceso/Comprobación para el reembolso de fondo fijo de CEDIS.xlsx'; // Ruta del archivo
+                      enlace.download = 'Comprobación para el reembolso de fondo fijo de CEDIS.xlsx'; // Nombre con el que se descargará
+                      enlace.click();
+                    });
+                    </script>
 
 
-        
+              
 
-         <div class="boton">
-          <!-- Boton que despliquega el documento en pdf utilizado para la papeleria-->
-          <p class="d-inline-flex gap-1">
-            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2" data-bs-parent="#accordionExample">
-                <img src="../../../DocumentosProceso/Entrega de material y papelería.png" alt=""  style="width: 200px; height: 200px;"> 
-            </button>
-          </p> 
+              <div class="boton">
+                <!-- Boton que despliquega el documento en pdf utilizado para la papeleria-->
+                <p class="d-inline-flex gap-1">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2" data-bs-parent="#accordionExample">
+                      <img src="../../../DocumentosProceso/Entrega de material y papelería.png" alt=""  style="width: 200px; height: 200px;"> 
+                  </button>
+                </p> 
 
-          
-          <p class="nombre_doc">Formato de entrega de herramientas/material y papelería</p>
-         </div>
-         
+                
+                <p class="nombre_doc">Formato de entrega de herramientas/material y papelería</p>
+              </div>
+              
 
-         <div class="boton">
-          <!-- Boton que despliquega el documento en pdf de formato de vale de entrada-->
-          <p class="d-inline-flex gap-1">
-            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample2" data-bs-parent="#accordionExample">
-                <img src="../../../DocumentosProceso/entrada y salida del CEDI-icono.png" alt=""  style="width: 200px; height: 200px;"> 
-            </button>
-          </p> 
-          <p class="nombre_doc">Formato de vale de entrada y salida</p>
-         </div>
+              <div class="boton">
+                <!-- Boton que despliquega el documento en pdf de formato de vale de entrada-->
+                <p class="d-inline-flex gap-1">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample2" data-bs-parent="#accordionExample">
+                      <img src="../../../DocumentosProceso/entrada y salida del CEDI-icono.png" alt=""  style="width: 200px; height: 200px;"> 
+                  </button>
+                </p> 
+                <p class="nombre_doc">Formato de vale de entrada y salida</p>
+              </div>
 
-        <div class="boton">
-          <!-- Boton que despliquega el formato de registro de asistencia-->
-          <p class="d-inline-flex gap-1">
-            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample2" data-bs-parent="#accordionExample">
-                <img src="../../../DocumentosProceso/Registro asistencia.png" alt=""  style="width: 200px; height: 200px;"> 
-            </button>
-          </p> 
-          <p class="nombre_doc">Formato de registro de asistencia</p>
-         </div>
+              <div class="boton">
+                <!-- Boton que despliquega el formato de registro de asistencia-->
+                <p class="d-inline-flex gap-1">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample2" data-bs-parent="#accordionExample">
+                      <img src="../../../DocumentosProceso/Registro asistencia.png" alt=""  style="width: 200px; height: 200px;"> 
+                  </button>
+                </p> 
+                <p class="nombre_doc">Formato de registro de asistencia</p>
+              </div>
 
-        <div class="boton">
-          <!-- Boton que despliquega el formato para la minuta -->
-          <p class="d-inline-flex gap-1">
-            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample2" data-bs-parent="#accordionExample" onclick="window.open('https://docs.google.com/spreadsheets/d/11COInv_1f0ghee3uyAdvnjbSKjIbk95spqji0hAmoqc/copy?gid=0#gid=0', '_blank', 'noopener')">
-                <img src="../../../DocumentosProceso/Minuta_icono.png" alt=""  style="width: 200px; height: 200px;"> 
-            </button>
-          </p> 
-          <p class="nombre_doc">Formato de minuta</p>
-         </div>
+              <div class="boton">
+                <!-- Boton que despliquega el formato para la minuta -->
+                <p class="d-inline-flex gap-1">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample2" data-bs-parent="#accordionExample" onclick="window.open('https://docs.google.com/spreadsheets/d/11COInv_1f0ghee3uyAdvnjbSKjIbk95spqji0hAmoqc/copy?gid=0#gid=0', '_blank', 'noopener')">
+                      <img src="../../../DocumentosProceso/Minuta_icono.png" alt=""  style="width: 200px; height: 200px;"> 
+                  </button>
+                </p> 
+                <p class="nombre_doc">Formato de minuta</p>
+              </div>
+            </div>
 
-           
-       </div>
+              
+          </div>
+     <!-- </div>-->
 
        <div class="desplegable" id="accordionExample">
         
