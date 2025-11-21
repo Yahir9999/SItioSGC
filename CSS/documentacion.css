@@ -87,36 +87,6 @@ main {
 
 
 
-/* Contenedor de políticas: todos en una sola línea sin scroll 
-.politicas {
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;          /* ❗ Siempre en una sola línea */
-  /*  justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 0;
-}*/
-
-/* Cada botón se ajusta automáticamente *
-.boton {
-    flex: 1;                    /* ❗ Cada icono ocupa el mismo espacio */
-    /*max-width: 180px;           /* ❗ Tamaño máximo permitido */
-   /* min-width: 90px;            /* ❗ Tamaño mínimo antes de romper */
-   /* text-align: center;
-} */
-
-/* Imagen responsive pero sin deformarse 
-.boton img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    max-width: 140px;           /* grande */
-   /*  min-width: 70px;            /* pequeño si la pantalla es chica */
-  /*   transition: transform 0.2s ease;
-}*/
-
-
 
 .boton:hover {
     transform: translateY(-5px);
@@ -453,5 +423,53 @@ h2{
     font-family: "DM Sans", sans-serif;
   
 }
+
+
+#dynamicOffcanvas {
+    width: 60% !important;
+}
+
+/* Desactivar animación y evitar que se mueva */
+.offcanvas {
+    transition: none !important;
+    transform: none !important;
+    visibility: hidden; /* para que no se vea hasta que esté abierto */
+}
+
+.offcanvas.show {
+    transform: none !important;
+    visibility: visible;
+}
+
+/* --- Estilo del título --- */
+.offcanvas-header h5 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1d3557; /* azul oscuro elegante */
+    margin: 0;
+}
+
+.boton_dowload {
+    background-color: #1d3557 !important;
+    color: #fff !important;
+    border-radius: 12px;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.boton_dowload:hover {
+    background-color: #457b9d !important;
+    transform: translateY(-2px);
+    color: #fff !important;
+}
+
+
 
 
