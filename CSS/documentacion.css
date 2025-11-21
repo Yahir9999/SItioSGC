@@ -28,39 +28,63 @@ main {
 }
 
 .contenedor-secciones {
-   width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
+  
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 30px;
 }
+
 
 
 
 .columna {
-    border: 2px solid #ccc;
-  padding: 25px;
-  border-radius: 15px;
-  margin-bottom: 40px;
+    width: 48%;
+    background: #e9effc;
+    border: 2px solid #cdd3e1;
+    padding: 25px;
+    border-radius: 15px;
 }
 
 .columna h2 {
    text-align: center;
-  margin-bottom: 20px;
+    margin-bottom: 25px;
   font-weight: bold;
+}
+
+.grid-iconos {
+   display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .boton {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .boton img {
-    width: 80px;
-    height: 80px;
+   
+     width: 100%;
+    height: auto;
     object-fit: contain;
+    max-width: 140px;           /* grande */
+   min-width: 70px;            /* pequeño si la pantalla es chica */
+  transition: transform 0.2s ease;
+    
+  
 }
+
+.boton p {
+    margin-top: 10px;
+}
+
+
 
 
 /* Contenedor de políticas: todos en una sola línea sin scroll 
@@ -247,8 +271,8 @@ main {
     }
     
     .boton img {
-        width: 120px;  /* Ajustable según se vea mejor */
-        height: 120px;
+        width: 100px;  /* Ajustable según se vea mejor */
+        height: 100px;
         object-fit: contain;
         margin-bottom: 0.5rem;
     }
@@ -429,3 +453,5 @@ h2{
     font-family: "DM Sans", sans-serif;
   
 }
+
+
