@@ -1,12 +1,13 @@
  /* Diseño general para todas las areas de procesos*/
-        main {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 1rem;
-            min-height: 110vh;
+       main {
+        display: flex;
+        flex-direction: column;   /* coloca todo en columna NORMAL */
+        align-items: center;
+        justify-content: flex-start; /* que empiece desde arriba */
+        padding: 1rem;
+        min-height: 110vh;
         }
+
 
         /* Tarjeta donde contiene toda la info*/
         .general_container {
