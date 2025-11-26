@@ -250,14 +250,14 @@ main {
 
 /* Tarjeta dentro del área oscura */
 .card-oscura {
-    background: #2b2b2b;
+    background: #bcbcbc;
     color: white;
     border: 1px solid #3a3a3a;
 }
 
 /* Texto blanco dentro de la sección oscura */
 .card-oscura .card-text {
-    color: #e0e0e0;
+    color: #000000;
 }
 
 /* Botón para sección oscura */
@@ -280,7 +280,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-color: #3a3a3a;
+    background-color: #cfdaff;
 }
 
 
