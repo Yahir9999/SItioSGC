@@ -148,42 +148,81 @@
                 </div>
             </div>
 
-           
-                    
-                   
-                <!-- Texto informativo sobre el proceso-->
-                <div class="contenedor_texto">
-                <div class="carril">
-                    <span class="texto2">
-                    Es responsabilidad del dueño del proceso comunicar al área del Sistema de Gestión de Calidad (SGC) cualquier cambio o modificación en los procesos operativos de los CEDIS, con el fin de garantizar la actualización, vigencia y correcta difusión.          
-                    </span>
-                    
-                </div>
-                </div>
-            </div> 
+                            <!-- Formatos-->
+            <div class="formato">
+                
 
-            <!-- Seccion donde el canvas recibe la informacion de los botones para poder mostrarla -->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="dynamicOffcanvas" aria-labelledby="dynamicOffcanvasLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="dynamicOffcanvasLabel">Título por defecto</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <!-- Linea divisora-->
+                <div class="linea-divisora"></div>
+
+                <!-- Titulo general -->
+                <div class="titulo">
+                    <h2>Formatos</h2>
                 </div>
-                <div class="offcanvas-body">
-                    <img id="offcanvasImage" src="" alt="" class="img-offcanvas">
-                    <a id="offcanvasDownload" href="#" class="btn boton_dowload mt-3" target="_blank">Descargar</a>
+
+                <!-- En cada contenedor vamos a mandar el titulo del formato, la direccion de la imagen, tamaño (solo si es necesario), y la ruta para poder descargar el formato-->
+                <div class="contenedor">
+
+                    <!--  Checklist para motos  -->
+                    <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPDF3" aria-controls="offcanvasPDF">
+                    Formato de recolección
+                    </button>
+
+
+                    <!--  Checklist para motos  -->
+                    <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPDF2" aria-controls="offcanvasPDF">
+                    Checklist para motocicletas
+                    </button>
+
                 </div>
+
+                        <!-- Texto informativo sobre el proceso-->
+                <div class="contenedor_texto">
+                    <div class="carril">
+                        <span class="texto2">
+                        Es responsabilidad del dueño del proceso comunicar al área del Sistema de Gestión de Calidad (SGC) cualquier cambio o modificación en los procesos operativos de los CEDIS, con el fin de garantizar la actualización, vigencia y correcta difusión.          
+                        </span>
+                        
+                    </div>
+                </div>
+
             </div>
 
-            <!-- Genera un canvas, pero este contiene un iframe con un documento pdf -->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF1" aria-labelledby="offcanvasPDFLabel" style="width: 70%;">
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF2" aria-labelledby="offcanvasPDFLabel" style="width: 30%;">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasPDFLabel">Bitácora de seguimiento TO</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
                 </div>
                 <div class="offcanvas-body" style="padding: 0;">
-                    <iframe src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" width="100%" height="100%"></iframe>
+                    <iframe src="../../Documentos/checklist_motos.pdf#toolbar=0&navpanes=0" width="95%" height="80%"></iframe>
+                        <div class="p-3">
+                            <a href="../../Documentos/checklist_motos.pdf" class="btn boton_dowload" download>
+                                        Descargar documento 
+                            </a>
+                        </div>
                 </div>
             </div>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF3" aria-labelledby="offcanvasPDFLabel" style="width: 30%;">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                </div>
+                <div class="offcanvas-body" style="padding: 0;">
+                    <iframe src="../../Documentos/FORMATO DE RECOLECCIÓN.pdf#toolbar=0&navpanes=0" width="95%" height="80%"></iframe>
+                        <div class="p-3">
+                            <a href="../../Documentos/FORMATO DE RECOLECCIÓN.pdf" class="btn boton_dowload" download>
+                                        Descargar documento 
+                            </a>
+                        </div>
+                </div>
+            </div>
+
+           
+                    
+                   
+               
+            </div> 
+
+
             
         </div>     
     </main>
