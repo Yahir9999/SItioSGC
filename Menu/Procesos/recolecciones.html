@@ -174,6 +174,14 @@
                     Checklist para motocicletas
                     </button>
 
+                    <!-- bitacora de recoleccion -->
+                    <button class="btn open-offcanvas" 
+                            data-img="../../Documentos/bitacora-recolecciones.png"
+                            data-size="large"
+                            data-download="https://docs.google.com/spreadsheets/d/1QD9a2OTOucSxHPwjQauqIGfQ3do6ncG2rZR1RKciEfY/copy">
+                    Bitácora de recolecciones
+                    </button>
+
                 </div>
 
                         <!-- Texto informativo sobre el proceso-->
@@ -216,6 +224,29 @@
                 </div>
             </div>
 
+            
+                       <!-- Seccion donde el canvas recibe la informacion de los botones para poder mostrarla -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="dynamicOffcanvas" aria-labelledby="dynamicOffcanvasLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="dynamicOffcanvasLabel">Título por defecto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <img id="offcanvasImage" src="" alt="" class="img-offcanvas">
+                    <a id="offcanvasDownload" href="#" class="btn boton_dowload mt-3" target="_blank">Descargar</a>
+                </div>
+            </div>
+
+            <!-- Genera un canvas, pero este contiene un iframe con un documento pdf -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF1" aria-labelledby="offcanvasPDFLabel" style="width: 70%;">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasPDFLabel">Bitácora de seguimiento TO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                </div>
+                <div class="offcanvas-body" style="padding: 0;">
+                    <iframe src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" width="100%" height="100%"></iframe>
+                </div>
+            </div>        
            
                     
                    
