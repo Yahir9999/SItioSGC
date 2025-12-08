@@ -125,153 +125,192 @@
           <h1>DOCUMENTOS DE USO INTERNO</h1>
        </div>
 
-       <div class="contenedor-secciones">
+<div class="documentos-grid">
 
-            <!--<div class="politicas">-->
-            <!-- Contenedores para cada boton-->
+    <!-- =============  POLÍTICAS  (COLUMNA IZQUIERDA ARRIBA) ============= -->
+    <div class="tarjeta">
+        <h2>POLÍTICAS</h2>
 
-            <div class="columna">
-            <h2>POLÍTICAS</h2>
+        <div class="iconos">
 
-            <div class="grid-iconos">
+            <!-- Orden y limpieza -->
+            <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="Orden y limpieza"
+                        data-file="../../../Documentos/PL- Política de orden y limpieza de los CEDIS.docx.pdf">
+                    <img src="../../../DocumentosProceso/Orden y limpieza.png" style="width:200px;height:200px;">
+                </button>
+                <p class="nombre_doc">Orden y limpieza</p>
+            </div>
 
-              <!-- Orden y limpieza -->
-<div class="boton">
-  <p class="d-inline-flex gap-1">
-    <button class="btn open-offcanvas"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#dynamicOffcanvas"
-            data-title="Orden y limpieza"
-            data-file="../../../Documentos/PL- Política de orden y limpieza de los CEDIS.docx.pdf"
-            data-side="end">
+            <!-- Administración y fondo fijo -->
+            <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="Administración y fondo fijo"
+                        data-file="../../../Documentos/Política Administración y control del fondo fijo de CEDIS.pdf">
+                    <img src="../../../DocumentosProceso/Politica de administracion.png" style="width:200px;height:200px;">
+                </button>
+                <p class="nombre_doc">Administración y fondo fijo</p>
+            </div>
 
-      <img src="../../../DocumentosProceso/Orden y limpieza.png" style="width:200px;height:200px;">
-    </button>
-  </p>
-  <p class="nombre_doc">Orden y limpieza</p>
-</div>
+        </div>
+    </div>
 
-<!-- Administración y fondo fijo -->
-<div class="boton">
-  <p class="d-inline-flex gap-1">
-    <button class="btn open-offcanvas"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#dynamicOffcanvas"
-            data-title="Administración y fondo fijo"
-            data-file="../../../Documentos/Política Administración y control del fondo fijo de CEDIS.pdf"
-            data-side="end">
 
-      <img src="../../../DocumentosProceso/Politica de administracion.png" style="width:200px;height:200px;">
-    </button>
-  </p>
-  <p class="nombre_doc">Administración y fondo fijo</p>
-</div>
+    <!-- =============  FORMATOS  (COLUMNA DERECHA ARRIBA) ============= -->
+    <div class="tarjeta">
+        <h2>FORMATOS</h2>
 
+        <div class="carrusel">
+
+            <!-- Flecha izquierda -->
+            <span class="flecha">‹</span>
+
+            <!-- Items -->
+            <div class="carrusel-items">
+
+                <!-- EPP -->
+                <div class="icono-item">
+                    <button class="btn open-offcanvas"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#dynamicOffcanvas"
+                            data-title="Entrega de EPP y uniforme"
+                            data-file="../../../Documentos/Responsiva de entrega de EPP y uniforme CEDIS.pdf">
+                        <img src="../../../DocumentosProceso/Responsiva EPP-icono.png">
+                    </button>
+                    <p class="nombre_doc">Entrega de EPP y uniforme</p>
+                </div>
+
+                <div class="icono-item">
+                <button class="btn descargar"
+                        data-file="../../../DocumentosProceso/Comprobación para el reembolso de fondo fijo de CEDIS.xlsx">
+                    <img src="../../../DocumentosProceso/Formato reembolso.png">
+                </button>
+                <p class="nombre_doc">Comprobación para el reembolso</p>
+            </div>
+
+
+                <!-- Herramientas -->
+                <div class="icono-item">
+                    <button class="btn open-offcanvas"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#dynamicOffcanvas"
+                            data-title="Entrega de herramientas/material y papelería"
+                            data-file="../../../Documentos/Entrega de material o papelería.pdf">
+                        <img src="../../../DocumentosProceso/Entrega de material y papelería.png">
+                    </button>
+                    <p class="nombre_doc">Entrega de herramientas / papelería</p>
+                </div>
+
+                <!-- Vale de entrada y salida -->
+                <div class="icono-item">
+                    <button class="btn open-offcanvas"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#dynamicOffcanvas"
+                            data-title="Vale de entrada y salida"
+                            data-file="../../../Documentos/Vale de entrada y salida del CEDI.pdf">
+                        <img src="../../../DocumentosProceso/entrada y salida del CEDI-icono.png">
+                    </button>
+                    <p class="nombre_doc">Vale de entrada y salida</p>
+                </div>
+
+                <!-- Registro de asistencia -->
+                <div class="icono-item">
+                    <button class="btn open-offcanvas"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#dynamicOffcanvas"
+                            data-title="Registro de asistencia"
+                            data-file="../../../Documentos/Registro de asistencia.pdf">
+                        <img src="../../../DocumentosProceso/Registro asistencia.png">
+                    </button>
+                    <p class="nombre_doc">Registro de asistencia</p>
+                </div>
+
+                <!-- Minuta adaptada -->
+                <div class="icono-item" role="listitem">
+                    <button class="btn"
+                            onclick="window.open('https://docs.google.com/spreadsheets/d/11COInv_1f0ghee3uyAdvnjbSKjIbk95spqji0hAmoqc/copy?gid=0#gid=0', '_blank', 'noopener');">
+                        <img src="../../../DocumentosProceso/Minuta_icono.png" alt="Minuta">
+                    </button>
+
+                    <p class="nombre_doc">Minuta</p>
+                </div>
+
+
+                
 
             </div>
-          </div>
 
-          <div class="columna">
-                <h2>FORMATOS</h2>
+            <!-- Flecha derecha -->
+            <span class="flecha">›</span>
 
-                <div class="grid-iconos">
-
-                  <!-- EPP -->
-                  <div class="boton">
-                    <p class="d-inline-flex gap-1">
-                      <button class="btn open-offcanvas"
-                              data-bs-toggle="offcanvas"
-                              data-bs-target="#dynamicOffcanvas"
-                              data-title="Entrega de EPP y uniforme"
-                              data-file="../../../Documentos/Responsiva de entrega de EPP y uniforme CEDIS.pdf">
-                        <img src="../../../DocumentosProceso/Responsiva EPP-icono.png" style="width:200px;height:200px;">
-                      </button>
-                    </p>
-                    <p class="nombre_doc">Entrega de EPP y uniforme</p>
-                  </div>
-
-                  <!-- Reembolso (descarga directa, NO va al offcanvas) -->
-                  <div class="boton">
-                    <p class="d-inline-flex gap-1">
-                      <button class="btn descargar" type="button">
-                        <img src="../../../DocumentosProceso/Formato reembolso.png" style="width:200px;height:200px;">
-                      </button>
-                    </p>
-                    <p class="nombre_doc">Comprobación para el reembolso de fondo fijo</p>
-                  </div>
-
-                  <!-- JS para descarga -->
-                  <script>
-                    document.querySelector('.descargar').addEventListener('click', function () {
-                      const enlace = document.createElement('a');
-                      enlace.href = '../../../DocumentosProceso/Comprobación para el reembolso de fondo fijo de CEDIS.xlsx';
-                      enlace.download = 'Comprobación para el reembolso de fondo fijo de CEDIS.xlsx';
-                      enlace.click();
-                    });
-                  </script>
-
-                  <!-- Papelería -->
-                  <div class="boton">
-                    <p class="d-inline-flex gap-1">
-                      <button class="btn open-offcanvas"
-                              data-bs-toggle="offcanvas"
-                              data-bs-target="#dynamicOffcanvas"
-                              data-title="Entrega de herramientas/material y papelería"
-                              data-file="../../../Documentos/Entrega de material o papelería.pdf">
-                        <img src="../../../DocumentosProceso/Entrega de material y papelería.png" style="width:200px;height:200px;">
-                      </button>
-                    </p>
-                    <p class="nombre_doc">Entrega de herramientas/material y papelería</p>
-                  </div>
-
-                  <!-- Vale de entrada -->
-                  <div class="boton">
-                    <p class="d-inline-flex gap-1">
-                      <button class="btn open-offcanvas"
-                              data-bs-toggle="offcanvas"
-                              data-bs-target="#dynamicOffcanvas"
-                              data-title="Vale de entrada y salida"
-                              data-file="../../../Documentos/Vale de entrada y salida del CEDI.pdf">
-                        <img src="../../../DocumentosProceso/entrada y salida del CEDI-icono.png" style="width:200px;height:200px;">
-                      </button>
-                    </p>
-                    <p class="nombre_doc">Vale de entrada y salida</p>
-                  </div>
-
-                  <!-- Registro de asistencia -->
-                  <div class="boton">
-                    <p class="d-inline-flex gap-1">
-                      <button class="btn open-offcanvas"
-                              data-bs-toggle="offcanvas"
-                              data-bs-target="#dynamicOffcanvas"
-                              data-title="Registro de asistencia"
-                              data-file="../../../Documentos/Registro de asistencia.pdf">
-                        <img src="../../../DocumentosProceso/Registro asistencia.png" style="width:200px;height:200px;">
-                      </button>
-                    </p>
-                    <p class="nombre_doc">Registro de asistencia</p>
-                  </div>
-
-                  <!-- Minuta (abre Google Sheets) -->
-                  <div class="boton">
-                    <p class="d-inline-flex gap-1">
-                      <button class="btn"
-                              onclick="window.open('https://docs.google.com/spreadsheets/d/11COInv_1f0ghee3uyAdvnjbSKjIbk95spqji0hAmoqc/copy?gid=0#gid=0', '_blank', 'noopener');">
-                        <img src="../../../DocumentosProceso/Minuta_icono.png" style="width:200px;height:200px;">
-                      </button>
-                    </p>
-                    <p class="nombre_doc">Minuta</p>
-                  </div>
-
-                </div>
-              </div>
+        </div>
+    </div>
 
 
+    <!-- =============  INSTRUCTIVOS  (DEBAJO DE POLÍTICAS) ============= -->
+    <div class="tarjeta instructivos">
+        <h2>INSTRUCTIVOS</h2>
 
-            
-              
-          </div>
+        <div class="iconos">
+
+            <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="Uso de app Scan-It To Office"
+                        data-file="../../../Documentos/Instructivo de uso de aplicación Scan it to office.pdf">
+                    <img src="../../../DocumentosProceso/instructivo_icono.png" style="width:200px;height:200px;">
+                </button>
+                <p class="nombre_doc">Uso de app Scan-It To Office</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Espacio vacío debajo de FORMATOS (columna derecha) -->
+    <div></div>
+
+</div>
+
      <!-- </div>-->
+
+
+                  <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                  const carrusel = document.querySelector(".columna:nth-child(2) .grid-iconos");
+
+                  carrusel.addEventListener("wheel", (e) => {
+                      e.preventDefault();
+                      carrusel.scrollLeft += e.deltaY;
+                  });
+              });
+              </script>
+
+
+
+<script>
+document.querySelectorAll(".descargar").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const file = btn.getAttribute("data-file");
+        if (file) {
+            const link = document.createElement("a");
+            link.href = file;
+            link.download = file.split("/").pop(); // descarga con el nombre original
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    });
+});
+</script>
+
+
 
      
 
@@ -311,6 +350,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+
+
+
+
 
 
        <div class="desplegable" id="accordionExample">
@@ -411,6 +454,96 @@ document.addEventListener("DOMContentLoaded", function () {
 
     </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.carrusel').forEach(function(wrapper) {
+    let items = wrapper.querySelector('.carrusel-items');
+
+    // si no hay .carrusel-items, nada que hacer
+    if (!items) return;
+
+    // Si no hay flechas en el HTML, crear dos flechas dentro del wrapper
+    let left = wrapper.querySelector('.flecha.left');
+    let right = wrapper.querySelector('.flecha.right');
+    if (!left) {
+      left = document.createElement('button');
+      left.className = 'flecha left';
+      left.innerText = '‹';
+      wrapper.appendChild(left);
+    }
+    if (!right) {
+      right = document.createElement('button');
+      right.className = 'flecha right';
+      right.innerText = '›';
+      wrapper.appendChild(right);
+    }
+
+    // función para actualizar visibilidad de flechas
+    function actualizarFlechas() {
+      const canLeft = items.scrollLeft > 0;
+      const canRight = items.scrollLeft + items.clientWidth < items.scrollWidth - 1;
+      left.classList.toggle('hidden', !canLeft);
+      right.classList.toggle('hidden', !canRight);
+    }
+
+    // scroll con flechas (medio ancho visible por click)
+    left.addEventListener('click', () => items.scrollBy({ left: -Math.round(items.clientWidth/2), behavior: 'smooth' }));
+    right.addEventListener('click', () => items.scrollBy({ left:  Math.round(items.clientWidth/2), behavior: 'smooth' }));
+
+    // actualizar al hacer scroll y al redimensionar
+    items.addEventListener('scroll', actualizarFlechas);
+    window.addEventListener('resize', actualizarFlechas);
+
+    // HABILITAR arrastre (mouse/touch) para hacer scroll
+    (function enableDragScroll(el) {
+      let isDown = false, startX, scrollLeft;
+      el.addEventListener('mousedown', (e) => {
+        isDown = true;
+        el.classList.add('dragging');
+        startX = e.pageX - el.offsetLeft;
+        scrollLeft = el.scrollLeft;
+        e.preventDefault();
+      });
+      el.addEventListener('mouseleave', () => { isDown = false; el.classList.remove('dragging'); });
+      el.addEventListener('mouseup', () => { isDown = false; el.classList.remove('dragging'); actualizarFlechas(); });
+      el.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        const x = e.pageX - el.offsetLeft;
+        const walk = (x - startX) * 1; // velocidad
+        el.scrollLeft = scrollLeft - walk;
+      });
+
+      // touch support
+      let touchStartX = 0, touchScrollLeft = 0;
+      el.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].pageX;
+        touchScrollLeft = el.scrollLeft;
+      }, {passive: true});
+      el.addEventListener('touchmove', (e) => {
+        const x = e.touches[0].pageX;
+        const walk = (x - touchStartX);
+        el.scrollLeft = touchScrollLeft - walk;
+      }, {passive: true});
+    })(items);
+
+    // Rueda del mouse: permitir scroll horizontal con shift o siempre con ctrl/alt meta
+    items.addEventListener('wheel', function(e) {
+      // si el usuario tiene shift presionado o sistema lo interpreta
+      if (e.shiftKey || Math.abs(e.deltaX) > 0 || (!e.shiftKey && Math.abs(e.deltaY) > 0 && e.deltaX === 0)) {
+        // convertir la rueda vertical en horizontal
+        e.preventDefault();
+        items.scrollBy({ left: e.deltaY > 0 ? 150 : -150 });
+      }
+    }, { passive: false });
+
+    // Inicializar estado de flechas
+    setTimeout(actualizarFlechas, 50);
+  });
+});
+</script>
+
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>

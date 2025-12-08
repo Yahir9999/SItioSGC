@@ -472,4 +472,260 @@ h2{
 
 
 
+.documentos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* 2 columnas iguales */
+    grid-template-rows: auto auto;   /* 2 filas */
+    gap: 20px;
+}
 
+/* Cada tarjeta ocupa su espacio sin crecer */
+.tarjeta {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;       /* ← evita que nada empuje el tamaño */
+}
+
+/* POLÍTICAS (arriba izquierda) */
+.documentos-grid > .tarjeta:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+/* FORMATOS (arriba derecha) */
+.documentos-grid > .tarjeta:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1;
+}
+
+/* INSTRUCTIVOS (abajo izquierda) */
+.documentos-grid > .tarjeta.instructivos {
+    grid-column: 1 / 2;
+    grid-row: 2;
+}
+
+/* Espacio vacío (abajo derecha) */
+.documentos-grid > div:last-child {
+    grid-column: 2 / 3;
+    grid-row: 2;
+}
+
+
+/* INSTRUCTIVOS SOLO BAJO POLÍTICAS */
+.tarjeta.instructivos {
+    grid-column: 1 !important;  /* ocupa solo columna 1 */
+}
+
+/* Títulos */
+.tarjeta h2 {
+    text-align: center !important;
+    color: #0F2145 !important;
+    font-size: 1.7rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Iconos */
+.iconos {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 2rem !important;
+    flex-wrap: wrap !important;
+}
+
+.icono-item {
+    text-align: center !important;
+}
+
+.icono-item img {
+    width: 150px !important;
+}
+
+
+
+.carrusel-items img {
+    max-width: 180px;
+    height: auto;
+}
+
+
+
+.carrusel-items::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carrusel-items::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    border-radius: 4px;
+}
+
+/* Ítems del carrusel */
+.icono-item {
+    flex: 0 0 auto;          /* <- PREVIENE que FORMATOS se expanda */
+    text-align: center;
+}
+
+.icono-item img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+}
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: bold;
+    color: #455a8a;
+    user-select: none;
+    z-index: 5;
+}
+
+.flecha:first-of-type {
+    left: 10px;
+}
+
+.flecha:last-of-type {
+    right: 10px;
+}
+
+
+/* POLÍTICAS: igualar iconos al tamaño de FORMATOS */
+.tarjeta h2 {
+    text-align: center !important;
+}
+
+.tarjeta .icono-item img {
+    width: 150px !important;
+    height: 150px !important;
+    object-fit: contain !important;
+}
+
+
+
+/* ---------- FIX FINAL PARA GRID + TARJETAS + CARRUSEL ---------- */
+
+/* 1) Asegurar que los elementos del grid no se expandan más que su celda */
+.documentos-grid > * {
+    min-width: 0 !important; /* evita que hijos forcen la columna a crecer */
+    box-sizing: border-box !important;
+}
+
+/* 2) Tarjeta: no crecer más de su celda y permitir overflow interno */
+.tarjeta {
+    width: 100% !important;
+    min-width: 0 !important;       /* muy importante para grid */
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;  /* que se vea el scroll interno si aplica */
+}
+
+/* 3) Forzar que la tarjeta de formatos respete su columna (si hay reglas específicas) */
+.documentos-grid > .tarjeta:nth-child(2) {
+    min-width: 0 !important;
+    max-width: 100% !important;
+}
+
+
+
+/* 7) Imágenes del carrusel e ítems de políticas: fijar tamaño razonable */
+.icono-item img {
+    width: 150px !important;
+    height: 150px !important;
+    object-fit: contain !important;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 8) Flechas: posición y click area */
+.flecha {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 10 !important;
+    cursor: pointer !important;
+    user-select: none !important;
+    font-size: 30px !important;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #455a8a !important;
+    background: rgba(255,255,255,0.0);
+    border-radius: 50%;
+}
+
+/* asegurar gaps entre columna izquierda y derecha en pantallas grandes */
+@media (min-width: 1024px) {
+    .documentos-grid { gap: 30px !important; }
+}
+
+/* Reglas de fallback en pantallas pequeñas: dejar que las tarjetas apilen */
+@media (max-width: 768px) {
+    .documentos-grid {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+    }
+    .documentos-grid > div:last-child { display: none; } /* opcional */
+}
+
+
+/* === FIX CARRUSEL ROBUSTO === */
+.carrusel {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: relative !important;
+    overflow: hidden !important; /* el contenedor no se expande */
+}
+
+/* items: permitir scroll horizontal siempre */
+.carrusel-items {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 20px !important;
+    padding: 12px !important;
+    margin: 0 !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-behavior: smooth !important;
+    /* asegurar que no rompa el grid */
+    min-width: 0 !important;
+}
+
+/* asegurar que los hijos no forcen el ancho de la columna */
+.documentos-grid > * { min-width: 0 !important; }
+
+/* items visuales */
+.carrusel-items .icono-item { flex: 0 0 auto !important; width: auto !important; max-width: 220px !important; }
+.carrusel-items .icono-item img { width: 150px !important; height: 150px !important; object-fit: contain !important; }
+
+/* flechas (si ya las tienes las posiciona; si no, el JS las crea) */
+.carrusel .flecha {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 20 !important;
+    cursor: pointer !important;
+    user-select: none !important;
+    font-size: 28px !important;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.85);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    color: #2b3b6b !important;
+    border: none;
+}
+.carrusel .flecha.left { left: 8px !important; }
+.carrusel .flecha.right { right: 8px !important; }
+
+/* ocultar flechas cuando no haya overflow */
+.carrusel .flecha.hidden { visibility: hidden; opacity: 0; pointer-events: none; transition: opacity 150ms; }
