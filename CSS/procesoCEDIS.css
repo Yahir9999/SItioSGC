@@ -175,8 +175,8 @@ main {
 .imagen4 { background-image: url(../Imagenes/Embarque.svg); }
 .imagen5 { background-image: url(../Imagenes/Reparaciones.svg); }
 .imagen6 { background-image: url(../Imagenes/Recuperación.svg); }
-.imagen7 { background-image: url(../Imagenes/gestionpo-imagen.png); }
-.imagen8 { background-image: url(../Imagenes/recolecciones-imagen.png); }
+.imagen7 { background-image: url(../Imagenes/Gestiónpo.svg); }
+.imagen8 { background-image: url(../Imagenes/Recolecciones.svg); }
 
 
 /* Botones dentro del modal que nos ayudan hacer zoom*/
