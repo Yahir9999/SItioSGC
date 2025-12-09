@@ -46,3 +46,12 @@
 }
 
 
+.video-ajustado {
+    width: 70%;        /* ⬅️ Ajusta el tamaño del video */
+    max-width: 900px;  /* ⬅️ Tamaño máximo permitido */
+    display: block;
+    margin: 0 auto;    /* ⬅️ Centrado */
+    border-radius: 10px; /* opcional */
+}
+
+

@@ -129,7 +129,8 @@
 
     <!-- =============  POLÍTICAS  (COLUMNA IZQUIERDA ARRIBA) ============= -->
     <div class="tarjeta">
-        <h2>POLÍTICAS</h2>
+        <h2>POLÍTICAS Y LINEAMIENTOS</h2>
+        <p></p>
 
         <div class="iconos">
 
@@ -156,6 +157,19 @@
                 </button>
                 <p class="nombre_doc">Administración y fondo fijo</p>
             </div>
+
+            <!-- Insumos de papelería autorizados -->
+             <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="Insumos de papelería autorizados"
+                        data-file="https://docs.google.com/spreadsheets/d/13Ceo6JDbNMJEf7xvZOTyKfAN8_SUTad4/preview">
+                    <img src="../../../DocumentosProceso/insumos-icono.png" style="width:100px;height:100px;">
+                </button>
+                <p class="nombre_doc">Insumos de papelería autorizados</p>
+            </div>
+
 
         </div>
     </div>
@@ -313,43 +327,57 @@ document.querySelectorAll(".descargar").forEach(btn => {
 
 
      
+ <!-- script para offcanvas -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
 
-              <script>
-document.addEventListener("DOMContentLoaded", function () {
+                const offcanvas = document.getElementById("dynamicOffcanvas");
+                const title = document.getElementById("dynamicOffcanvasLabel");
+                const fileViewer = document.getElementById("offcanvasImage");
+                const download = document.getElementById("offcanvasDownload");
 
-    const offcanvas = document.getElementById("dynamicOffcanvas");
-    const title = document.getElementById("dynamicOffcanvasLabel");
-    const fileViewer = document.getElementById("offcanvasImage");
-    const download = document.getElementById("offcanvasDownload");
+            offcanvas.addEventListener("show.bs.offcanvas", function (event) {
 
-    offcanvas.addEventListener("show.bs.offcanvas", function (event) {
+                const button = event.relatedTarget;
+                if (!button) return;
 
-        const button = event.relatedTarget;
-        if (!button) return;
+                const fileTitle = button.getAttribute("data-title");
+                const fileSrc = button.getAttribute("data-file");
+                const side = button.getAttribute("data-side") || "start";
 
-        const fileTitle = button.getAttribute("data-title");
-        const fileSrc = button.getAttribute("data-file");
-        const side = button.getAttribute("data-side") || "start"; // default lado izquierdo
+                // Quitar clases previas
+                offcanvas.classList.remove("offcanvas-start", "offcanvas-end");
 
-        // Quitar clases previas
-        offcanvas.classList.remove("offcanvas-start", "offcanvas-end");
+                // Agregar la clase según el botón
+                if (side === "end") {
+                    offcanvas.classList.add("offcanvas-end");
+                } else {
+                    offcanvas.classList.add("offcanvas-start");
+                }
 
-        // Agregar la clase según el botón
-        if (side === "end") {
-            offcanvas.classList.add("offcanvas-end");
-        } else {
-            offcanvas.classList.add("offcanvas-start");
-        }
+                // Cargar en iframe
+                title.textContent = fileTitle;
+                fileViewer.src = fileSrc;
 
-        // Carga dinámica del documento
-        title.textContent = fileTitle;
-        fileViewer.src = fileSrc;
-        download.href = fileSrc;
-        download.setAttribute("download", fileTitle + ".pdf");
-    });
+                // 🟦 LÓGICA PARA DETECTAR SI ES GOOGLE SHEETS
+                const esGoogleSheet = fileSrc.includes("docs.google.com/spreadsheets");
 
-});
-</script>
+                if (esGoogleSheet) {
+                    // Ocultar botón solo si es Google Sheets
+                    download.style.display = "none";
+                } else {
+                    // Mostrar y preparar botón para otros archivos (PDF u otros)
+                    download.style.display = "block";
+                    download.href = fileSrc;
+                    download.setAttribute("download", fileTitle + ".pdf");
+                }
+
+            });
+
+            });
+        </script>
+
+  
 
 
 
@@ -455,6 +483,8 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 </div>
 
+
+ <!-- script para carrusel de formatos -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.carrusel').forEach(function(wrapper) {

@@ -729,3 +729,30 @@ h2{
 
 /* ocultar flechas cuando no haya overflow */
 .carrusel .flecha.hidden { visibility: hidden; opacity: 0; pointer-events: none; transition: opacity 150ms; }
+
+/* === POLÍTICAS EN UNA SOLA FILA === */
+.tarjeta:first-child .iconos {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 2rem !important;
+    flex-wrap: nowrap !important;      /* <-- YA NO SE BAJAN DE LÍNEA */
+    overflow-x: auto !important;       /* <-- permite que se vean todos */
+    padding-bottom: 10px !important;
+}
+
+/* evitar que los iconos crezcan demasiado */
+.tarjeta:first-child .icono-item {
+    flex: 0 0 auto !important;
+}
+
+/* --- FORZAR ICONOS DE POLÍTICAS AL MISMO TAMAÑO --- */
+.tarjeta:first-child .icono-item img {
+    width: 150px !important;     /* mismo ancho exacto */
+    height: 150px !important;    /* misma altura exacta */
+    object-fit: contain !important; /* evita deformación */
+    background: transparent;        /* por si la imagen tiene borde */
+    padding: 0 !important;
+    display: block;
+}
