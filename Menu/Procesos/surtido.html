@@ -86,6 +86,7 @@
                          <!-- Submenu del menu despegable-->    
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="../Menu Principal/CEDIS.html">Presencia CEDIS</a></li>
+                            <li><a class="dropdown-item" href="../Menu Principal/tarifarios.html">Tarifarios</a></li>
                             
                         </ul>
                         </li>
@@ -181,8 +182,9 @@
                             data-img="../../Documentos/Bitácora de órdenes de traslado CEDI.svg"
                             data-size="xlarge"
                             data-download="#">
-                    Bitácora de seguimiento TO
-                    </button> 
+                        Bitácora de seguimiento TO
+                    </button>
+ 
 
                     <!-- Marbete para la activacion-->
                     <button class="btn open-offcanvas" 
@@ -205,16 +207,25 @@
                 </div>
             </div>
 
-            <!-- Genera un canvas, pero este contiene un iframe con un documento pdf -->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF1" aria-labelledby="offcanvasPDFLabel" style="width: 70%;">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasPDFLabel">Bitácora de seguimiento TO</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-                </div>
-                <div class="offcanvas-body" style="padding: 0;">
-                    <iframe src="" width="100%" height="100%"></iframe>
-                </div>
+
+
+          <!-- Offcanvas para mostrar imagen con zoom -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF1" aria-labelledby="offcanvasPDFLabel" style="width: 70%;">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasPDFLabel">Bitácora de seguimiento TO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
             </div>
+
+            <div class="offcanvas-body" style="padding: 0; display: flex; justify-content: center; align-items: center;">
+                
+                <!-- 🔍 Contenedor de imagen con zoom -->
+                <div class="zoom-container">
+                    <img id="zoomImage" src="" class="zoomable" alt="Imagen">
+                </div>
+
+            </div>
+        </div>
+
             <!-- Texto informativo sobre el proceso-->
                 <div class="contenedor_texto">
                 <div class="carril">
@@ -236,6 +247,29 @@
                 <p class="parrafo_info">La presente información es confidencial y de uso exclusivo de los centros de distribución, se prohibe su reproducción, modificación, almacenamiento, o difusión a personas externas sin autorización previa.</p>
             </div>
     </footer>
+
+    <script>
+        // Abrir offcanvas cargando la imagen
+document.querySelectorAll(".open-offcanvas").forEach(btn => {
+    btn.addEventListener("click", function () {
+
+        const imgSrc = this.dataset.img;  // viene del botón
+        const img = document.getElementById("zoomImage");
+
+        img.src = imgSrc;
+        img.classList.remove("zoomed"); // por si estaba ampliada antes
+
+        const offcanvas = new bootstrap.Offcanvas(document.getElementById("offcanvasPDF1"));
+        offcanvas.show();
+    });
+});
+
+// Zoom con clic
+document.getElementById("zoomImage").addEventListener("click", function () {
+    this.classList.toggle("zoomed");
+});
+
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>

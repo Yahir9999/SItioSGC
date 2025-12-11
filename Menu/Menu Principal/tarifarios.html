@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../CSS/header_footer.css">
+  
+  <link rel="stylesheet" href="../../CSS/documentacion.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+  <script src="../../Script/modal.js" defer></script>
+
+  <!-- Apartado para poder evitar que se acceda directamente a cualquier pagina sin iniciar sesión, esto verifica si ya hubo un inicio de sesion, de lo contrario te envia al inicio de sesión -->
+    <script>
+        if(sessionStorage.getItem("logueado") !== "true"){
+            window.location.href = "../Inicio de Sesion/Inicio.html";
+        }
+  </script>
+  <title>Nuestros CEDIS</title>
+</head>
+
+<!-- Contenedor general para todo el contenido de la pagina principal-->
+<body>  
+        <!-- Contenedor de la seccion header (logo y menu de navegacion)-->
+        <header>
+
+            <!-- Logo empresarial-->
+            <div class="logo">
+
+            </div>
+
+            <!-- Seccion para el menu de navegación-->
+            <div class="menu">
+                <nav class="navbar navbar-expand-lg bg-white navbar-light">
+                <div class="container-fluid">
+                    <!-- Boton para regresar al menu principal-->
+                    <a class="navbar-brand" href="../../index.html">Inicio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <!-- Boton principal del menu despegable (para la seccion de procesos)-->
+                        <li class="nav-item dropdown custom-dropdown-hover">
+                            <a
+                              class="nav-link dropdown-toggle"
+                              href="procesoCEDIS.html"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                              onclick="window.location.href='procesoCEDIS.html'"
+                            >
+                              Procesos CEDIS
+                            </a>
+
+                        <!-- Submenu del menu despegable-->    
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../Procesos/recibo.html">Recibo</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/surtido.html">Surtido</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/activacion.html">Activación</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/embarque.html">Embarque</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/reparaciones.html">Reparaciones</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/recuperacion.html">Recuperación</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/gestionpo.html">Gestión de PO</a></li>
+                            <li><a class="dropdown-item" href="../Procesos/recolecciones.html">Recolecciones</a></li>
+                        </ul>
+                        </li>
+
+                        <!-- Boton principal del menu despegable (Para la seccion de la documentación)-->
+                        <li class="nav-item dropdown custom-dropdown-hover">
+                            <a
+                              class="nav-link dropdown-toggle"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              Documentación
+                            </a>
+                        <!-- Submenu del menu despegable-->    
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="documentacion/documentacion_i.html">Interna</a></li>
+                            <li><a class="dropdown-item" href="documentacion/documentacion_soporte.html">Soporte</a></li>
+                        </ul>
+                        </li>
+
+                        <!-- Boton principal del menu principal que nos enseña los apartados de nuestros CEDIS-->
+                        <li class="nav-item dropdown custom-dropdown-hover">
+                            <a
+                              class="nav-link dropdown-toggle"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              Nosotros
+                            </a>
+                         <!-- Submenu del menu despegable-->    
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../Menu Principal/CEDIS.html">Presencia CEDIS</a></li>
+                            <li><a class="dropdown-item" href="../Menu Principal/tarifarios.html">Tarifarios</a></li>
+                            
+                        </ul>
+                        </li>
+
+                        <!-- Boton que nos dirige a la seccion de los indicadores -->
+                        <li class="nav-item">
+                        <a class="nav-link" href="indicadores.html">Indicadores</a>
+                        </li>
+
+                        <!-- Boton que nos dirige a la seccion de comunicacion del sistema de gestion de calidad-->
+                        <li class="nav-item">
+                        <a class="nav-link" href="comunicacion.html">Comunicación SGC</a>
+                        </li>
+
+                    </ul>
+                    </div>
+                </div>
+                </nav>
+            </div>
+        </header>
+
+  <!-- Empieza el contenido de la pagina-->      
+    <main>
+
+      <!-- titulo-->
+       <div class="titulo">
+          <h1>TARIFARIOS</h1>
+       </div>
+
+       <div class="iconos">
+
+            <!-- TARIFARIO CAMARONES -->
+            <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="CAMARONES"
+                        data-file="../../Tabuladores/TABULADOR CAMARONES.pdf">
+                    <img src="../../Tabuladores/TABULADOR CAMARONES_page-0001.jpg" style="width:200px;height:200px;">
+                </button>
+                <p class="nombre_doc">CAMARONES</p>
+            </div>
+
+            <!-- TARIFARIO CHALCO -->
+            <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="CHALCO"
+                        data-file="../../Tabuladores/TABULADOR CHALCO.pdf">
+                    <img src="../../Tabuladores/TABULADOR CHALCO_page-0001.jpg" style="width:200px;height:200px;">
+                </button>
+                <p class="nombre_doc">CHALCO</p>
+            </div>
+
+            <!-- TARIFARIO TULTEPEC -->
+            <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="TULTEPEC"
+                        data-file="../../Tabuladores/TABULADOR TULTEPEC.pdf">
+                    <img src="../../Tabuladores/TABULADOR TULTEPEC_page-0001.jpg" style="width:200px;height:200px;">
+                </button>
+                <p class="nombre_doc">TULTEPEC</p>
+            </div>
+
+            <!-- TARIFARIO TOLUCA -->
+            <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="TOLUCA"
+                        data-file="../../Tabuladores/TABULADOR TOLUCA.pdf">
+                    <img src="../../Tabuladores/TABULADOR TOLUCA_page-0001.jpg" style="width:200px;height:200px;">
+                </button>
+                <p class="nombre_doc">TOLUCA</p>
+            </div>
+
+            <!-- TARIFARIO IRAPUATO -->
+            <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="IRAPUATO"
+                        data-file="../../Tabuladores/TABULADOR IRAPUATO.pdf">
+                    <img src="../../Tabuladores/TABULADOR IRAPUATO_page-0001.jpg" style="width:200px;height:200px;">
+                </button>
+                <p class="nombre_doc">IRAPUATO</p>
+            </div>
+
+            <!-- TARIFARIO VILLAHERMOSA -->
+            <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="VILLAHERMOSA"
+                        data-file="../../Tabuladores/TABULADOR VILLAHERMOSA.pdf">
+                    <img src="../../Tabuladores/TABULADOR VILLAHERMOSA_page-0001.jpg" style="width:200px;height:200px;">
+                </button>
+                <p class="nombre_doc">VILLAHERMOSA</p>
+            </div>
+
+            <!-- TARIFARIO VERACRUZ -->
+            <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="VERACRUZ"
+                        data-file="../../Tabuladores/TABULADOR VERACRUZ.pdf">
+                    <img src="../../Tabuladores/TABULADOR VERACRUZ_page-0001.jpg" style="width:200px;height:200px;">
+                </button>
+                <p class="nombre_doc">VERACRUZ</p>
+            </div>
+           
+
+
+        </div>
+
+      <div class="desplegable" id="accordionExample">
+        
+        
+          <!-- Card desplegable del formato de orden y limpieza-->
+        <div class="collapse" id="collapseExample" data-bs-parent="#accordionExample">
+                <div class="card card-body">
+                  <!-- El articulo #toolbar=0&navpanes=0 sirven para poder ocultar los paneles de trabajo de un pdf y que solo este quede visible-->
+                  <iframe src="../../Tabuladores/TABULADOR CAMARONES.pdf#toolbar=0&navpanes=0" frameborder="0" width="100%" height="100%">
+
+                  </iframe>
+                </div>
+          </div>
+
+          <div class="collapse" id="collapseExample" data-bs-parent="#accordionExample">
+                <div class="card card-body">
+                  <!-- El articulo #toolbar=0&navpanes=0 sirven para poder ocultar los paneles de trabajo de un pdf y que solo este quede visible-->
+                  <iframe src="../../Tabuladores/TABULADOR CHALCO.pdf.pdf#toolbar=0&navpanes=0" frameborder="0" width="100%" height="100%">
+
+                  </iframe>
+                </div>
+          </div>
+
+          <div class="collapse" id="collapseExample" data-bs-parent="#accordionExample">
+                <div class="card card-body">
+                  <!-- El articulo #toolbar=0&navpanes=0 sirven para poder ocultar los paneles de trabajo de un pdf y que solo este quede visible-->
+                  <iframe src="../../Tabuladores/TABULADOR TULTEPEC.pdf.pdf#toolbar=0&navpanes=0" frameborder="0" width="100%" height="100%">
+
+                  </iframe>
+                </div>
+          </div>
+
+           
+        </div>
+    </main>
+
+    <!-- Seccion del footer el cual contiene un aviso de privacidad y difuncion-->
+    <footer>
+            <div class="logo_informativo">
+
+            </div>
+
+            <!-- Mnesaje de aviso de privacidad y difucion-->
+            <div class="mensaje">
+                <p class="parrafo_info">La presente información es confidencial y de uso exclusivo de los centros de distribución, se prohíbe su reproducción, modificación, almacenamiento, o difusión a personas externas sin autorización previa.</p>
+            </div>
+    </footer>
+    <!-- OFFCANVAS DINÁMICO -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="dynamicOffcanvas">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="dynamicOffcanvasLabel">Cargando…</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body">
+        <!-- Visualización -->
+        <iframe id="offcanvasImage"
+                src=""
+                style="width:100%; height:90vh; border:none;">
+        </iframe>
+
+        <!-- Botón de descarga 
+        <a id="offcanvasDownload"
+           href=""
+           class="btn btn-primary mt-3"
+           download>
+           Descargar archivo
+        </a>-->
+    </div>
+</div>
+
+
+     <!-- script para offcanvas -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+
+                const offcanvas = document.getElementById("dynamicOffcanvas");
+                const title = document.getElementById("dynamicOffcanvasLabel");
+                const fileViewer = document.getElementById("offcanvasImage");
+                const download = document.getElementById("offcanvasDownload");
+
+            offcanvas.addEventListener("show.bs.offcanvas", function (event) {
+
+                const button = event.relatedTarget;
+                if (!button) return;
+
+                const fileTitle = button.getAttribute("data-title");
+                const fileSrc = button.getAttribute("data-file");
+                const side = button.getAttribute("data-side") || "start";
+
+                // Quitar clases previas
+                offcanvas.classList.remove("offcanvas-start", "offcanvas-end");
+
+                // Agregar la clase según el botón
+                if (side === "end") {
+                    offcanvas.classList.add("offcanvas-end");
+                } else {
+                    offcanvas.classList.add("offcanvas-start");
+                }
+
+                // Cargar en iframe
+                title.textContent = fileTitle;
+                fileViewer.src = fileSrc;
+
+                // 🟦 LÓGICA PARA DETECTAR SI ES GOOGLE SHEETS
+                const esGoogleSheet = fileSrc.includes("docs.google.com/spreadsheets");
+
+                if (esGoogleSheet) {
+                    // Ocultar botón solo si es Google Sheets
+                    download.style.display = "none";
+                } else {
+                    // Mostrar y preparar botón para otros archivos (PDF u otros)
+                    download.style.display = "block";
+                    download.href = fileSrc;
+                    download.setAttribute("download", fileTitle + ".pdf");
+                }
+
+            });
+
+            });
+        </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+                    
+
+                               
+    
+
+</body>
+
+        
+
+</html>
