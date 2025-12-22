@@ -200,14 +200,21 @@
                     <p class="nombre_doc">Entrega de EPP y uniforme</p>
                 </div>
 
-                <div class="icono-item">
-                <button class="btn descargar"
-                        data-file="../../../DocumentosProceso/Comprobación para el reembolso de fondo fijo de CEDIS.xlsx">
-                    <img src="../../../DocumentosProceso/Formato reembolso.png">
-                </button>
-                <p class="nombre_doc">Comprobación para el reembolso</p>
-            </div>
 
+                <!-- comprobacion reembolso fijo -->
+                <div class="icono-item">
+                    <button class="btn open-offcanvas"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#dynamicOffcanvas"
+                            data-title="Comprobación para el reembolso"
+                            data-file="../../../Documentos/Comprobación para el reembolso de fondo fijo.pdf"
+                            data-download="../../../DocumentosProceso/Comprobación para el reembolso de fondo fijo de CEDIS.xlsx">
+                        <img src="../../../DocumentosProceso/Formato reembolso.png">
+                    </button>
+                    <p class="nombre_doc">Comprobación para el reembolso</p>
+                </div>
+
+                
 
                 <!-- Herramientas -->
                 <div class="icono-item">
@@ -417,14 +424,47 @@ document.querySelectorAll(".descargar").forEach(btn => {
               </div>
           </div>
 
-          <!-- Card desplegable del formato REEMBOLSO FIJO
-          <div class="collapse" id="collapseExample6" data-bs-parent="#accordionExample">
-              <div class="card card-body">
-                <iframe src="../../../Documentos/Comprobación para el reembolso de fondo fijo.pdf" frameborder="0" width="100%" height="100%">
+          <!-- REEMBOLSO-->
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="dynamicOffcanvas" style="width:70%;">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
 
-                </iframe>
-              </div>
-          </div> -->
+                <div class="offcanvas-body">
+                    <iframe id="offcanvasIframe"
+                            src=""
+                            width="100%"
+                            height="90%"
+                            frameborder="0">
+                    </iframe>
+
+                    <!-- Botón descarga Excel -->
+                    <div class="text-end mt-3">
+                        <a id="btnDescargarExcel" class="btn btn-success" download>
+                            Descargar Excel
+                        </a>
+                    </div>
+                </div>
+         </div>
+            <!-- SCRIPT REEMBOLSO -->
+            <script>
+            document.querySelectorAll(".open-offcanvas").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const title = btn.getAttribute("data-title");
+                    const pdf = btn.getAttribute("data-file");
+                    const excel = btn.getAttribute("data-download");
+
+                    document.getElementById("offcanvasTitle").textContent = title;
+                    document.getElementById("offcanvasIframe").src = pdf;
+
+                    const linkExcel = document.getElementById("btnDescargarExcel");
+                    linkExcel.href = excel;
+                });
+            });
+            </script>
+
+
 
           <!-- Card desplegable del formato para entrega de papaleria-->
           <div class="collapse" id="collapseExample2" data-bs-parent="#accordionExample">
