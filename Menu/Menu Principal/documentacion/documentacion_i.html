@@ -228,16 +228,30 @@
                     <p class="nombre_doc">Entrega de herramientas / papelería</p>
                 </div>
 
-                <!-- Vale de entrada y salida -->
+               <!-- Permiso de entrada y salida (SOLO VISTA) -->
+                <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="Permiso de entrada y salida"
+                        data-file="../../../Documentos/Permiso de entrada y salida del CEDI_page.jpg"
+                        data-view-only="true">
+                    <img src="../../../DocumentosProceso/vale de entrada y salida.png">
+                </button>
+                <p class="nombre_doc">Permiso de entrada y salida</p>
+                </div>
+
+
+                <!-- Vale de entrada y salida de mercancia -->
                 <div class="icono-item">
                     <button class="btn open-offcanvas"
                             data-bs-toggle="offcanvas"
                             data-bs-target="#dynamicOffcanvas"
-                            data-title="Vale de entrada y salida"
+                            data-title="Vale de entrada y salida de mercancia"
                             data-file="../../../Documentos/Vale de entrada y salida del CEDI.pdf">
                         <img src="../../../DocumentosProceso/entrada y salida del CEDI-icono.png">
                     </button>
-                    <p class="nombre_doc">Vale de entrada y salida</p>
+                    <p class="nombre_doc">Vale de entrada y salida de mercancia</p>
                 </div>
 
                 <!-- Registro de asistencia -->
@@ -252,13 +266,12 @@
                     <p class="nombre_doc">Registro de asistencia</p>
                 </div>
 
-
-                <!-- minuta -->
+                <!-- Minuta-->
                 <div class="icono-item">
                     <button class="btn open-offcanvas"
                             data-bs-toggle="offcanvas"
                             data-bs-target="#dynamicOffcanvas"
-                            data-title="minuta"
+                            data-title="Minuta"
                             data-file="../../../Documentos/minutaa.pdf"
                             data-download="../../../DocumentosProceso/Minuta.xlsx">
                         <img src="../../../DocumentosProceso/Minuta_icono.png">
@@ -307,95 +320,6 @@
      <!-- </div>-->
 
 
-                  <script>
-              document.addEventListener("DOMContentLoaded", () => {
-                  const carrusel = document.querySelector(".columna:nth-child(2) .grid-iconos");
-
-                  carrusel.addEventListener("wheel", (e) => {
-                      e.preventDefault();
-                      carrusel.scrollLeft += e.deltaY;
-                  });
-              });
-              </script>
-
-
-
-<script>
-document.querySelectorAll(".descargar").forEach(btn => {
-    btn.addEventListener("click", () => {
-        const file = btn.getAttribute("data-file");
-        if (file) {
-            const link = document.createElement("a");
-            link.href = file;
-            link.download = file.split("/").pop(); // descarga con el nombre original
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-    });
-});
-</script>
-
-
-
-     
- <!-- script para offcanvas -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-
-                const offcanvas = document.getElementById("dynamicOffcanvas");
-                const title = document.getElementById("dynamicOffcanvasLabel");
-                const fileViewer = document.getElementById("offcanvasImage");
-                const download = document.getElementById("offcanvasDownload");
-
-            offcanvas.addEventListener("show.bs.offcanvas", function (event) {
-
-                const button = event.relatedTarget;
-                if (!button) return;
-
-                const fileTitle = button.getAttribute("data-title");
-                const fileSrc = button.getAttribute("data-file");
-                const side = button.getAttribute("data-side") || "start";
-
-                // Quitar clases previas
-                offcanvas.classList.remove("offcanvas-start", "offcanvas-end");
-
-                // Agregar la clase según el botón
-                if (side === "end") {
-                    offcanvas.classList.add("offcanvas-end");
-                } else {
-                    offcanvas.classList.add("offcanvas-start");
-                }
-
-                // Cargar en iframe
-                title.textContent = fileTitle;
-                fileViewer.src = fileSrc;
-
-                // 🟦 LÓGICA PARA DETECTAR SI ES GOOGLE SHEETS
-                const esGoogleSheet = fileSrc.includes("docs.google.com/spreadsheets");
-
-                if (esGoogleSheet) {
-                    // Ocultar botón solo si es Google Sheets
-                    download.style.display = "none";
-                } else {
-                    // Mostrar y preparar botón para otros archivos (PDF u otros)
-                    download.style.display = "block";
-                    download.href = fileSrc;
-                    download.setAttribute("download", fileTitle + ".pdf");
-                }
-
-            });
-
-            });
-        </script>
-
-  
-
-
-
-
-
-
        <div class="desplegable" id="accordionExample">
         
         
@@ -428,45 +352,64 @@ document.querySelectorAll(".descargar").forEach(btn => {
               </div>
           </div>
 
-          <!-- REEMBOLSO-->
-          <div class="offcanvas offcanvas-start" tabindex="-1" id="dynamicOffcanvas" style="width:70%;">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasTitle"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-                </div>
-
-                <div class="offcanvas-body">
-                    <iframe id="offcanvasIframe"
-                            src=""
-                            width="100%"
-                            height="90%"
-                            frameborder="0">
-                    </iframe>
-
-                    <!-- Botón descarga Excel -->
-                    <div class="text-end mt-3">
-                        <a id="btnDescargarExcel" class="btn btn-success" download>
-                            Descargar Excel
-                        </a>
-                    </div>
-                </div>
-         </div>
+          
             <!-- SCRIPT REEMBOLSO -->
             <script>
-            document.querySelectorAll(".open-offcanvas").forEach(btn => {
-                btn.addEventListener("click", () => {
+                document.addEventListener("DOMContentLoaded", () => {
+                document.querySelectorAll(".open-offcanvas").forEach(btn => {
+                    btn.addEventListener("click", () => {
+
                     const title = btn.getAttribute("data-title");
-                    const pdf = btn.getAttribute("data-file");
+                    const file  = btn.getAttribute("data-file");
                     const excel = btn.getAttribute("data-download");
+                    const viewOnly = btn.getAttribute("data-view-only"); // 👈 NUEVO
 
-                    document.getElementById("offcanvasTitle").textContent = title;
-                    document.getElementById("offcanvasIframe").src = pdf;
+                    const iframe = document.getElementById("offcanvasIframe");
+                    const downloadBtn = document.getElementById("offcanvasDownload");
+                    const titleEl = document.getElementById("offcanvasTitle");
 
-                    const linkExcel = document.getElementById("btnDescargarExcel");
-                    linkExcel.href = excel;
+                    titleEl.textContent = title || "";
+                    iframe.src = file || "";
+
+                    // Reset
+                    downloadBtn.style.display = "none";
+                    downloadBtn.removeAttribute("href");
+                    downloadBtn.removeAttribute("download");
+
+                    // 🚫 SOLO VISTA → no descargar
+                    if (viewOnly === "true") {
+                        return;
+                    }
+
+                    // 🔹 Google Sheets → sin botón
+                    if (file && file.includes("docs.google.com")) {
+                        return;
+                    }
+
+                    // 🔹 Excel
+                    if (excel) {
+                        downloadBtn.style.display = "inline-block";
+                        downloadBtn.textContent = "Descargar Excel";
+                        downloadBtn.href = excel;
+                        downloadBtn.setAttribute("download", excel.split("/").pop());
+                        return;
+                    }
+
+                    // 🔹 PDF normal
+                    if (file) {
+                        downloadBtn.style.display = "inline-block";
+                        downloadBtn.textContent = "Descargar";
+                        downloadBtn.href = file;
+                        downloadBtn.setAttribute("download", file.split("/").pop());
+                    }
+                    });
                 });
-            });
+                });
             </script>
+
+
+
+
 
 
 
@@ -508,25 +451,7 @@ document.querySelectorAll(".descargar").forEach(btn => {
         </div>
     </footer>
 
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="dynamicOffcanvas">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="dynamicOffcanvasLabel">Título por defecto</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-        <iframe id="offcanvasImage"
-                src=""
-                frameborder="0"
-                style="width:100%; height:80vh;"></iframe>
-
-        <div class="btn-center">
-    <a id="offcanvasDownload" href="#" class="btn boton_dowload mt-3" download>
-        Descargar
-    </a>
-</div>
-
-    </div>
-</div>
+    
 
 
  <!-- script para carrusel de formatos -->
@@ -617,6 +542,35 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="dynamicOffcanvas">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasTitle"></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body d-flex flex-column gap-3">
+
+    <!-- Visor -->
+    <iframe
+      id="offcanvasIframe"
+      src=""
+      style="width:100%; height:70vh; border:none;"
+      loading="lazy">
+    </iframe>
+
+    <!-- Botón descarga -->
+    <a
+      id="offcanvasDownload"
+      class="btn btn-descarga w-100"
+      style="display:none;">
+      Descargar
+    </a>
+
+  </div>
+</div>
+
+
 
 
 

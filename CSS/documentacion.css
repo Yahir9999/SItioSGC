@@ -756,3 +756,27 @@ h2{
     padding: 0 !important;
     display: block;
 }
+
+
+/* Botón descarga Offcanvas */
+a.btn-descarga {
+  background-color: #1d3557;
+  border-color: #1d3557;
+  color: #fff;
+  font-weight: 600;
+}
+
+a.btn-descarga:hover {
+  background-color: #152843;
+  border-color: #152843;
+}
+
+a.btn-descarga:active {
+  background-color: #0f1f36;
+  border-color: #0f1f36;
+}
+
+a.btn-descarga:focus {
+  box-shadow: 0 0 0 0.25rem rgba(29, 53, 87, 0.35);
+}
+
