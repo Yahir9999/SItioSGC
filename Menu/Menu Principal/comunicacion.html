@@ -114,7 +114,8 @@
             </div>
         </header>
 
-<!-- Empieza el contenido de la pagina-->         
+<!-- Empieza el contenido de la pagina-->
+    <div style="height: calc(100vh - 140px); overflow-y: auto;">        
     <main>
         <div class="contenedor_informacion">
             <!-- Imagen miniatura-->
@@ -140,14 +141,14 @@
 <img src="../../DocumentosProceso/Estatus SO-IF.svg" 
      class="img-thumbnail" 
      data-bs-toggle="modal" 
-     data-bs-target="#modalEstatus" 
+    data-bs-target="#modalEstatusSO"
      style="cursor:pointer;">
 
-<div class="modal fade" id="modalEstatus" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="modalEstatusSO" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-fullscreen">
     <div class="modal-content bg-dark">
       <div class="modal-body p-0">
-        <img src="../../DocumentosProceso/Estatus SO-IF.svg" class="img-fluid w-100" style="height: 100vh; object-fit: contain;">
+        <img src="../../DocumentosProceso/Estatus SO-IF.svg" class="img-fluid w-100"  object-fit: contain;">
       </div>
       <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Cerrar"></button>
     </div>
@@ -162,14 +163,14 @@
 <img src="../../DocumentosProceso/Estatus TO-IF.svg" 
      class="img-thumbnail" 
      data-bs-toggle="modal" 
-     data-bs-target="#modalEstatus" 
+     data-bs-target="#modalEstatusTO"
      style="cursor:pointer;">
 
-<div class="modal fade" id="modalEstatus" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="modalEstatusTO" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-fullscreen">
     <div class="modal-content bg-dark">
       <div class="modal-body p-0">
-        <img src="../../DocumentosProceso/Estatus TO-IF.svg" class="img-fluid w-100" style="height: 100vh; object-fit: contain;">
+        <img src="../../DocumentosProceso/Estatus TO-IF.svg" class="img-fluid w-100"  object-fit: contain;">
       </div>
       <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Cerrar"></button>
     </div>
@@ -410,8 +411,11 @@
 
                 
         </div>
+        <div style="height: 160px;"></div>
     </main>
+    </div> 
 
+   
 
 <!-- Seccion de pie de pagina-->    
     <footer>

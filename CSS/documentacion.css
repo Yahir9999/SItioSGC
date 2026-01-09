@@ -1,14 +1,26 @@
-/* Estilos generales */
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    gap: 1.5rem;
-    min-height: 80vh;
+/* ================== ESTILOS GENERALES ================== */
+* {
+    font-family: "DM Sans", sans-serif;
+    box-sizing: border-box;
 }
 
-/* Título principal */
+main {
+
+    padding: 1rem;
+    display: block; /* evita cortes por flex + vh */
+    
+}
+
+/* ================== TÍTULOS ================== */
+h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #1c2c5b;
+    text-align: center;
+    margin-top: 0.75rem;
+    line-height: 1.3;
+}
+
 .titulo {
     width: 100%;
     min-height: 100px;
@@ -17,29 +29,21 @@ main {
     justify-content: center;
     align-items: center;
     color: white;
-    font-weight: 100;
-    font-style: normal;
     letter-spacing: 3px;
-    word-spacing: 5px;
     text-align: center;
     padding: 1rem;
     border-radius: 8px;
-
 }
 
+/* ================== CONTENEDORES ================== */
 .contenedor-secciones {
-  
     display: flex;
-    justify-content: space-between;
     gap: 30px;
     width: 100%;
     max-width: 1400px;
     margin: auto;
     padding: 30px;
 }
-
-
-
 
 .columna {
     width: 48%;
@@ -49,734 +53,173 @@ main {
     border-radius: 15px;
 }
 
-.columna h2 {
-   text-align: center;
-    margin-bottom: 25px;
-  font-weight: bold;
-}
-
+/* ================== GRID DE ICONOS ================== */
 .grid-iconos {
-   display: grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
 .boton {
     display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .boton img {
-   
-     width: 100%;
+    width: 100%;
+    max-width: 140px;
+    min-width: 70px;
     height: auto;
     object-fit: contain;
-    max-width: 140px;           /* grande */
-   min-width: 70px;            /* pequeño si la pantalla es chica */
-  transition: transform 0.2s ease;
-    
-  
+    transition: transform 0.2s ease;
 }
-
-.boton p {
-    margin-top: 10px;
-}
-
-
-
-
 
 .boton:hover {
     transform: translateY(-5px);
 }
 
-.boton button {
-    border: none;
-    background: transparent;
-    padding: 0;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.boton button:hover {
-    opacity: 0.8;
-}
-
-
-
-/* Nombre del documento */
 .nombre_doc {
     font-size: 1rem;
     font-weight: bold;
     color: #1c2c5b;
-    text-align: center;
     margin-top: 0.75rem;
-    line-height: 1.3;
 }
 
-/* Contenedor de documentos desplegables */
-.desplegable {
-    width: 100%;
-}
-
-/* Tarjeta con documento PDF */
-.card-body {
-    width: 100% !important;
-    height: 70vh;
-    padding: 0;
-    border: none;
-}
-
-/* Ajuste general de iframe para móviles */
-.card-body iframe {
-    width: 100%;
-    height: 70vh; /* altura por defecto */
-    max-height: 80vh; /* no exceder altura de pantalla */
-}
-
-/* Media Queries para responsividad */
-@media (max-width: 1200px) {
-    .boton {
-        flex: 0 0 calc(33.333% - 1.5rem);
-    }
-}
-
-@media (max-width: 992px) {
-    .titulo h1 {
-        font-size: 1.5rem;
-        letter-spacing: 2px;
-        word-spacing: 3px;
-    }
-    
-    .boton {
-        flex: 0 0 calc(50% - 1.5rem);
-    }
-    
-    .nombre_doc {
-        font-size: 0.95rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .titulo {
-        min-height: 80px;
-        padding: 0.75rem;
-    }
-    
-    .titulo h1 {
-        font-size: 1.25rem;
-        letter-spacing: 1px;
-        word-spacing: 2px;
-    }
-    
-    .politicas {
-        gap: 1rem;
-    }
-    
-    .boton {
-        flex: 0 0 calc(50% - 1rem);
-        padding: 0.5rem;
-    }
-    
-    .boton img {
-        max-width: 150px;
-    }
-    
-    .nombre_doc {
-        font-size: 0.9rem;
-        margin-top: 0.5rem;
-    }
-    
-    .card-body {
-        height: 60vh;
-    }
-}
-
-@media (max-width: 576px) {
-    main {
-        padding: 0.5rem;
-        gap: 1rem;
-    }
-    
-    .titulo {
-        min-height: 70px;
-    }
-    
-    .titulo h1 {
-        font-size: 1rem;
-        letter-spacing: 0;
-        word-spacing: 1px;
-    }
-    
-    .politicas {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-    
-    .boton {
-        flex: 0 0 100%;
-        width: 100%;
-        max-width: 250px;
-    }
-    
-    .boton img {
-        max-width: 130px;
-    }
-    
-    .nombre_doc {
-        font-size: 0.85rem;
-    }
-    
-    .card-body {
-        height: 50vh;
-    }
-}
-
-/* Para pantallas muy pequeñas */
-@media (max-width: 400px) {
-    .titulo h1 {
-        font-size: 0.9rem;
-    }
-    
-    .boton img {
-        width: 100px;  /* Ajustable según se vea mejor */
-        height: 100px;
-        object-fit: contain;
-        margin-bottom: 0.5rem;
-    }
-    
-    .nombre_doc {
-        font-size: 0.8rem;
-    }
-
-    .politicas{
-        flex-direction: row;
-        align-items: center; /* Centrar los botones */
-        gap: 1rem; 
-    }
-}
-
-
-
-/* Documentacion de soporte*/
-
-.botones_opciones{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1rem 0;
-}
-
-/* Botones - Seccion documentacion de soporte */
-.boton_i{
-    background-color: #1C2C5B;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-block;
-    width: auto;
-    max-width: 100%;
-}
-
-.boton_i:hover {
-    background-color: #141F44;
-    transform: scale(1.03);
-    color: white;
-}
-
-/* Diseño del login */ 
-.login-container {
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            width: 100%;
-            max-width: 400px;
-        }
-
-.login-header {
-            background: linear-gradient(135deg, #1c2c5b 0%, #263971 100%);
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-.login-form {
-            padding: 30px;
-        }
-
-.form-control {
-            border-radius: 50px;
-            padding: 12px 25px;
-            margin-bottom: 20px;
-            border: 2px solid #eee;
-            transition: all 0.3s;
-        }
-
-.form-control:focus {
-            border-color: #263971;
-            box-shadow: 0 0 10px rgba(106, 17, 203, 0.3);
-        }
-
-.btn-login {
-            background: linear-gradient(135deg, #1c2c5b 0%, #263971 100%);
-            border: none;
-            border-radius: 50px;
-            padding: 12px;
-            color: white;
-            width: 100%;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-.btn-login:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
-            color: rgba(255, 255, 255, 0.76);
-        }
-
-.input-icon {
-            position: relative;
-        }
-
-.input-icon i {
-            position: absolute;
-            left: 15px;
-            top: 13px;
-            color: #1c2c5b;
-        }
-
-.input-icon input {
-            padding-left: 40px;
-        }
-
-.modal-content{
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-.welcome-modal {
-            text-align: center;
-            padding: 20px;
-        }
-
-.welcome-icon {
-            font-size: 80px;
-            color: #1c2c5b;
-            margin-bottom: 20px;
-        }
-
-.alert {
-            border-radius: 10px;
-            display: none;
-        }
-
-/* Pantallas medianas */
-@media (max-width: 768px) {
-    .card-body {
-        height: 50vh; /* reducir altura total del contenedor */
-    }
-    .card-body iframe {
-        height: 50vh;
-    }
-}
-
-/* Pantallas pequeñas */
-@media (max-width: 576px) {
-    .card-body {
-        height: 40vh; /* menos altura para que se vea en celular */
-    }
-    .card-body iframe {
-        height: 40vh;
-    }
-}
-
-/* Pantallas muy pequeñas */
-@media (max-width: 400px) {
-    .card-body {
-        height: 35vh;
-    }
-    .card-body iframe {
-        height: 35vh;
-    }
-}        
-
-h2{
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #1c2c5b;
-    text-align: center;
-    margin-top: 0.75rem;
-    line-height: 1.3;
-}
-
-*{
-    font-family: "DM Sans", sans-serif;
-  
-}
-
-
-#dynamicOffcanvas {
-    width: 60% !important;
-}
-
-/* Desactivar animación y evitar que se mueva */
-.offcanvas {
-    transition: none !important;
-    transform: none !important;
-    visibility: hidden; /* para que no se vea hasta que esté abierto */
-}
-
-.offcanvas.show {
-    transform: none !important;
-    visibility: visible;
-}
-
-/* --- Estilo del título --- */
-.offcanvas-header h5 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #1d3557; /* azul oscuro elegante */
-    margin: 0;
-}
-
-.boton_dowload {
-    background-color: #1d3557 !important;
-    color: #fff !important;
-    border-radius: 12px;
-    padding: 12px 20px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-
-    transition: background-color 0.25s ease, transform 0.25s ease;
-}
-
-.boton_dowload:hover {
-    background-color: #457b9d !important;
-    transform: translateY(-2px);
-    color: #fff !important;
-}
-
-
-
-.documentos-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;  /* 2 columnas iguales */
-    grid-template-rows: auto auto;   /* 2 filas */
-    gap: 20px;
-}
-
-/* Cada tarjeta ocupa su espacio sin crecer */
+/* ================== TARJETAS / DOCUMENTOS ================== */
 .tarjeta {
     background: white;
     border-radius: 15px;
     padding: 20px;
     width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;       /* ← evita que nada empuje el tamaño */
+    overflow: auto; /* FIX CLAVE: evita recortes */
 }
 
-/* POLÍTICAS (arriba izquierda) */
-.documentos-grid > .tarjeta:nth-child(1) {
-    grid-column: 1 / 2;
-    grid-row: 1;
+/* ================== CARD BODY (PDF / IFRAME) ================== */
+.card-body {
+    width: 100%;
+    padding: 0;
+    min-height: 70vh; /* en lugar de height */
+    overflow-y: auto;
 }
 
-/* FORMATOS (arriba derecha) */
-.documentos-grid > .tarjeta:nth-child(2) {
-    grid-column: 2 / 3;
-    grid-row: 1;
+.card-body iframe {
+    width: 100%;
+    min-height: 70vh;
+    border: none;
 }
 
-/* INSTRUCTIVOS (abajo izquierda) */
-.documentos-grid > .tarjeta.instructivos {
-    grid-column: 1 / 2;
-    grid-row: 2;
+/* ================== DOCUMENTOS GRID ================== */
+.documentos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
-/* Espacio vacío (abajo derecha) */
-.documentos-grid > div:last-child {
-    grid-column: 2 / 3;
-    grid-row: 2;
+.documentos-grid > * {
+    min-width: 0;
 }
 
-
-/* INSTRUCTIVOS SOLO BAJO POLÍTICAS */
-.tarjeta.instructivos {
-    grid-column: 1 !important;  /* ocupa solo columna 1 */
-}
-
-/* Títulos */
-.tarjeta h2 {
-    text-align: center !important;
-    color: #0F2145 !important;
-    font-size: 1.7rem !important;
-    margin-bottom: 1.5rem !important;
-}
-
-/* Iconos */
+/* ================== ICONOS ================== */
 .iconos {
-    display: flex !important;
-    justify-content: center !important;
-    gap: 2rem !important;
-    flex-wrap: wrap !important;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .icono-item {
-    text-align: center !important;
-}
-
-.icono-item img {
-    width: 150px !important;
-}
-
-
-
-.carrusel-items img {
-    max-width: 180px;
-    height: auto;
-}
-
-
-
-.carrusel-items::-webkit-scrollbar {
-    height: 8px;
-}
-
-.carrusel-items::-webkit-scrollbar-thumb {
-    background: #c2c2c2;
-    border-radius: 4px;
-}
-
-/* Ítems del carrusel */
-.icono-item {
-    flex: 0 0 auto;          /* <- PREVIENE que FORMATOS se expanda */
     text-align: center;
+    flex: 0 0 auto;
 }
 
 .icono-item img {
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
 }
+
+/* ================== CARRUSEL ================== */
+.carrusel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carrusel-items {
+    display: flex;
+    gap: 20px;
+    padding: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
 .flecha {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 28px;
+    z-index: 10;
     color: #455a8a;
-    user-select: none;
-    z-index: 5;
 }
 
-.flecha:first-of-type {
-    left: 10px;
+/* ================== OFFCANVAS ================== */
+#dynamicOffcanvas {
+    width: 60% !important;
 }
 
-.flecha:last-of-type {
-    right: 10px;
+.offcanvas {
+    transition: none !important;
 }
 
-
-/* POLÍTICAS: igualar iconos al tamaño de FORMATOS */
-.tarjeta h2 {
-    text-align: center !important;
-}
-
-.tarjeta .icono-item img {
-    width: 150px !important;
-    height: 150px !important;
-    object-fit: contain !important;
-}
-
-
-
-/* ---------- FIX FINAL PARA GRID + TARJETAS + CARRUSEL ---------- */
-
-/* 1) Asegurar que los elementos del grid no se expandan más que su celda */
-.documentos-grid > * {
-    min-width: 0 !important; /* evita que hijos forcen la columna a crecer */
-    box-sizing: border-box !important;
-}
-
-/* 2) Tarjeta: no crecer más de su celda y permitir overflow interno */
-.tarjeta {
-    width: 100% !important;
-    min-width: 0 !important;       /* muy importante para grid */
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    overflow: visible !important;  /* que se vea el scroll interno si aplica */
-}
-
-/* 3) Forzar que la tarjeta de formatos respete su columna (si hay reglas específicas) */
-.documentos-grid > .tarjeta:nth-child(2) {
-    min-width: 0 !important;
-    max-width: 100% !important;
-}
-
-
-
-/* 7) Imágenes del carrusel e ítems de políticas: fijar tamaño razonable */
-.icono-item img {
-    width: 150px !important;
-    height: 150px !important;
-    object-fit: contain !important;
-    display: block;
-    margin: 0 auto;
-}
-
-/* 8) Flechas: posición y click area */
-.flecha {
-    position: absolute !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    z-index: 10 !important;
-    cursor: pointer !important;
-    user-select: none !important;
-    font-size: 30px !important;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #455a8a !important;
-    background: rgba(255,255,255,0.0);
-    border-radius: 50%;
-}
-
-/* asegurar gaps entre columna izquierda y derecha en pantallas grandes */
-@media (min-width: 1024px) {
-    .documentos-grid { gap: 30px !important; }
-}
-
-/* Reglas de fallback en pantallas pequeñas: dejar que las tarjetas apilen */
-@media (max-width: 768px) {
-    .documentos-grid {
-        grid-template-columns: 1fr !important;
-        grid-template-rows: auto !important;
-    }
-    .documentos-grid > div:last-child { display: none; } /* opcional */
-}
-
-
-/* === FIX CARRUSEL ROBUSTO === */
-.carrusel {
-    width: 100% !important;
-    max-width: 100% !important;
-    position: relative !important;
-    overflow: hidden !important; /* el contenedor no se expande */
-}
-
-/* items: permitir scroll horizontal siempre */
-.carrusel-items {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    gap: 20px !important;
-    padding: 12px !important;
-    margin: 0 !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    -webkit-overflow-scrolling: touch !important;
-    scroll-behavior: smooth !important;
-    /* asegurar que no rompa el grid */
-    min-width: 0 !important;
-}
-
-/* asegurar que los hijos no forcen el ancho de la columna */
-.documentos-grid > * { min-width: 0 !important; }
-
-/* items visuales */
-.carrusel-items .icono-item { flex: 0 0 auto !important; width: auto !important; max-width: 220px !important; }
-.carrusel-items .icono-item img { width: 150px !important; height: 150px !important; object-fit: contain !important; }
-
-/* flechas (si ya las tienes las posiciona; si no, el JS las crea) */
-.carrusel .flecha {
-    position: absolute !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    z-index: 20 !important;
-    cursor: pointer !important;
-    user-select: none !important;
-    font-size: 28px !important;
-    width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255,255,255,0.85);
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    color: #2b3b6b !important;
+/* ================== BOTONES ================== */
+.boton_dowload,
+a.btn-descarga {
+    background-color: #1d3557;
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px 20px;
+    font-weight: 600;
     border: none;
 }
-.carrusel .flecha.left { left: 8px !important; }
-.carrusel .flecha.right { right: 8px !important; }
 
-/* ocultar flechas cuando no haya overflow */
-.carrusel .flecha.hidden { visibility: hidden; opacity: 0; pointer-events: none; transition: opacity 150ms; }
-
-/* === POLÍTICAS EN UNA SOLA FILA === */
-.tarjeta:first-child .iconos {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 2rem !important;
-    flex-wrap: nowrap !important;      /* <-- YA NO SE BAJAN DE LÍNEA */
-    overflow-x: auto !important;       /* <-- permite que se vean todos */
-    padding-bottom: 10px !important;
-}
-
-/* evitar que los iconos crezcan demasiado */
-.tarjeta:first-child .icono-item {
-    flex: 0 0 auto !important;
-}
-
-/* --- FORZAR ICONOS DE POLÍTICAS AL MISMO TAMAÑO --- */
-.tarjeta:first-child .icono-item img {
-    width: 150px !important;     /* mismo ancho exacto */
-    height: 150px !important;    /* misma altura exacta */
-    object-fit: contain !important; /* evita deformación */
-    background: transparent;        /* por si la imagen tiene borde */
-    padding: 0 !important;
-    display: block;
-}
-
-
-/* Botón descarga Offcanvas */
-a.btn-descarga {
-  background-color: #1d3557;
-  border-color: #1d3557;
-  color: #fff;
-  font-weight: 600;
-}
-
+.boton_dowload:hover,
 a.btn-descarga:hover {
-  background-color: #152843;
-  border-color: #152843;
+    background-color: #457b9d;
 }
 
-a.btn-descarga:active {
-  background-color: #0f1f36;
-  border-color: #0f1f36;
+/* ================== LOGIN ================== */
+.login-container {
+    max-width: 400px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
 }
 
-a.btn-descarga:focus {
-  box-shadow: 0 0 0 0.25rem rgba(29, 53, 87, 0.35);
+/* ================== MEDIA QUERIES ================== */
+@media (max-width: 768px) {
+    .documentos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-body,
+    .card-body iframe {
+        min-height: 50vh;
+    }
 }
 
+@media (max-width: 576px) {
+    .card-body,
+    .card-body iframe {
+        min-height: 40vh;
+    }
+}
+
+@media (max-width: 400px) {
+    .card-body,
+    .card-body iframe {
+        min-height: 35vh;
+    }
+}
