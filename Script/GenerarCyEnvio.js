@@ -24,6 +24,8 @@ registroformulario.addEventListener("submit", function(e){
     data.append("puesto", puesto);
     data.append("ubicacion", ubicacion);
     data.append("password", password);
+    data.append("nombre", nombre);
+    data.append("apellido", apellido);
 
     // URL de tu Web App de Google Apps Script
     const url = "https://script.google.com/macros/s/AKfycbySeY5KRM7ulbYZ3oBPqqymB_hMUWpy6DmitiFBsGnEz2DoqPxngsY5ipsxihTI_40gpA/exec";
