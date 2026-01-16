@@ -151,6 +151,108 @@
                 </div>
             </div>
 
+                        <!-- Formatos-->
+            <div class="formato">
+                
+
+                <!-- Linea divisora-->
+                <div class="linea-divisora"></div>
+
+                <!-- Titulo general -->
+                <div class="titulo">
+                    <h2>Formatos</h2>
+                </div>
+
+                <!-- En cada contenedor vamos a mandar el titulo del formato, la direccion de la imagen, tamaño (solo si es necesario), y la ruta para poder descargar el formato-->
+                <div class="contenedor">
+
+                  
+                    <!-- BITACORA-->
+                    <button class="btn open-offcanvas" 
+                            data-img="../../Documentos/imagenes-procesos/BITACORA DE SO.png"
+                            data-size="xlarge"
+                            data-download="#">
+                    Bitácora de seguimiento SO
+                    </button>
+
+                    <button class="btn open-offcanvas"
+                            data-img="../../Documentos/imagenes-procesos/Marbete Caja.png"
+                            data-download="../../Documentos/imagenes-procesos/Provisional Caja - PROVISIONAL CAJA.pdf">
+                            Marbete "CAJA"
+                    </button>
+
+                    <button class="btn open-offcanvas"
+                            data-img="../../Documentos/imagenes-procesos/Marbete Ventocredit.png"
+                            data-download="../../Documentos/imagenes-procesos/Provisional Ventocredit - PROVISIONAL VENTOCREDIT.pdf">
+                            Marbete "VENTOCREDIT"
+                    </button>
+
+                    <button class="btn open-offcanvas"
+                            data-img="../../Documentos/imagenes-procesos/Marbete Reparada.png"
+                            data-download="../../Documentos/imagenes-procesos/Provisional Reparada - PROVISIONAL REPARADA.pdf">
+                            Marbete "REPARADA"
+                    </button>
+
+                    <button class="btn open-offcanvas"
+                            data-img="../../Documentos/imagenes-procesos/marberte-amarillo.png"
+                            data-download="#">
+                            Marbete "PARA ACTIVAR"
+                    </button>
+
+                    <button class="btn open-offcanvas"
+                            data-img="../../Documentos/imagenes-procesos/mercancia_surtida.png"
+                            data-download="#">
+                            Marbete "MERCANCÍA SURTIDA"
+                    </button>
+
+
+
+                        <!-- Texto informativo sobre el proceso-->
+                <div class="contenedor_texto">
+                    <div class="carril">
+                        <span class="texto2">
+                        Es responsabilidad del dueño del proceso comunicar al área del Sistema de Gestión de Calidad (SGC) cualquier cambio o modificación en los procesos operativos de los CEDIS, con el fin de garantizar la actualización, vigencia y correcta difusión.          
+                        </span>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Seccion donde el canvas recibe la informacion de los botones para poder mostrarla -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="dynamicOffcanvas" aria-labelledby="dynamicOffcanvasLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="dynamicOffcanvasLabel">Título por defecto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <img id="offcanvasImage" src="" alt="" class="img-offcanvas">
+                    <a id="offcanvasDownload" href="#" class="btn boton_dowload mt-3" target="_blank">Descargar documento</a>
+                </div>
+            </div>
+
+            <script>
+document.querySelectorAll(".open-offcanvas").forEach(button => {
+    button.addEventListener("click", () => {
+        const imgSrc = button.getAttribute("data-img");
+        const downloadSrc = button.getAttribute("data-download");
+
+        // Imagen
+        const img = document.getElementById("offcanvasImage");
+        img.src = imgSrc;
+
+        // Botón descarga
+        const downloadBtn = document.getElementById("offcanvasDownload");
+        downloadBtn.href = downloadSrc;
+        downloadBtn.setAttribute("download", "");
+
+        // Título dinámico
+        document.getElementById("dynamicOffcanvasLabel").innerText = button.innerText;
+    });
+});
+</script>
+
+
        
            
                     
