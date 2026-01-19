@@ -17,7 +17,7 @@
             window.location.href = "../Inicio de Sesion/Inicio.html";
         }
   </script>
-  <title>Embarque y entrega de pedidos de E-commerce</title>
+  <title>Distribuidores</title>
 </head>
 <body> 
         <header>
@@ -58,6 +58,8 @@
                             <li><a class="dropdown-item" href="recolecciones.html">Recolecciones</a></li>
                             <li><a class="dropdown-item" href="ecommerce.html">E-commerce surtido y consolidacion</a></li>
                             <li><a class="dropdown-item" href="ecommerce2.html">E-commerce embarque y entrega</a></li>
+                            <li><a class="dropdown-item" href="distribuidores.html">Distribuidores</a></li>
+
                         </ul>
                         </li>
 
@@ -115,15 +117,15 @@
 <main>
 
         <div class="general_container">
-        <h3>EMBARQUE Y ENTREGA DE PEDIDOS DE E-COMMERCE</h3>
+        <h3>DISTRIBUIDORES</h3>
             <!-- Diagrama de flujo -->
             <div class="diagrama-container">
                 
-                <img src="../../DocumentosProceso/Diagramas/E-comerce-EMBARQUE Y ENTREGA DE PEDIDOS DE E-COMERCE.drawio.svg" 
+                <img src="../../DocumentosProceso/Diagramas/Procesos CEDIS-DISTRIBUIDORES.svg" 
                      class="diagrama"
                      data-bs-toggle="modal"
                      data-bs-target="#modalImagen"
-                     alt="Diagrama de proceso CEDIS-E-COMMERCE DOS">
+                     alt="Diagrama de proceso CEDIS-DISTRIBUIDORES">
             </div>
 
             <!-- Modal para el diagrama a pantalla completa -->
@@ -133,7 +135,7 @@
                     <div class="modal-content">
                         <div class="modal-body text-center" style="overflow: hidden; position: relative;">
                             <div class="zoom-container" style="display: inline-block; cursor: grab;">
-                            <img src="../../DocumentosProceso/Diagramas/E-comerce-EMBARQUE Y ENTREGA DE PEDIDOS DE E-COMERCE.drawio.svg" 
+                            <img src="../../DocumentosProceso/Diagramas/Procesos CEDIS-DISTRIBUIDORES.svg" 
                                 class="zoomable"
                                 style="max-width: 85%; transform-origin: center center; transition: transform 0.2s ease;"
                                 alt="Diagrama completo de proceso">
@@ -151,7 +153,7 @@
                 </div>
             </div>
 
-                                    <!-- Formatos-->
+                        <!-- Formatos-->
             <div class="formato">
                 
 
@@ -167,50 +169,11 @@
                 <div class="contenedor">
 
                   
-                    <!-- BITACORA-->
-                    <button class="btn open-offcanvas" 
-                            data-img="../../Documentos/imagenes-procesos/BITACORA DE SO.png"
-                            data-size="xlarge"
-                            data-download="#">
-                    Bitácora de seguimiento SO
-                    </button>
-
-                    <button class="btn open-offcanvas"
-                            data-img="../../Documentos/imagenes-procesos/Marbete Caja.png"
-                            data-download="../../Documentos/imagenes-procesos/Provisional Caja - PROVISIONAL CAJA.pdf">
-                            Marbete "CAJA"
-                    </button>
-                    
-                    <!--  Checklist para vehiculos -->
-                    <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPDF1" aria-controls="offcanvasPDF">
-                    Checklist para vehículos
-                    </button>
-
-                    <!-- Marbete activada -->
-                    <button class="btn open-offcanvas" 
-                            data-img="../../Documentos/imagenes-procesos/marberte-verde.png"
-                            data-download="../../Documentos/imagenes-procesos/marberte-verde.png">
-                    Marbete "ACTIVADA"
-                    </button> 
-
-                    <!--  Checklist para motos  -->
-                    <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPDF2" aria-controls="offcanvasPDF">
-                    Checklist para motocicletas
-                    </button>
                     
 
-                    <!--  Bitacora de transportes -->
-                    <button class="btn open-offcanvas" 
-                            data-img="../../Documentos/Bitacora_transportes.png"
-                            data-size="xlarge" 
-                            data-download="#">
-                    Bitácora de transportes
-                    </button>
+                    
 
-                    <!-- Formato de devoluciones-->
-                    <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPDF3" aria-controls="offcanvasPDF">
-                    Formato de devoluciones 
-                    </button>
+
 
                         <!-- Texto informativo sobre el proceso-->
                 <div class="contenedor_texto">
@@ -233,51 +196,6 @@
                 <div class="offcanvas-body">
                     <img id="offcanvasImage" src="" alt="" class="img-offcanvas">
                     <a id="offcanvasDownload" href="#" class="btn boton_dowload mt-3" target="_blank">Descargar documento</a>
-                </div>
-            </div>
-
-                         <!-- Offcanvas para el checklist de vehiculo -->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF1" aria-labelledby="offcanvasPDFLabel" style="width: 50%;">
-                <div class="offcanvas-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-                </div>
-                <div class="offcanvas-body" style="padding: 0;">
-                    <iframe src="../../Documentos/Checklist Vehiculos.pdf#toolbar=0&navpanes=0" width="85%" height="80%"></iframe>
-                        <div class="p-3">
-                            <a href="../../Documentos/Checklist Vehiculos.pdf" class="btn boton_dowload" download>
-                                        Descargar documento 
-                            </a>
-                        </div>
-                </div>
-            </div>
-
-            <!-- Offcanvas para el checklist de motocicletas  -->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF2" aria-labelledby="offcanvasPDFLabel" style="width: 30%;">
-                <div class="offcanvas-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-                </div>
-                <div class="offcanvas-body" style="padding: 0;">
-                    <iframe src="../../Documentos/checklist_motos.pdf#toolbar=0&navpanes=0" width="95%" height="80%"></iframe>
-                        <div class="p-3">
-                            <a href="../../Documentos/checklist_motos.pdf" class="btn boton_dowload" download>
-                                        Descargar documento 
-                            </a>
-                        </div>
-                </div>
-            </div>
-
-            <!-- Offcanvas para el formato de devoluciones  -->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF3" aria-labelledby="offcanvasPDFLabel" style="width: 30%;">
-                <div class="offcanvas-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-                </div>
-                <div class="offcanvas-body" style="padding: 0;">
-                    <img src="../../Documentos/formato_de_devoluciones.png" alt="" width="85%" height="80%">
-                    <div class="p-3">
-                        <a href="../../Documentos/Formato de devolución.pdf" class="btn boton_dowload" download>
-                                        Descargar documento 
-                        </a>
-                    </div>
                 </div>
             </div>
 
