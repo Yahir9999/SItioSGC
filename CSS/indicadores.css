@@ -229,3 +229,24 @@ main {
         transform: none;
     }
 }
+
+.menu-reportes {
+  display: none;
+  margin-top: 10px;
+}
+
+.menu-reportes a {
+  display: block;
+  padding: 8px;
+  margin-bottom: 5px;
+  background: #1e2a5a;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.menu-reportes a:hover {
+  background: #2f3e8f;
+}
