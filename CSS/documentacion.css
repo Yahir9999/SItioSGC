@@ -187,8 +187,9 @@ h2 {
 
 /* ================== OFFCANVAS ================== */
 #dynamicOffcanvas {
-    width: 60% !important;
+    width: 80% !important;
 }
+
 
 .offcanvas {
     transition: none !important;
