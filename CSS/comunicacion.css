@@ -32,6 +32,19 @@ main{
     object-fit: contain;
 }
 
+.titulo {
+    width: 100%;
+    background-color: #1c2c5b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    letter-spacing: 3px;
+    text-align: center;
+    
+}
+
+
 /* ===== MEDIA QUERIES PARA MINIATURAS Y MODALES ===== */
 
 /* Tabletas y móviles grandes */
