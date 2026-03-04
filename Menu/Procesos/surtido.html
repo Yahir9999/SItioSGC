@@ -173,22 +173,6 @@
                     Marbete "MERCANCÍA SURTIDA"
                     </button> 
                     
-                    <!-- Boton que nos manda la link de NetSuite-->
-                    <a href="https://system.netsuite.com/pages/customerlogin.jsp" class="botonapp btn" target="_blank">
-                        <div class="imagen_boton logo_netsuite"></div>
-                        <div class="texto">
-                            <p>NetSuite </p>
-                        </div>
-                    </a>
-
-                    <!-- Bitácora de seguimiento de TO -->
-                    <button class="btn open-offcanvas" 
-                            data-img="../../Documentos/Bitácora de órdenes de traslado CEDI.svg"
-                            data-size="xlarge"
-                            data-download="#">
-                        Bitácora de seguimiento TO
-                    </button>
- 
 
                     <!-- Marbete para la activacion-->
                     <button class="btn open-offcanvas" 
@@ -204,6 +188,31 @@
                             data-download="https://docs.google.com/spreadsheets/d/1rvxtxOHYQ-kn_LRhoI-ZzQtfBOqVgdn30M0b3ZwgnhA/copy?gid=0#gid=0">
                     Bitácora de reparaciones
                     </button>
+
+                    <!-- Video de llenado de bitácora de reparaciones -->
+                    <button class="btn open-video" 
+                            data-video="../../DocumentosProceso/videosapoyo/Llenado_de_la_bitacora_de_reparaciones.mp4"
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalVideoBitacora">
+                            
+                        Vídeo "Bitácora de reparaciones"🎬
+                    </button>
+
+                    <!-- Boton que nos manda la link de NetSuite-->
+                    <a href="https://system.netsuite.com/pages/customerlogin.jsp" class="botonapp btn" target="_blank">
+                        <div class="imagen_boton logo_netsuite"></div>
+                        <div class="texto">
+                            <p>NetSuite </p>
+                        </div>
+                    </a>
+
+                    <!-- Bitácora de seguimiento de TO -->
+                    <button class="btn open-offcanvas" 
+                            data-img="../../Documentos/Bitácora de órdenes de traslado CEDI.svg"
+                            data-size="xlarge"
+                            data-download="#">
+                        Bitácora de seguimiento TO
+                    </button>
                 </div>
             </div>
 
@@ -218,6 +227,25 @@
                     <a id="offcanvasDownload" href="#" class="btn boton_dowload mt-3" download="">Descargar</a>
                 </div>
             </div>
+
+            <!-- Modal Video -->
+            <div class="modal fade" id="modalVideoBitacora" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                
+                <div class="modal-header">
+                    <h5 class="modal-title">Como llenar correctamente la bitácora de reparaciones</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body text-center" >
+                    <!-- Aquí se insertará el video -->
+                </div>
+
+                </div>
+            </div>
+            </div>
+
 
 
 
@@ -265,6 +293,45 @@ document.getElementById("zoomImage").addEventListener("click", function () {
     this.classList.toggle("zoomed");
 });
 
+    </script>
+
+
+
+    
+<script>
+          document.querySelectorAll('.open-video').forEach(button => {
+
+    button.addEventListener('click', function () {
+
+        const videoSrc = this.getAttribute('data-video');
+        const targetModal = document.querySelector(this.getAttribute('data-bs-target'));
+        const container = targetModal.querySelector('.modal-body');
+
+        container.innerHTML = `
+            <video controls autoplay class="w-100">
+                <source src="${videoSrc}" type="video/mp4">
+                Tu navegador no soporta video HTML5.
+            </video>
+        `;
+    });
+
+});
+
+
+//Detener video en CUALQUIER modal al cerrarse
+document.querySelectorAll('.modal').forEach(modal => {
+
+    modal.addEventListener('hidden.bs.modal', function () {
+        const video = modal.querySelector('video');
+
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+            video.remove();
+        }
+    });
+
+});
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
