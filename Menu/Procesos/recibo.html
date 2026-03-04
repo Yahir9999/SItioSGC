@@ -179,7 +179,7 @@
 
                     <!-- Video de llenado de bitácora -->
                     <button class="btn open-video" 
-                            data-video="../../DocumentosProceso/videosapoyo/Llenado de bitácora control de recepción de mercancía (1).mp4"
+                            data-video="../../DocumentosProceso/videosapoyo/Llenado_de_bitacora_control_de_recepcion_de_mercancia.mp4"
                             data-bs-toggle="modal" 
                             data-bs-target="#modalVideoBitacora">
                             
@@ -193,6 +193,15 @@
                             data-download="https://docs.google.com/spreadsheets/d/154zEU_osRHhmICDefgjRqfPifopjzkd-IxHb7B11LRM/copy?gid=1761523378#gid=1761523378">
                     Reporte de incidencias de almacén
                     </button> 
+
+                    <!-- Video de Reporte de incidencias de almacén -->
+                    <button class="btn open-video" 
+                            data-video="../../DocumentosProceso/videosapoyo/REPORTE_DE_INCIDENCIAS_DE_ALMACEN.mp4"
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalVideoAlmacen">
+                            
+                        Vídeo "Reporte de incidencias de almacén" 🎬
+                    </button>
 
                     <!-- Código de colores PEPS -->
                     <button class="btn open-offcanvas" 
@@ -239,8 +248,27 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
 
-                <div class="modal-body text-center" id="modalVideoContent">
+                <div class="modal-body text-center" >
                     <!-- Aquí se insertará el video -->
+                </div>
+
+                </div>
+            </div>
+            </div>
+
+            <!-- Modal Video Reporte de incidencias de almacén -->
+            <div class="modal fade" id="modalVideoAlmacen" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                
+                <div class="modal-header">
+                    <h5 class="modal-title">Como llenar correctamente el reporte de incidencias de almacén</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body text-center" >
+                    <!-- Aquí se insertará el video -->
+                    
                 </div>
 
                 </div>
@@ -269,27 +297,39 @@
             </div>
     </footer>
     <script>
-            document.querySelectorAll('.open-video').forEach(button => {
+          document.querySelectorAll('.open-video').forEach(button => {
 
-            button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
 
-                const videoSrc = this.getAttribute('data-video');
-                const container = document.getElementById('modalVideoContent');
+        const videoSrc = this.getAttribute('data-video');
+        const targetModal = document.querySelector(this.getAttribute('data-bs-target'));
+        const container = targetModal.querySelector('.modal-body');
 
-                container.innerHTML = `
-                    <video controls autoplay class="w-100">
-                        <source src="${videoSrc}" type="video/mp4">
-                        Tu navegador no soporta video HTML5.
-                    </video>
-                `;
-            });
-        });
-
-        // 🔥 Opcional: detener video al cerrar el modal
-document.getElementById('modalVideoBitacora')
-    .addEventListener('hidden.bs.modal', function () {
-        document.getElementById('modalVideoContent').innerHTML = "";
+        container.innerHTML = `
+            <video controls autoplay class="w-100">
+                <source src="${videoSrc}" type="video/mp4">
+                Tu navegador no soporta video HTML5.
+            </video>
+        `;
     });
+
+});
+
+
+// 🔥 Detener video en CUALQUIER modal al cerrarse
+document.querySelectorAll('.modal').forEach(modal => {
+
+    modal.addEventListener('hidden.bs.modal', function () {
+        const video = modal.querySelector('video');
+
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+            video.remove();
+        }
+    });
+
+});
     </script>
 
 
