@@ -1,0 +1,43 @@
+
+
+.contenedor{
+    max-width:900px;
+    margin:auto;
+    background: white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.tabla-capacidades{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.tabla-capacidades th{
+    background:#2c3e50;
+    color:white;
+    padding:12px;
+    text-align:center;
+    border:1px solid #ddd;
+}
+
+.tabla-capacidades td{
+    padding:12px;
+    text-align:center;
+    border:1px solid #ddd;
+}
+
+.tabla-capacidades tbody tr:nth-child(even){
+    background:#f7f9fb;
+}
+
+.tabla-capacidades tbody tr:hover{
+    background:#eaf2ff;
+    transition:0.2s;
+}
