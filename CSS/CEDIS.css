@@ -79,6 +79,14 @@ main{
   
 }
 
+/* Boton que nos muestra informacion de CEDI veracruz*/
+.boton8{
+  position: relative;
+   left: 37%;
+  top: 67%;  
+  
+}
+
 /* Contenido del modal*/
 .modal-contenedor{
   display: flex;
