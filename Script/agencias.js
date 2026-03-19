@@ -919,6 +919,78 @@ const centros = {
       mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d237.19251483529322!2d-92.9541582!3d17.9750036!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85edd7006acda9b5%3A0xacf416bed4dc935c!2sVento%20Motorcycles%20U.S.A%20Tamulte!5e0!3m2!1sen!2smx!4v1769091249669!5m2!1sen!2smx"
     }
   ],
+
+  Veracruz: [
+
+    {
+      nombre: "15 Tierra Blanca",
+      direccion: "C. Pedro García 903, Centro, 95100 Tierra Blanca, Ver.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d473.09604912290644!2d-96.357457!3d18.4488221!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c389a1888ec57b%3A0xb0881f4023f95d67!2sVento%20Motorcycles%20U.S.A%20Tierra%20Blanca!5e0!3m2!1ses-419!2smx!4v1773962296785!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "16 Veracruz",
+      direccion: "C. Pedro García 903, Centro, 95100 Tierra Blanca, Ver.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d473.09604912290644!2d-96.357457!3d18.4488221!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c389a1888ec57b%3A0xb0881f4023f95d67!2sVento%20Motorcycles%20U.S.A%20Tierra%20Blanca!5e0!3m2!1ses-419!2smx!4v1773962479217!5m2!1ses-419!2smx"
+    },
+
+    {
+      nombre: "36 Xalapa",
+      direccion: "Av. Manuel Ávila Camacho 166, Zona Centro, Centro, 91000 Xalapa-Enríquez, Ver.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d235.00927966550998!2d-96.9321709!3d19.5352382!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2fc0004c1cd5%3A0x68b85632d48af76f!2sVento%20Motorcycles%20U.S.A%20Xalapa!5e0!3m2!1ses-419!2smx!4v1773962644984!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "37 Orizaba",
+      direccion: "Pte. 7 1077, Centro, 94300 Centro, Ver.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2242.019479709791!2d-97.1132303!3d18.841209!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c503b8eff09e55%3A0xf00bc6dd27d5a0b4!2sVento%20Motorcycles%20U.S.A%20Orizaba!5e1!3m2!1ses-419!2smx!4v1773962925272!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "38 Cordoba",
+      direccion: "Av 11 2217, San Jose, 94560 Córdoba, Ver.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d560.3170460149464!2d-96.9465995!3d18.8973943!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c4e58a2ba05469%3A0x92981fd7e52c80ab!2sVento%20Motorcycles%20U.S.A%20C%C3%B3rdoba!5e1!3m2!1ses-419!2smx!4v1773962975709!5m2!1ses-419!2smx"
+    },
+
+    {
+      nombre: "41 San Andrés Tuxtla",
+      direccion: "Av. Benito Juárez, Centro, 95700 San Andrés Tuxtla, Ver.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15139.057956836758!2d-95.21257915967868!3d18.44899924823444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c2734b998d97ad%3A0xc17674d8f92973a7!2sVento%20Motorcycles%20U.S.A%20San%20Andr%C3%A9s%20Tuxtla!5e0!3m2!1ses-419!2smx!4v1773963027126!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "50 Veracruz Tejeria",
+      direccion: "La Placita, Calzada Manuel De Jesús Clouthier S/N-Local 4, La Loma, 91727 Veracruz, Ver.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5952.728186979821!2d-96.22114000044688!3d19.16783937287216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c343a6cadb4c59%3A0x3eb3b6fb7ccf908a!2sVento%20Motorcycles%20U.S.A%20Tejer%C3%ADa!5e0!3m2!1ses-419!2smx!4v1773963117337!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "61 Boca del Rio",
+      direccion: "Av Urano 585, Jardines de Mocambo, 94299 Boca del Río, Ver.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d559.4941996945695!2d-96.1104687!3d19.1416661!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c341004bd4676f%3A0x727509716755d529!2sVento%20Motorcycles%20U.S.A%20Boca%20del%20R%C3%ADo!5e1!3m2!1ses-419!2smx!4v1773963180834!5m2!1ses-419!2smx"
+    },
+
+
+    {
+      nombre: "138 Plaza los Corales",
+      direccion: "Dr. Rafael Cuervo X 248, Playa Linda, 91810 Veracruz, Ver.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d877.3969625244634!2d-96.1750595999668!3d19.21563740244178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c3450016f9890b%3A0x6f3f36b978de8cf!2sVento%20Motorcycles%20U.S.A%20Plaza%20Los%20Corales!5e0!3m2!1ses-419!2smx!4v1773963243630!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "251 Coscomatepec",
+      direccion: "Nacional 330, Coscomatepec de Bravo, Santa Rosa, 94140 Coscomatepec de Bravo, Ver.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d279.8553214034495!2d-97.0397217!3d19.0777043!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c4df006575b0a3%3A0x81974d25bd21ba45!2sVento%20Motorcycles%20U.S.A%20Coscomatepec!5e1!3m2!1ses-419!2smx!4v1773963288122!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "280 Perote",
+      direccion: "Alejandro Von Humboldt Sur 24, Centro, 91273 Perote, Ver.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4464.371466970018!2d-97.24965617410068!3d19.564324581743428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85dad1647c7c452f%3A0x9a89db33619b274f!2sVento%20Motorcycles%20U.S.A%20Perote!5e1!3m2!1ses-419!2smx!4v1773963364022!5m2!1ses-419!2smx" 
+    }
+
+
+  ],
 };
 
 function cargarAgencias(centro) {
