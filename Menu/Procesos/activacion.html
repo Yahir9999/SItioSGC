@@ -292,6 +292,43 @@
             </div>
     </footer>
 
+    <script>
+          document.querySelectorAll('.open-video').forEach(button => {
+
+    button.addEventListener('click', function () {
+
+        const videoSrc = this.getAttribute('data-video');
+        const targetModal = document.querySelector(this.getAttribute('data-bs-target'));
+        const container = targetModal.querySelector('.modal-body');
+
+        container.innerHTML = `
+            <video controls autoplay class="w-100">
+                <source src="${videoSrc}" type="video/mp4">
+                Tu navegador no soporta video HTML5.
+            </video>
+        `;
+    });
+
+});
+
+
+//Detener video en CUALQUIER modal al cerrarse
+document.querySelectorAll('.modal').forEach(modal => {
+
+    modal.addEventListener('hidden.bs.modal', function () {
+        const video = modal.querySelector('video');
+
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+            video.remove();
+        }
+    });
+
+});
+    </script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>
