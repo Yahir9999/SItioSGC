@@ -175,6 +175,15 @@
                             data-download="https://docs.google.com/spreadsheets/d/1rvxtxOHYQ-kn_LRhoI-ZzQtfBOqVgdn30M0b3ZwgnhA/copy?gid=0#gid=0">
                     Bitácora de reparaciones
                     </button>
+
+                    <!-- Video de llenado de bitácora de reparaciones -->
+                    <button class="btn open-video" 
+                            data-video="../../DocumentosProceso/videosapoyo/Llenado_de_la_bitacora_de_reparaciones.mp4"
+                            data-bs-toggle="modal" 
+                            data-bs-target="#modalVideoBitacora">
+                            
+                        Vídeo "Bitácora de reparaciones"🎬
+                    </button>
                     
                     <!-- Reporte de incidencias de almacén -->
                     <button class="btn open-offcanvas" 
@@ -260,6 +269,24 @@
             </div>
             -->
 
+            <!-- Modal Video -->
+            <div class="modal fade" id="modalVideoBitacora" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                
+                <div class="modal-header">
+                    <h5 class="modal-title">Como llenar correctamente la bitácora de reparaciones</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body text-center" >
+                    <!-- Aquí se insertará el video -->
+                </div>
+
+                </div>
+            </div>
+            </div>
+
              <!-- Texto informativo sobre el proceso-->
                 <div class="contenedor_texto">
                     <div class="carril">
@@ -282,6 +309,42 @@
                 <p class="parrafo_info">La presente información es confidencial y de uso exclusivo de los centros de distribución, se prohíbe su reproducción, modificación, almacenamiento, o difusión a personas externas sin autorización previa.</p>
             </div>
     </footer>
+    <script>
+          document.querySelectorAll('.open-video').forEach(button => {
+
+    button.addEventListener('click', function () {
+
+        const videoSrc = this.getAttribute('data-video');
+        const targetModal = document.querySelector(this.getAttribute('data-bs-target'));
+        const container = targetModal.querySelector('.modal-body');
+
+        container.innerHTML = `
+            <video controls autoplay class="w-100">
+                <source src="${videoSrc}" type="video/mp4">
+                Tu navegador no soporta video HTML5.
+            </video>
+        `;
+    });
+
+});
+
+
+//Detener video en CUALQUIER modal al cerrarse
+document.querySelectorAll('.modal').forEach(modal => {
+
+    modal.addEventListener('hidden.bs.modal', function () {
+        const video = modal.querySelector('video');
+
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+            video.remove();
+        }
+    });
+
+});
+    </script>
+
     <script>
           document.querySelectorAll('.open-video').forEach(button => {
 
