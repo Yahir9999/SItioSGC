@@ -130,6 +130,11 @@ main{
     scroll-behavior: smooth;
 }
 
+/* evita que bajen a otra fila */
+.contenedor_imagen {
+    flex: 0 0 auto;
+}
+
 
 
 /* opcional: scrollbar más limpio */
