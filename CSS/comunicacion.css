@@ -130,17 +130,7 @@ main{
     scroll-behavior: smooth;
 }
 
-/* evita que bajen a otra fila */
-.contenedor_imagen {
-    flex: 0 0 auto;
-}
 
-/* tamaño uniforme */
-.contenedor_imagen img {
-    width: 180px;
-    height: 250px;
-    object-fit: cover;
-}
 
 /* opcional: scrollbar más limpio */
 .scroll-comunicados::-webkit-scrollbar {
