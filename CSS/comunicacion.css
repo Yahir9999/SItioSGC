@@ -117,5 +117,40 @@ main{
 }
 
 
+.scroll-comunicados {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    overflow-x: auto;   /* scroll horizontal */
+    overflow-y: hidden;
+
+    padding: 15px;
+    
+    scroll-behavior: smooth;
+}
+
+/* evita que bajen a otra fila */
+.contenedor_imagen {
+    flex: 0 0 auto;
+}
+
+/* tamaño uniforme */
+.contenedor_imagen img {
+    width: 180px;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* opcional: scrollbar más limpio */
+.scroll-comunicados::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-comunicados::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
 
  
