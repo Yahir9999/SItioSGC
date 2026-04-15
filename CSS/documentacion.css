@@ -293,3 +293,7 @@ a.btn-descarga:hover {
 }
 
 
+.dropdown-toggle::after {
+  display: none;
+}
+
