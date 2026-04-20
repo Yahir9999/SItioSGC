@@ -991,6 +991,155 @@ const centros = {
 
 
   ],
+
+    Guadalajara: [
+
+    {
+      nombre: "59 Tepatitlan",
+      direccion: "Blvd. Lic. Anacleto Glez F. Sur Norte 278, Españita, 47600 Tepatitlán de Morelos, Jal.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d233.0759874864765!2d-102.7503594!3d20.8229905!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84292700718568cf%3A0x6fb2d56168f21be4!2sVento%20Motorcycles%20U.S.A%20Tepatitl%C3%A1n!5e0!3m2!1ses-419!2smx!4v1776713938949!5m2!1ses-419!2smx"
+    },
+
+    {
+      nombre: "60 Zapotlanejo",
+      direccion: "C. Hidalgo 620, Las Granjas, 45430 Zapotlanejo, Jal.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d933.5978347108736!2d-103.0833456!3d20.6128997!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428cb002493504d%3A0xd94b777dfa8e0579!2sVento%20Motorcycles%20U.S.A%20Zapotlanejo%20%F0%9F%8F%8D%EF%B8%8F!5e0!3m2!1sen!2smx!4v1776720771119!5m2!1sen!2smx" 
+    },
+
+    {
+      nombre: "62 Arandas",
+      direccion: "Carr. A Tepatitlan Supermanzana Km 0, 47185 Arandas, Jal.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1107.9660682670492!2d-102.3680305!3d20.7063166!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84294b32a7200f13%3A0x37e43b7b57563eb2!2sVento%20Motorcycles%20U.S.A%20Arandas!5e1!3m2!1ses-419!2smx!4v1776723661661!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "63 Independencia",
+      direccion: "Calz. Independencia Norte 1523, Independencia, 44320 Guadalajara, Jal.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d466.53908327635395!2d-103.3300791!3d20.6975243!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b10046d8bcb1%3A0xe8b36b3c712fca57!2sVento%20Motorcycles%20U.S.A%20Independencia!5e0!3m2!1ses-419!2smx!4v1776723749921!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "64 Federalismo",
+      direccion: "Calz del Federalismo Nte 107-81, Zona Centro, 44200 Guadalajara, Jal.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d933.1989207348544!2d-103.3552653!3d20.6778898!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b100003cd4d5%3A0x58e0f58af4efdee3!2sVento%20Motorcycles%20U.S.A%20Federalismo!5e0!3m2!1sen!2smx!4v1776723896013!5m2!1sen!2smx" 
+    },
+
+    {
+      nombre: "69 San Juan de los Lagos",
+      direccion: "Blvd. Lic. Ramón Martín Huerta 681, El Herrero, 47000 San Juan de los Lagos, Jal.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1103.8839086537737!2d-102.3231262!3d21.2577754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84297192b049e47f%3A0x6df201a511269d69!2sVento%20Motorcycles%20U.S.A%20San%20Juan%20de%20los%20Lagos!5e1!3m2!1ses-419!2smx!4v1776724051237!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "74 Las Águilas",
+      direccion: "Av. Adolfo López Mateos Sur 5460, La Calma, 45070 Zapopan, Jal.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d466.73526513441186!2d-103.4144358!3d20.6336611!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ad002844dad7%3A0xa796e8f79f69dcbe!2sVento%20Motorcycles%20U.S.A%20Las%20%C3%81guilas%20Zapopan!5e0!3m2!1sen!2smx!4v1776724176720!5m2!1sen!2smx" 
+    },
+
+    {
+      nombre: "77 Tlajomulco",
+      direccion: "C. Higuera 65, Sin Nombre, 45640 Tlajomulco de Zúñiga, Jal.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d554.8411204207862!2d-103.4408002!3d20.4702436!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f51002630289d%3A0xec3d75cdc1888bc5!2sVento%20Motorcycles%20U.S.A%20Tlajomulco!5e1!3m2!1ses-419!2smx!4v1776724345607!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "78 El Salto",
+      direccion: "Heliodoro Hernández Loza 493, Centro, 45680 El Salto, Jal.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1109.380853006894!2d-103.1926443!3d20.51189!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f4b000fc791a5%3A0x6bc906f20ed7b3c1!2sVento%20Motorcycles%20U.S.A%20El%20Salto!5e1!3m2!1ses-419!2smx!4v1776726002826!5m2!1ses-419!2sm" 
+    },
+
+    {
+      nombre: "80 Tlaquepaque",
+      direccion: "Blvd. Gral. Marcelino García Barragán 1455, Bosques del Boulevard, 45500 Guadalajara, Jal.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d277.1062549172681!2d-103.3184833!3d20.6434372!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b30076a36dd5%3A0xdfa41a28e6e9c1cd!2sVento%20Motorcycles%20U.S.A%20Tlaquepaque!5e1!3m2!1ses-419!2smx!4v1776726291756!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "92 López Mateos Norte",
+      direccion: "Av. Cvln. Jorge Álvarez del Castillo 1128B, Lomas del Country, 44620 Guadalajara, Jal.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d277.0069344248126!2d-103.370416!3d20.6978781!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428af003c8e5b5f%3A0xabfea7d102809543!2sVento%20Motorcycles%20U.S.A%20L%C3%B3pez%20Mateos%20Norte!5e1!3m2!1ses-419!2smx!4v1776726448867!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "96 Atotonilco",
+      direccion: "Av. Independencia Poniente 342, San Felipe, 47750 Atotonilco el Alto, Jal.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d277.28082717796656!2d-102.5128696!3d20.547414!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842ecb0070ec14a5%3A0x720d9ba93eecab29!2sVento%20Motorcycles%20U.S.A%20Atotonilco!5e1!3m2!1ses-419!2smx!4v1776726562450!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "97 Ciudad Guzmán",
+      direccion: "Fraccionamiento Business Park, Av. Miguel de la Madrid Hurtado 582, 49059 Cdad. Guzmán, Jal.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d557.5662000672048!2d-103.4843843!3d19.7025974!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f878129270937%3A0x9e2a3a387572f3d!2sVento%20Motorcycles%20U.S.A%20Ciudad%20Guzm%C3%A1n!5e1!3m2!1ses-419!2smx!4v1776726689900!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "98 Chapala",
+      direccion: "Av. Francisco I. Madero 454, San Miguel, 45900 Chapala, Jal.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d277.74019143503926!2d-103.1920659!3d20.2926649!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f4100576cb7b9%3A0xf7bca71f91421072!2sVento%20Motorcycles%20U.S.A%20Lago%20de%20Chapala!5e1!3m2!1ses-419!2smx!4v1776726811838!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "206 Fuente San Gaspar",
+      direccion: "C. Pablo Valdez 350, Camichines, 45403 Tonalá, Jal.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d293.11331504345657!2d-103.25652862363256!3d20.676426251078293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b70059ad7c91%3A0x2c2f6f9d77990ade!2sVento%20Motorcycles%20U.S.A%20Fuente%20San%20Gaspar!5e1!3m2!1ses-419!2smx!4v1776727224464!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "213 Tecomán",
+      direccion: "Independencia 72A, Centro, 28140 Centro, Col.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d235.900670178896!2d-103.8726294!3d18.9132059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x843ab7006aee5675%3A0x77d0c2df599ea495!2sVento%20Motorcycles%20U.S.A%20Tecoman!5e0!3m2!1sen!2smx!4v1776727428522!5m2!1sen!2smx" 
+    },
+
+    {
+      nombre: "216 Sahuayo",
+      direccion: "Blvd. Lázaro Cárdenas Nte. 199, Dámaso Cárdenas, 59020 Sahuayo de Morelos, Mich.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d801.5413842178219!2d-102.71680893303589!3d20.055634575603605!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842efd005009b007%3A0x1b213f04e4939f9e!2sVento%20Motorcycles%20U.S.A%20Sahuayo!5e1!3m2!1ses-419!2smx!4v1776727511982!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "222 Ameca",
+      direccion: "C. Constitución 83, Los Naranjos, 46600 Ameca, Jal.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d554.5687466451108!2d-104.0445733!3d20.545459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8426774540884f81%3A0x698d8d515a903cc0!2sVento%20Motorcycles%20U.S.A%20Ameca!5e1!3m2!1ses-419!2smx!4v1776727617691!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "226 Manzanillo",
+      direccion: "Av. México 389, Valle Dorado, 28200 Manzanillo, Col.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d279.90224965969827!2d-104.3184144!3d19.0499042!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8424d52d6e8a85f1%3A0x32c996bdc9568ebc!2sVento%20Motorcycles%20U.S.A%20Manzanillo!5e1!3m2!1ses-419!2smx!4v1776727719339!5m2!1ses-419!2smx"
+    },
+
+    {
+      nombre: "227 Arcos de Zapopan",
+      direccion: "Av. Juan Gil Preciado 992, Arcos de Zapopan, 45130 Zapopan, Jal.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d276.92836544100123!2d-103.4075283!3d20.7408476!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428af914883bf47%3A0x796ab2ca2f863666!2sVento%20Motorcycles%20U.S.A%20Arcos%20de%20Zapopan!5e1!3m2!1ses-419!2smx!4v1776727815891!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "250 La Barca",
+      direccion: "Calle M. Hidalgo 457, Centro, 47910 La Barca, Jal.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d866.7979435547777!2d-102.54740803596434!3d20.286100701049754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842ec32cd770e33d%3A0xe17198e0b11ef51e!2sVento%20Motorcycles%20U.S.A%20La%20Barca!5e1!3m2!1ses-419!2smx!4v1776727925977!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "261 Compostela",
+      direccion: "Zaragoza Sur 67, Guayabal, 63703 Compostela, Nay.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1104.0454323145102!2d-104.9004240303766!3d21.236214998779097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842729510fe89a1d%3A0x8728eeb7980829e!2sVento%20Motorcycles%20U.S.A%20Compostela!5e1!3m2!1ses-419!2smx!4v1776728104480!5m2!1ses-419!2smx" 
+    },
+
+    {
+      nombre: "266 Vallarta Francisco Villa",
+      direccion: "Av. Francisco Villa 1474, Aralias II, Fovissste 96, 48328 Puerto Vallarta, Jal.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d937.5514288202287!2d-105.22022656407545!3d20.64450218369298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842145ba3a1d330b%3A0x6a0ac4310cd26f04!2sVento%20Motorcycles%20U.S.A%20Vallarta%20Francisco%20Villa!5e1!3m2!1ses-419!2smx!4v1776728908223!5m2!1ses-419!2smx"
+    },
+
+    {
+      nombre: "272 San Sebastian Tlajomulco",
+      direccion: "Carr. a San Sebastián El Grande 1915-1 Local B6 Colinas del Roble, 45650 San Sebastián el Grande, Jal.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1447.7776766236088!2d-103.39870729060367!3d20.50867671903295!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f537b08e687c7%3A0x93221c6c7b271c7f!2sVento%20Motorcycles%20U.S.A%20San%20Sebasti%C3%A1n%20Tlajomulco!5e1!3m2!1ses-419!2smx!4v1776728981402!5m2!1ses-419!2smx"
+    }
+
+
+  ]
 };
 
 function cargarAgencias(centro) {
