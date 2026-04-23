@@ -41,6 +41,7 @@
                         <!-- Boton principal del menu despegable (para la seccion de procesos)-->
                         <li class="nav-item dropdown custom-dropdown-hover">
                             <a
+                              id="menuProcesos"
                               class="nav-link dropdown-toggle"
                               href="../Menu Principal/procesoCEDIS.html"
                               role="button"
@@ -254,5 +255,27 @@
 
     <!-- Cargando la seccion correspondiente para el funcionamiento de nuestro bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-</body>
+
+    <script>
+
+// correo del usuario que NO debe ver Procesos CEDIS
+const usuarioBloqueado = "andrea.jeronimovna@gmail.com";
+
+// obtener usuario logueado
+const usuarioActual = sessionStorage.getItem("correoUsuario");
+
+// si es el usuario bloqueado → ocultar menú
+if (usuarioActual === usuarioBloqueado) {
+
+  let menu = document.getElementById("menuProcesos");
+
+  if (menu) {
+    menu.style.display = "none";
+  }
+
+}
+
+</script>
+
+  </body>
 </html>
