@@ -1,4 +1,6 @@
 // Actualizar actividad cada minuto
+
+console.log("MONITOR CARGADO");
 setInterval(async () => {
 
   const sessionId = sessionStorage.getItem("sessionId");
