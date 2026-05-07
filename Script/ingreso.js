@@ -20,7 +20,7 @@ loginForm.addEventListener("submit", async (e) => {
 
   try {
 
-    const response = await fetch("https://script.google.com/macros/s/AKfycbyJN4tNeGtHEsz77MzKrBvIFP76lpP4L_XFLHhCwyWreKNQQKWqiewVDkCfhSw6Qrv1Gw/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbySeY5KRM7ulbYZ3oBPqqymB_hMUWpy6DmitiFBsGnEz2DoqPxngsY5ipsxihTI_40gpA/exec", {
       method: "POST",
       body: formData,
     });
@@ -37,6 +37,26 @@ loginForm.addEventListener("submit", async (e) => {
 
       // 🆕 GUARDAR CORREO DEL USUARIO
       sessionStorage.setItem("correoUsuario", correo);
+
+      const dispositivo = navigator.userAgent;
+
+        const sesionData = new FormData();
+
+        sesionData.append("accion", "registrarSesion");
+        sesionData.append("correo", correo);
+        sesionData.append("dispositivo", dispositivo);
+
+        const sesionResponse = await fetch("https://script.google.com/macros/s/AKfycbySeY5KRM7ulbYZ3oBPqqymB_hMUWpy6DmitiFBsGnEz2DoqPxngsY5ipsxihTI_40gpA/exec", {
+          method: "POST",
+          body: sesionData
+        });
+
+        const sesionJson = await sesionResponse.json();
+        if (sesionJson.sessionId) {
+  sessionStorage.setItem("sessionId", sesionJson.sessionId);
+}
+
+        
 
       // Redireccionar
       setTimeout(() => {
