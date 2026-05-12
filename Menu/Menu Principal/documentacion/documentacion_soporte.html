@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   <link rel="stylesheet" href="../../../CSS/header_footer.css">
-  <link rel="stylesheet" href="../../../CSS/documentacion.css">
+  <link rel="stylesheet" href="../../../CSS/documentacion_soporte.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
@@ -121,375 +121,251 @@
             </div>
         </header>
 
+
+
     <main>
-      <!-- Titulo de la pagina-->
+      <!-- Conteniedo de las politicas-->
        <div class="titulo">
-        <h1>DOCUMENTOS DE SOPORTE </h1>
+          <h1>DOCUMENTOS DE SOPORTE</h1>
        </div>
 
-       <div class="botones_opciones">
+<div class="documentos-grid">
 
-        <!-- Documentos de operacion-->
-        
-          <div class="opciones">
+    <!-- =============  OPERACIÓN  ============= -->
+    <div class="tarjeta-operacion">
+        <h2>OPERACIÓN</h2>
+        <p></p>
 
-            <div class="dropdown">
+        <div class="operacion-fila">
 
-              <a href="#"
-                class="btn dropdown-toggle"
-                data-bs-toggle="dropdown"
-                aria-expanded="false">
 
-                <img src="../../../DocumentosProceso/Operación.png">
-
-                <h2>OPERACIÓN</h2>
-
-              </a>
-
-              <ul class="dropdown-menu">
-
-                <li>
-                  <a class="dropdown-item open-offcanvas" href="#"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#dynamicOffcanvas"
-                    data-title="Armado y activado"
-                    data-file="../../../DocumentosProceso/03 Procesos de apoyo/MIMC-GL-01 Armado y activado V01.pdf">
-                    Armado y activado
-                  </a>
-                </li>
-
-                <li>
-                  <a class="dropdown-item open-offcanvas" href="#"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#dynamicOffcanvas"
-                    data-title="Seguridad patrimonial"
-                    data-file="../../../DocumentosProceso/03 Procesos de apoyo/PT-AIC-GC-01 Seguridad Patrimonial V01.pdf">
-                    Seguridad patrimonial
-                  </a>
-                </li>
-
-                <li>
-                  <a class="dropdown-item open-offcanvas" href="#"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#dynamicOffcanvas"
-                    data-title="Verificación diaria de montacargas"
-                    data-file="../../../DocumentosProceso/03 Procesos de apoyo/Verificación diaria de montacargas.pdf">
-                    Verificación diaria de montacargas
-                  </a>
-                </li>
-
-              </ul>
-
+            <!-- Armado y activado -->
+            <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="Armado y activado"
+                        data-file="../../../DocumentosProceso/03 Procesos de apoyo/MIMC-GL-01 Armado y activado V01.pdf">
+                    <img src="../../../DocumentosProceso/iconos_soporte/armadoyactivado.png">
+                </button>
+                <p class="nombre_doc">Armado y activado</p>
             </div>
 
-          </div>
-
-        <!-- Documentos de administracion-->
-          <div class="opciones">
-
-            <div class="dropdown">
-
-              <a href="#"
-                class="btn dropdown-toggle"
-                data-bs-toggle="dropdown"
-                aria-expanded="false">
-
-                <img src="../../../DocumentosProceso/Administración.png">
-
-                <h2>ADMINISTRACIÓN</h2>
-
-              </a>
-
-              <ul class="dropdown-menu">
-
-                <li>
-                  <a class="dropdown-item open-offcanvas"
-                    href="#"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#dynamicOffcanvas"
-                    data-title="Formato de requisición de compra"
-                    data-pdf="../../../DocumentosProceso/03 Procesos de apoyo/Formato_requision_compra.pdf"
-                    data-excel="../../../DocumentosProceso/Requisición de compra.xlsx">
-                    Formato de requisición de compra
-                  </a>
-                </li>
-
-                <li>
-                  <a class="dropdown-item open-offcanvas"
-                    href="#"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#dynamicOffcanvas"
-                    data-title="Registro de PO de fletes CEDIS"
-                    data-file="../../../DocumentosProceso/03 Procesos de apoyo/MU-OCCDS-TI Manual para el registro de órdenes de compra de servicios de fletes para CEDIS V01.pdf">
-                    Registro de PO de fletes CEDIS
-                  </a>
-                </li>
-
-                <li>
-                  <a class="dropdown-item open-offcanvas"
-                    href="#"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#dynamicOffcanvas"
-                    data-title="Manual de usuario para el registro de gastos de Caja Chica de Subsidiarias"
-                    data-file="../../../DocumentosProceso/RCGH-Manual de usuario para el registro de gastos de Caja Chica de Subsidiarias V02 2025..pdf">
-                    Manual Caja Chica de Subsidiarias 
-                  </a>
-                </li>
-
-              </ul>
-
+            <!-- Seguridad patrimonial -->
+             <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="Seguridad patrimonial"
+                        data-file="../../../DocumentosProceso/03 Procesos de apoyo/PT-AIC-GC-01 Seguridad Patrimonial V01.pdf">
+                    <img src="../../../DocumentosProceso/iconos_soporte/seguridad_patrimonial.png">
+                </button>
+                <p class="nombre_doc">Seguridad patrimonial</p>
             </div>
 
-          </div>
-        <!-- Imagen con menu despeglabe, que al darle click necesitamos hacer un inicio de seios y llamar nuestro excel, ademas de que solo los que tengan el puesto de generente puedas acceder a estos documentos-->
-        <!-- Documentos de Gerencia-->
-        <div class="opciones">
+            <!-- Verificación diaria de montacargas -->
+             <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="Verificación diaria de montacargas"
+                        data-file="../../../DocumentosProceso/03 Procesos de apoyo/Verificación diaria de montacargas.pdf">
+                    <img src="../../../DocumentosProceso/iconos_soporte/verificacion_montacargas.png">
+                </button>
+                <p class="nombre_doc">Verificación diaria de montacargas</p>
+            </div>
 
-          <div class="dropdown">
+            
+    </div>
 
-            <a href="#"
-              class="btn dropdown-toggle"
-              data-bs-toggle="dropdown"
-              aria-expanded="false">
+    </div>
 
-              <img src="../../../DocumentosProceso/Gerencia.png" alt="Gerencia">
+        <!-- =============  GERENCIA ============= -->
+    <div class="tarjeta-gerencia">
+        <h2>GERENCIA</h2>
 
-              <h2>GERENCIA</h2>
-
-            </a>
-
-            <ul class="dropdown-menu">
-
+        <div class="gerencia-fila">
               <!-- Movimientos de personal y ajustes salariales -->
-              <li>
-                <a class="dropdown-item"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#loginModal"
-                  data-action="view"
-                  data-pdf="../../../Documentos/CH-NM-PR-03 Movimientos de personal y ajustes salariales en sistema V02.pdf#toolbar=0&navpanes=0">
-                  Movimientos de personal y ajustes salarial
-                </a>
-              </li>
-
-              <!-- Solicitud y comprobación de viáticos -->
-              <li>
-                <a class="dropdown-item"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#loginModal"
-                  data-action="view"
-                  data-pdf="../../../Documentos/PO-VI-DCH-02 Solicitud y Comprobación de Viáticos V02.pdf#toolbar=0&navpanes=0">
-                  Solicitud y comprobación de viáticos
-                </a>
-              </li>
-
-              <!-- Formato de viáticos -->
-              <li>
-                <a class="dropdown-item"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#loginModal"
-                  data-action="excel"
-                  data-pdf="../../../DocumentosProceso/03 Procesos de apoyo/Formato de solicitud, comprobación y reembolso de viáticos.pdf"
-                  data-excel="../../../DocumentosProceso/Formato de solicitud, comprobación y reembolso de viáticos.xlsx">
-                  Solicitud y comprobación de viáticos (Formato)
-                </a>
-              </li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-      <script>
-          document.addEventListener("DOMContentLoaded", () => {
-
-
-                        // 🚫 Evitar que el modal se abra si ya hay sesión
-            document.getElementById("loginModal").addEventListener("show.bs.modal", function (e) {
-              if (sessionStorage.getItem("gerenciaAuth") === "true") {
-                e.preventDefault(); // ⛔ NO mostrar modal
-              }
-            });
-
-            const loginBtn = document.getElementById("loginBtn");
-            const username = document.getElementById("username");
-            const password = document.getElementById("password");
-            const errorAlert = document.getElementById("errorAlert");
-            const errorMessage = document.getElementById("errorMessage");
-
-            let selectedPdf = "";
-            let selectedExcel = "";
-            let selectedAction = "";
-
-            const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQzdlogsRKtl8eL_BcbjtowWrqoIVU20l7LuQEeShvuCA1QRCOkuOFYJTBm4zvZU9oL3EBkQ412bbVp/pub?gid=0&single=true&output=csv";
-
-            /* ===========================
-              🔐 CLICK EN OPCIONES GERENCIA
-              =========================== */
-            document.querySelectorAll("[data-action]").forEach(item => {
-              item.addEventListener("click", function (e) {
-
-                selectedAction = this.getAttribute("data-action");
-                selectedPdf    = this.getAttribute("data-pdf") || "";
-                selectedExcel  = this.getAttribute("data-excel") || "";
-
-                // ✅ Si ya hay sesión → NO mostrar login
-                if (sessionStorage.getItem("gerenciaAuth") === "true") {
-                  e.preventDefault();
-                  ejecutarAccion();
-                }
-              });
-            });
-
-            /* ===========================
-              🔑 LOGIN
-              =========================== */
-            loginBtn.addEventListener("click", async () => {
-
-              const usuario = username.value.trim();
-              const contraseña = password.value.trim();
-
-              try {
-                const response = await fetch(SHEET_URL);
-                const csvText = await response.text();
-
-                const rows = csvText.trim().split("\n").map(r => r.split(","));
-                rows.shift();
-
-                const userRow = rows.find(row => row[0] === usuario && row[2] === contraseña);
-
-                if (!userRow) {
-                  mostrarError("Usuario o contraseña incorrectos");
-                  return;
-                }
-
-                const puesto = userRow[1];
-
-                if (!puesto.startsWith("Gerente")) {
-                  mostrarError("Acceso restringido: solo Gerencia");
-                  return;
-                }
-
-                // ✅ Guardar sesión
-                sessionStorage.setItem("gerenciaAuth", "true");
-
-                cerrarModal();
-                limpiarErrores();
-                ejecutarAccion();
-
-              } catch (err) {
-                console.error(err);
-                mostrarError("No se pudo validar el usuario");
-              }
-            });
-
-            /* ===========================
-              📂 EJECUTAR ACCIÓN
-              =========================== */
-            function ejecutarAccion() {
-
-              const iframe = document.getElementById("offcanvasIframe");
-              const title  = document.getElementById("offcanvasTitle");
-              const downloadBtn = document.getElementById("offcanvasDownload");
-
-              iframe.src = "";
-              downloadBtn.style.display = "none";
-
-              title.textContent = "Documento de Gerencia";
-
-              // 📄 MOSTRAR PDF
-              if (selectedPdf) {
-                iframe.src = selectedPdf;
-
-                downloadBtn.style.display = "inline-block";
-
-                // 📊 Si hay Excel → descargar Excel
-                if (selectedExcel) {
-                  downloadBtn.href = selectedExcel;
-                  downloadBtn.setAttribute("download", selectedExcel.split("/").pop());
-                  downloadBtn.textContent = "Descargar Excel";
-                }
-                // 📄 Si NO hay Excel → descargar PDF
-                else {
-                  downloadBtn.href = selectedPdf;
-                  downloadBtn.setAttribute("download", selectedPdf.split("/").pop());
-                  downloadBtn.textContent = "Descargar PDF";
-                }
-              }
-
-              const offcanvas = new bootstrap.Offcanvas(
-                document.getElementById("dynamicOffcanvas")
-              );
-              offcanvas.show();
-            }
-
-            /* ===========================
-              🧼 HELPERS
-              =========================== */
-            function cerrarModal() {
-              const modal = bootstrap.Modal.getInstance(
-                document.getElementById("loginModal")
-              );
-              modal && modal.hide();
-            }
-
-            function mostrarError(msg) {
-              errorMessage.textContent = msg;
-              errorAlert.classList.remove("d-none");
-            }
-
-            function limpiarErrores() {
-              errorAlert.classList.add("d-none");
-            }
-
-          });
-      </script>
-
-
-
-
-
-
-        <!-- Seccion del modal para inicio de sesion-->
-        <!-- Modal de Inicio de Sesión -->
-        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="login-header">
-                <h2 class="modal-title" id="loginModalLabel">Inicio de Sesión</h2>
-                <p>Ingresa el usuario con los permisos necesarios para continuar</p>
-              </div>
-              <div class="modal-body">
-                <div class="login-form">
-                  <div class="alert alert-danger d-none" id="errorAlert" role="alert">
-                    <i class="fas fa-exclamation-circle me-2"></i>
-                    <span id="errorMessage"></span>
-                  </div>
-
-                  <div class="mb-3 input-icon">
-                    <i class="fas fa-user"></i>
-                    <input type="text" class="form-control" id="username" placeholder="Usuario" autocomplete="off">
-                  </div>
-
-                  <div class="mb-3 input-icon">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" class="form-control" id="password" placeholder="Contraseña" autocomplete="off">
-                  </div>
-
-                  <button type="button" class="btn btn-login" id="loginBtn">
-                    <i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesión
-                  </button>
-                </div>
-              </div>
+            <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="Movimientos de personal y ajustes salarial"
+                        data-action="view"
+                        data-pdf="../../../Documentos/CH-NM-PR-03 Movimientos de personal y ajustes salariales en sistema V02.pdf">
+                    <img src="../../../DocumentosProceso/iconos_soporte/personal_ajustesalarial.png">
+                </button>
+                <p class="nombre_doc">Movimientos de personal y ajustes salarial</p>
             </div>
-          </div>
+
+            <!-- Solicitud y comprobación de viáticos -->
+            <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="Solicitud y comprobación de viáticos"
+                        data-action="view"
+                        data-pdf="../../../Documentos/PO-VI-DCH-02 Solicitud y Comprobación de Viáticos V02.pdf#toolbar=0&navpanes=0">
+                    <img src="../../../DocumentosProceso/iconos_soporte/solicitud_viaticos.png">
+                </button>
+                <p class="nombre_doc">Solicitud y comprobación de viáticos</p>
+            </div>
+
+            <!-- Formato de viáticos -->
+            <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="Formato de viáticos"
+                        data-action="excel"
+                        data-pdf="../../../DocumentosProceso/03 Procesos de apoyo/Formato de solicitud, comprobación y reembolso de viáticos.pdf"
+                        data-excel="../../../DocumentosProceso/Formato de solicitud, comprobación y reembolso de viáticos.xlsx">
+                    <img src="../../../DocumentosProceso/iconos_soporte/formato_viaticos.png">
+                </button>
+                <p class="nombre_doc">Formato de viáticos</p>
+            </div>
+
+
+
         </div>
-      </div>
+    </div>
+
+
+    <!-- =============  ADMINISTRACIÓN ============= -->
+    <div class="tarjeta-administracion">
+        <h2>ADMINISTRACIÓN</h2>
+
+        <div class="administracion-fila">
+
+                <!-- Formato de requisición de compra -->
+                <div class="icono-item">
+                    <button class="btn open-offcanvas"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#dynamicOffcanvas"
+                            data-title="Formato de requisición de compra"
+                            data-file="../../../DocumentosProceso/03 Procesos de apoyo/Formato_requision_compra.pdf"
+                            data-download="../../../DocumentosProceso/Requisición de compra.xlsx">
+                        <img src="../../../DocumentosProceso/iconos_soporte/requisicion_compra.png">
+                    </button>
+                    <p class="nombre_doc">Formato de requisición de compra</p>
+                </div>
+
+                <!-- Registro de PO de fletes CEDIS -->
+             <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="Registro de PO de fletes CEDIS"
+                        data-file="../../../DocumentosProceso/03 Procesos de apoyo/MU-OCCDS-TI Manual para el registro de órdenes de compra de servicios de fletes para CEDIS V01.pdf">
+                    <img src="../../../DocumentosProceso/iconos_soporte/registro_po.png">
+                </button>
+                <p class="nombre_doc">Registro de PO de fletes CEDIS</p>
+            </div>
+
+            <!-- Manual Caja Chica de Subsidiarias -->
+             <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="Manual de usuario para el registro de gastos de Caja Chica de Subsidiarias"
+                        data-file="../../../DocumentosProceso/RCGH-Manual de usuario para el registro de gastos de Caja Chica de Subsidiarias V02 2025..pdf">
+                    <img src="../../../DocumentosProceso/iconos_soporte/manual_cajachica.png">
+                </button>
+                <p class="nombre_doc">Manual Caja Chica de Subsidiarias</p>
+            </div>
+
+            <!-- Política para la Administración de Activo Fijo -->
+             <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="Política para la administración de activo fijo"
+                        data-file="../../../DocumentosProceso/Política para la Administración de Activo Fijo.pdf">
+                    <img src="../../../DocumentosProceso/iconos_soporte/administracion_activofijo.png">
+                </button>
+                <p class="nombre_doc">Política para la administración de activo fijo</p>
+            </div>
+
+            <!-- Levantamiento de Inventario por Dirección -->
+             <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="Levantamiento de inventario por Dirección"
+                        data-file="../../../DocumentosProceso/Levantamiento de Inventario por Direccion.pdf"
+                        data-download="../../../DocumentosProceso/Levantamiento de Inventario por Dirección.xlsx">
+                    <img src="../../../DocumentosProceso/iconos_soporte/levantamiento_inventario.png">
+                </button>
+                <p class="nombre_doc">Levantamiento de inventario por Dirección</p>
+            </div>
+
+            <!-- Guía rápida activo fijo -->
+             <div class="icono-item">
+                <button class="btn open-offcanvas"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#dynamicOffcanvas"
+                        data-title="Guía rápida de activo fijo"
+                        data-file="../../../DocumentosProceso/GUIA RÁPIDA ACTIVO FIJO.pdf">
+                    <img src="../../../DocumentosProceso/iconos_soporte/guia_activofijo.png">
+                </button>
+                <p class="nombre_doc">Guía rápida activo fijo</p>
+            </div>
+
+        </div>
+
+        </div>
+           
+
+        
+    
+
+   
+     
+
+    
       
-            <!-- script -->
+</div>       
+       
+    </main>
+
+    <!-- off canvas -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="dynamicOffcanvas">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasTitle"></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+
+                <div class="offcanvas-body p-0">
+                  <iframe id="offcanvasIframe"
+                          src=""
+                          style="width:100%; min-height:80vh; border:none;">
+                  </iframe>
+
+                  <div class="text-center p-3">
+                    <a id="offcanvasDownload"
+                      class="btn boton_dowload"
+                      style="display:none">
+                      Descargar
+                    </a>
+                  </div>
+                </div>
+             </div>
+
+       
+
+
+    <footer>
+            <div class="logo_informativo">
+
+            </div>
+            <div class="mensaje">
+                <p class="parrafo_info">La presente información es confidencial y de uso exclusivo de los centros de distribución, se prohíbe su reproducción, modificación, almacenamiento, o difusión a personas externas sin autorización previa.</p>
+            </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+    <!-- script -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -542,61 +418,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-            <!-- off canvas -->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="dynamicOffcanvas">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasTitle"></h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-                </div>
 
-                <div class="offcanvas-body p-0">
-                  <iframe id="offcanvasIframe"
-                          src=""
-                          style="width:100%; min-height:80vh; border:none;">
-                  </iframe>
-
-                  <div class="text-center p-3">
-                    <a id="offcanvasDownload"
-                      class="btn boton_dowload"
-                      style="display:none">
-                      Descargar
-                    </a>
-                  </div>
-                </div>
-             </div>
-  
-    </main>
-
-    <footer>
-            <div class="logo_informativo">
-
-            </div>
-            <div class="mensaje">
-                <p class="parrafo_info">La presente información es confidencial y de uso exclusivo de los centros de distribución, se prohíbe su reproducción, modificación, almacenamiento, o difusión a personas externas sin autorización previa.</p>
-            </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-
-<script>
-
-// correo del usuario que NO debe ver Procesos CEDIS
-const usuarioBloqueado = "andrea.jeronimovna@gmail.com";
-
-// obtener usuario logueado
-const usuarioActual = sessionStorage.getItem("correoUsuario");
-
-// si es el usuario bloqueado → ocultar menú
-if (usuarioActual === usuarioBloqueado) {
-
-  let menu = document.getElementById("menuProcesos");
-
-  if (menu) {
-    menu.style.display = "none";
-  }
-
-}
-
-</script>
   </body>
 </html>

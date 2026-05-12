@@ -1,0 +1,191 @@
+/* ================== ESTILOS GENERALES ================== */
+* {
+    font-family: "DM Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+main {
+
+    padding: 1rem;
+    display: block; /* evita cortes por flex + vh */
+    
+}
+
+/* ================== TÍTULOS ================== */
+h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #1c2c5b;
+    text-align: center;
+    margin-top: 0.75rem;
+    line-height: 1.3;
+}
+
+.titulo {
+    width: 100%;
+    min-height: 100px;
+    background-color: #1c2c5b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    letter-spacing: 3px;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+
+
+
+
+.boton img {
+    width: 100%;
+    max-width: 140px;
+    min-width: 70px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.boton:hover {
+    transform: translateY(-5px);
+}
+
+.nombre_doc {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1c2c5b;
+    margin-top: 0.75rem;
+}
+
+/* ================== GRID PRINCIPAL ================== */
+
+.documentos-grid{
+    width: 100%;
+    max-width: 1500px;
+    margin: 40px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* ================== TARJETAS ================== */
+
+.tarjeta-operacion,
+.tarjeta-gerencia,
+.tarjeta-administracion{
+
+    background: #fafafa;
+    border: 2px solid #cdd3e1;
+
+    padding: 30px;
+    border-radius: 20px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ADMINISTRACIÓN ABAJO Y GRANDE */
+.tarjeta-administracion{
+    grid-column: 1 / 3;
+}
+
+/* ================== FILAS DE ICONOS ================== */
+
+.operacion-fila,
+.gerencia-fila,
+.administracion-fila{
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 35px;
+}
+
+/* ================== ITEMS ================== */
+
+.icono-item{
+    width: 150px;
+    text-align: center;
+}
+
+/* ================== BOTONES ================== */
+
+.icono-item button{
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+/* ================== IMAGENES ================== */
+
+.icono-item img{
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+
+    transition: transform 0.2s ease;
+}
+
+.icono-item img:hover{
+    transform: scale(1.08);
+}
+
+/* ================== TEXTO ================== */
+
+.nombre_doc{
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1c2c5b;
+
+    margin-top: 12px;
+    line-height: 1.3;
+}
+
+/* ================== OFFCANVAS ================== */
+#dynamicOffcanvas {
+    width: 80% !important;
+}
+
+
+.offcanvas {
+    transition: none !important;
+}
+
+/* ================== BOTONES ================== */
+.boton_dowload,
+a.btn-descarga {
+    background-color: #1d3557;
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px 20px;
+    font-weight: 600;
+    border: none;
+}
+
+
+/* ================== RESPONSIVE ================== */
+
+@media(max-width: 900px){
+
+    .documentos-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-administracion{
+        grid-column: auto;
+    }
+
+}
+
+@media(max-width: 768px){
+
+    .offcanvas{
+        width: 100% !important;
+    }
+
+}
