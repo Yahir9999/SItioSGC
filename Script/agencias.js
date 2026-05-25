@@ -1139,6 +1139,32 @@ const centros = {
     }
 
 
+  ],
+
+    Merida: [
+
+    {
+      nombre: "243 Champoton",
+      direccion: "Col, entre C. 3 y C. 5, Av. Luis Donaldo Colosio S/N, Venustiano Carranza, 24400 Champotón, Camp.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1117.6073342887703!2d-90.725118!3d19.3443668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85f771000f05632b%3A0xe92e04d6ec1c37f3!2sVento%20Motorcycles%20U.S.A%20Champot%C3%B3n!5e1!3m2!1ses-419!2smx!4v1779748171250!5m2!1ses-419!2smx"
+    },
+
+    {
+      nombre: "244 Campeche Centro",
+      direccion: "Av Gobernadores 112, entre 43 y 45, Santa Ana, Barrio de Sta Ana, 24050 San Francisco de Campeche, Camp.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8913.329400500159!2d-90.5263081!3d19.8407653!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85f831be7ada384b%3A0xa5b991715fae31ee!2sVento%20Motorcycles%20U.S.A%20Campeche!5e1!3m2!1ses-419!2smx!4v1779748854960!5m2!1ses-419!2smx"
+    },
+
+    {
+      nombre: "275 Chetumal",
+      direccion: "Av Álvaro Obregón 227, Centro, 77000 Chetumal, Q.R.",
+      mapa:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d404.40775463287!2d-88.29875208580111!3d18.497162119201217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5ba3278a1f5baf%3A0x45a1e52e7688346!2sVento%20Motorcycles%20U.S.A%20Chetumal!5e1!3m2!1ses-419!2smx!4v1779749615410!5m2!1ses-419!2smx"
+    }
+
+
+
+
+
   ]
 };
 
