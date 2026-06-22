@@ -208,11 +208,20 @@
         }
 
         /* Contenedor general del boton*/
-        .botonapp {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
+        .botonapp{
+    width: 320px; /* o 350px */
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.botonapp .texto p{
+    margin: 0;
+    line-height: 1.4;
+}
 
         /* Boton que contendra una imagen, junto a un texto que diga descargar */
         .imagen_boton {
