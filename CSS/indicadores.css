@@ -1,3 +1,7 @@
+*{
+  font-family: "Saira", sans-serif;
+}
+
 /* ===== ESTILOS GENERALES ===== */
 main {
     display: flex;

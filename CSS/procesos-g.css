@@ -1,3 +1,7 @@
+ *{
+  font-family: "Saira", sans-serif;
+}
+ 
  /* Diseño general para todas las areas de procesos*/
        main {
         display: flex;
@@ -17,7 +21,7 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            background-color: #a3bde2;
+            background-color: #424242;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             padding: 1.5rem;
@@ -38,7 +42,7 @@
             height: auto;
             max-height: 50vh;
             object-fit: contain;
-            border: 2px solid #1C2C5B;
+            border: 2px solid #CCCCCC;
             border-radius: 8px;
             background-color: white;
             padding: 5px;
@@ -76,7 +80,7 @@
             font-weight: 500;  /* grosor intermedio */
             text-align: center;            /* centrado */
             text-transform: uppercase;           /* mantiene todas las letras en mayúscula */
-            color: #1C2C5B;                      /* color azul oscuro */
+            color: #fdfcfc;                      /* color azul oscuro */
             margin-bottom: 1rem; 
             width: 100%;              /* Que el contenedor use todo el ancho */
             display: flex;            /* Activamos flex */
@@ -90,7 +94,7 @@
             font-weight: 500;  /* grosor intermedio */
             text-align: center;            /* centrado */
             text-transform: uppercase;           /* mantiene todas las letras en mayúscula */
-            color: #1C2C5B;                      /* color azul oscuro */
+            color: #ffffff;                      /* color azul oscuro */
             margin-bottom: 1rem; 
             width: 100%;              /* Que el contenedor use todo el ancho */
             display: flex;            /* Activamos flex */
@@ -123,7 +127,7 @@
         /* Diseño de los botones que muestran el submenu*/
         .btn {
             background-color: #f5f6f7;          /* Gris claro suave */
-            color: #1C2C5B;                     /* Azul institucional */
+            color: #050505;                     /* Azul institucional */
             border: 1px solid #d0d4dc;          /* Borde sutil */
             border-radius: 10px;                /* Bordes suaves */
             font-weight: 500;
@@ -197,7 +201,7 @@
         /* Linea divisora entre mi titulo y mis botones que me dirigen a cada formato*/
         .linea-divisora {
             height: 2px;
-            background-color: #1e2e5e; /* Azul oscuro de tus botones */
+            background-color: #CCCCCC; /* Azul oscuro de tus botones */
             margin: 20px auto;
             width: 80%;
         }
@@ -352,11 +356,11 @@
 
 /* Texto duplicado */
 .texto2 {
-  font-family: 'Poppins', sans-serif;
+  
   font-style: italic;
   font-weight: 400;
   font-size: 0.85rem;
-  color: #1C2C5B;
+  color: #fcfcfc;
   line-height: 1.4;
   text-align: center;
 }

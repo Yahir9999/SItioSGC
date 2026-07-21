@@ -1,3 +1,6 @@
+*{
+  font-family: "Saira", sans-serif;
+}
 
 main{
     display: flex;
@@ -12,7 +15,7 @@ main{
 .titulo{
     width: 100%;
     min-height: 100px;
-    background-color: #1c2c5b;
+    background-color: #424242;
     display: flex;
     justify-content: center;
     align-items: center;

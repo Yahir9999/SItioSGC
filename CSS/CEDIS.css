@@ -1,3 +1,7 @@
+*{
+  font-family: "Saira", sans-serif;
+}
+
 /* Prueba */
 main{
   display: flex;
@@ -128,7 +132,7 @@ main{
     transform: translate(-50%, -50%);
     color: white;
     font-size: 10px;
-    background-color: rgba(28, 44, 91, 1); /* fondo semitransparente */
+    background-color: #424242; /* fondo semitransparente */
     padding: 5px 8px;
     border-radius: 5px;
     opacity: 0; /* oculto por defecto */
@@ -142,7 +146,7 @@ main{
     transform: translate(-50%, -50%);
     color: white;
     font-size: 10px;
-    background-color: rgba(28, 44, 91, 1); /* fondo semitransparente */
+    background-color: #424242; /* fondo semitransparente */
     padding: 5px 8px;
     border-radius: 5px;
     opacity: 0; /* oculto por defecto */

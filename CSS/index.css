@@ -1,7 +1,7 @@
 /* En el apartado del titulo ponemos un fondo con un gradiente para una visualizacion mejor*/
 .titulo{
     height: 8vh;
-    background-color: #000000;
+    background-color: #fcfcfc;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +29,7 @@
     z-index: 0;
 }
 .imagen1{
-    background-color: #1a1f4c;
+    background-color: #fcfcfc;
 }
 
 .imagen2{
@@ -53,5 +53,7 @@
     margin: 0 auto;    /* ⬅️ Centrado */
     border-radius: 10px; /* opcional */
 }
+
+
 
 

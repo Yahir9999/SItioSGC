@@ -1,4 +1,6 @@
-
+*{
+  font-family: "Saira", sans-serif;
+}
 
 .contenedor{
     max-width:900px;
