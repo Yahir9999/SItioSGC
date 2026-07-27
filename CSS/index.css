@@ -54,6 +54,25 @@
     border-radius: 10px; /* opcional */
 }
 
+.control-btn {
+    background-color: #000;   /* Fondo negro */
+    border: 2px solid #000;   /* Borde negro */
+    color: #fff;              /* Icono blanco */
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
 
+.control-btn:hover {
+    background-color: #222;   /* Un poco más claro al pasar el mouse */
+    border-color: #222;
+    transform: scale(1.1);
+}
 
 
