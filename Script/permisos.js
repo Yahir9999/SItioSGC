@@ -19,27 +19,45 @@ const usuariosBloqueados = [
     "activacionyreparacionmerida@gmail.com"
 ];
 
-const usuarioActual = sessionStorage
-    .getItem("correoUsuario")
-    ?.trim()
-    .toLowerCase();
+document.addEventListener("DOMContentLoaded", function () {
 
-if (usuariosBloqueados.includes(usuarioActual)) {
+    const usuarioActual = (sessionStorage.getItem("correoUsuario") || "")
+        .trim()
+        .toLowerCase();
 
-    document.querySelectorAll(".navbar-nav .nav-item").forEach(item => {
+    console.log("Usuario actual:", usuarioActual);
+    console.log("¿Está bloqueado?:", usuariosBloqueados.includes(usuarioActual));
 
-        const texto = item.querySelector(".nav-link")
-            ?.textContent
-            .trim()
-            .toLowerCase();
+    if (!usuariosBloqueados.includes(usuarioActual)) {
+        return;
+    }
 
-        if (
-            texto === "documentación" ||
-            texto === "nosotros"
-        ) {
-            item.style.display = "none";
+    // Buscar Documentación por uno de sus enlaces internos
+    const enlaceDocumentacion = document.querySelector(
+        'a[href*="documentacion_i.html"]'
+    );
+
+    // Buscar Nosotros por uno de sus enlaces internos
+    const enlaceNosotros = document.querySelector(
+        'a[href*="CEDIS.html"]'
+    );
+
+    // Ocultar el <li> completo de Documentación
+    if (enlaceDocumentacion) {
+        const itemDocumentacion = enlaceDocumentacion.closest(".nav-item");
+
+        if (itemDocumentacion) {
+            itemDocumentacion.style.display = "none";
         }
+    }
 
-    });
+    // Ocultar el <li> completo de Nosotros
+    if (enlaceNosotros) {
+        const itemNosotros = enlaceNosotros.closest(".nav-item");
 
-}
+        if (itemNosotros) {
+            itemNosotros.style.display = "none";
+        }
+    }
+
+});
