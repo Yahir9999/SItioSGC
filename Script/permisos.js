@@ -26,38 +26,37 @@ document.addEventListener("DOMContentLoaded", function () {
         .toLowerCase();
 
     console.log("Usuario actual:", usuarioActual);
-    console.log("¿Está bloqueado?:", usuariosBloqueados.includes(usuarioActual));
+    console.log(
+        "¿Está bloqueado?:",
+        usuariosBloqueados.includes(usuarioActual)
+    );
 
+    // Si no está bloqueado, no hacemos nada
     if (!usuariosBloqueados.includes(usuarioActual)) {
         return;
     }
 
-    // Buscar Documentación por uno de sus enlaces internos
-    const enlaceDocumentacion = document.querySelector(
-        'a[href*="documentacion_i.html"]'
-    );
+    // Buscar todos los elementos principales del menú
+    document.querySelectorAll(".navbar-nav > .nav-item").forEach(item => {
 
-    // Buscar Nosotros por uno de sus enlaces internos
-    const enlaceNosotros = document.querySelector(
-        'a[href*="CEDIS.html"]'
-    );
+        const enlace = item.querySelector(":scope > .nav-link");
 
-    // Ocultar el <li> completo de Documentación
-    if (enlaceDocumentacion) {
-        const itemDocumentacion = enlaceDocumentacion.closest(".nav-item");
-
-        if (itemDocumentacion) {
-            itemDocumentacion.style.display = "none";
+        if (!enlace) {
+            return;
         }
-    }
 
-    // Ocultar el <li> completo de Nosotros
-    if (enlaceNosotros) {
-        const itemNosotros = enlaceNosotros.closest(".nav-item");
+        const texto = enlace.textContent
+            .trim()
+            .toLowerCase();
 
-        if (itemNosotros) {
-            itemNosotros.style.display = "none";
+        // Ocultar Documentación y Nosotros
+        if (
+            texto === "documentación" ||
+            texto === "nosotros"
+        ) {
+            item.style.setProperty("display", "none", "important");
         }
-    }
+
+    });
 
 });
