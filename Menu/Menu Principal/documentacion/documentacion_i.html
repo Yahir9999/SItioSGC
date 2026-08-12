@@ -680,46 +680,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-<script>
-
-// Usuarios que NO deben ver Documentación Interna
-const usuariosBloqueadosDocumentacionInterna = [
-    "activacionestoluca@gmail.com",
-    "activacionyreparacioncamarones@gmail.com",
-    "activacionyreparacionchalco@gmail.com",
-    "montacargastoluca@gmail.com",
-    "activacionyreparaciontultepec@gmail.com",
-    "activacionyreparacionvilla@gmail.com",
-    "activacionyreparacionveracruz@gmail.com",
-    "activacionyreparacionguadalajara@gmail.com",
-    "activacionyreparacionirapuato@gmail.com",
-    "montacargascamarones@gmail.com",
-    "montacargaschalco@gmail.com",
-    "montacargastultepec@gmail.com",
-    "montacargasvilla@gmail.com",
-    "montacargasveracruz@gmail.com",
-    "montacargasguadalajara@gmail.com",
-    "montacargas@gmail.com",
-    "montacargasmerida@gmail.com",
-    "activacionyreparacionmerida@gmail.com"
-];
-
-// Obtener usuario actualmente logueado
-const usuarioActual = sessionStorage.getItem("correoUsuario");
-
-// Si el usuario está bloqueado
-if (usuariosBloqueadosDocumentacionInterna.includes(usuarioActual)) {
-
-    const menu = document.querySelector(
-        'a[href*="documentacion_i.html"]'
-    );
-
-    if (menu) {
-        menu.style.display = "none";
-    }
-}
-
-</script>
+    <script src="../../JS/permisos.js"></script>
 
 </body>
 </html>
