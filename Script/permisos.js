@@ -41,4 +41,5 @@ if (usuariosBloqueados.includes(usuarioActual)) {
         }
 
     });
+
 }
