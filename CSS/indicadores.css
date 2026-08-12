@@ -1,8 +1,12 @@
-*{
-  font-family: "Saira", sans-serif;
+/* =========================================================
+   ESTILOS GENERALES
+========================================================= */
+
+* {
+    font-family: "Saira", sans-serif;
+    box-sizing: border-box;
 }
 
-/* ===== ESTILOS GENERALES ===== */
 main {
     display: flex;
     justify-content: center;
@@ -11,246 +15,305 @@ main {
     min-height: 80vh;
 }
 
+
+/* =========================================================
+   CONTENEDOR DE REPORTES
+========================================================= */
+
 .contenedor {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
     width: 100%;
     max-width: 1200px;
     margin: 2rem auto;
 }
 
-/* ===== TARJETAS PERSONALIZADAS ===== */
-.custom-card {
 
+/* =========================================================
+   TARJETAS
+========================================================= */
+
+.custom-card {
     display: flex;
     flex-direction: column;
     background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    min-width: 0;
 }
 
 .custom-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 
-.custom-card .card-body {
+/* =========================================================
+   IMÁGENES DE LOS REPORTES
+========================================================= */
 
+.custom-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+    display: block;
+    background-color: #fff;
+}
+
+
+/* =========================================================
+   CUERPO DE LA TARJETA
+========================================================= */
+
+.custom-card .card-body {
     padding: 1.5rem;
+
     text-align: center;
     background-color: #f8f9fa;
+
     flex-grow: 1;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
+
+
+/* =========================================================
+   TEXTO
+========================================================= */
 
 .custom-card p {
     font-size: 1rem;
     color: #555;
     line-height: 1.5;
-    margin-bottom: 1.5rem;
 
+    margin: 0 0 1.5rem 0;
+
+    width: 100%;
 }
 
 
-/* Botón personalizado */
+/* =========================================================
+   BOTÓN
+========================================================= */
+
 .btn {
-    background-color: #1C2C5B;
+    background-color: #424242;
     color: white;
+
     border: none;
     padding: 0.75rem 1.5rem;
+
     border-radius: 10px;
+
     font-weight: 600;
     font-size: 1rem;
+
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
     transition: all 0.3s ease;
+
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    margin: 0 auto;
+
+    display: block;
+
+    width: 140px;
+    max-width: 100%;
 }
 
 .btn:hover {
-    background-color: #141F44;
+    background-color: #070707;
     transform: scale(1.05);
 }
 
-/* ===== MEDIA QUERIES PARA RESPONSIVIDAD ===== */
 
-/* Tabletas grandes */
+/* =========================================================
+   TABLET
+========================================================= */
+
 @media (max-width: 992px) {
-    .custom-card {
-        flex-direction: row;
-        height: auto;
-    }
-    
-    .custom-card img {
-        width: 60%;
-    }
-    
-    .custom-card .card-body {
-        width: 40%;
-        padding: 1.25rem;
-    }
-    
-    .custom-card h5 {
-        font-size: 1.3rem;
-    }
-    
-    .custom-card p {
-        font-size: 0.95rem;
-    }
-    
-    .btn {
-        padding: 0.6rem 1.25rem;
-        font-size: 0.95rem;
-    }
-    
-    /* Segunda tarjeta mantiene imagen a la derecha en tabletas */
-    .custom-card:nth-child(2) {
-        flex-direction: row-reverse;
-    }
-}
 
-/* Tabletas y móviles */
-@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
     .contenedor {
         gap: 1.5rem;
-        margin: 1rem;
+        margin: 1rem auto;
     }
-    
-    .custom-card {
-        flex-direction: column;
-        height: auto;
-    }
-    
-    .custom-card img {
-        width: 100%;
-        height: 250px;
-    }
-    
+
     .custom-card .card-body {
-        width: 100%;
-        padding: 1.5rem;
+        padding: 1.25rem;
     }
-    
-    .custom-card h5 {
-        font-size: 1.25rem;
-    }
-    
+
     .custom-card p {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
-    
+
     .btn {
-        width: 100%;
-        max-width: none;
-        text-align: center;
-    }
-    
-    /* En móviles, todas las tarjetas van a columna (imagen arriba) */
-    .custom-card:nth-child(2) {
-        flex-direction: column;
+        font-size: 0.95rem;
+        padding: 0.65rem 1rem;
     }
 }
 
-/* Móviles grandes */
-@media (max-width: 576px) {
+
+/* =========================================================
+   CELULARES
+========================================================= */
+
+@media (max-width: 768px) {
+
+    main {
+        padding: 0.75rem;
+    }
+
+    /*
+       IMPORTANTE:
+       En celular dejamos UNA tarjeta por fila.
+       Esto evita que cada tarjeta quede demasiado angosta.
+    */
+
+    .contenedor {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+
+        width: 100%;
+        margin: 0.75rem auto;
+    }
+
+    .custom-card {
+        width: 100%;
+    }
+
+    .custom-card img {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-fit: contain;
+    }
+
+    .custom-card .card-body {
+        padding: 1.25rem;
+    }
+
+    .custom-card p {
+        font-size: 0.95rem;
+        line-height: 1.45;
+        margin-bottom: 1.25rem;
+    }
+
+    .btn {
+        width: 140px;
+        padding: 0.65rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+========================================================= */
+
+@media (max-width: 400px) {
+
     main {
         padding: 0.5rem;
     }
-    
-    .contenedor {
-        gap: 1.25rem;
-        margin: 0.5rem;
-    }
-    
-    .custom-card .card-body {
-        padding: 1.25rem;
-    }
-    
-    .custom-card h5 {
-        font-size: 1.1rem;
-    }
-    
-    .custom-card p {
-        font-size: 0.85rem;
-        margin-bottom: 1.25rem;
-    }
-    
-    .btn {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-    }
-}
 
-/* Móviles pequeños */
-@media (max-width: 400px) {
-    .custom-card img {
-        height: 200px;
+    .contenedor {
+        gap: 1rem;
+        margin: 0.5rem auto;
     }
-    
+
+    .custom-card {
+        border-radius: 12px;
+    }
+
     .custom-card .card-body {
         padding: 1rem;
     }
-    
-    .custom-card h5 {
-        font-size: 1rem;
-        margin-bottom: 0.75rem;
-    }
-    
+
     .custom-card p {
-        font-size: 0.8rem;
+        font-size: 0.88rem;
+        line-height: 1.4;
         margin-bottom: 1rem;
     }
-    
+
     .btn {
-        padding: 0.5rem;
+        width: 135px;
+        padding: 0.6rem 0.8rem;
         font-size: 0.85rem;
     }
 }
 
-/* Mejora de accesibilidad para enfoque */
+
+/* =========================================================
+   ACCESIBILIDAD
+========================================================= */
+
 .btn:focus {
-    outline: 2px solid #1C2C5B;
+    outline: 2px solid #424242;
     outline-offset: 2px;
 }
 
-/* Mejora de rendimiento para animaciones */
+
+/* =========================================================
+   REDUCIR ANIMACIONES
+========================================================= */
+
 @media (prefers-reduced-motion: reduce) {
+
     .custom-card,
     .btn {
         transition: none;
     }
-    
+
     .btn:hover {
         transform: none;
     }
 }
 
+
+/* =========================================================
+   MENÚ DE REPORTES
+========================================================= */
+
 .menu-reportes {
-  display: none;
-  margin-top: 10px;
+    display: none;
+    margin-top: 10px;
 }
 
 .menu-reportes a {
-  display: block;
-  padding: 8px;
-  margin-bottom: 5px;
-  background: #1e2a5a;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  text-align: center;
-  font-size: 14px;
+    display: block;
+
+    padding: 8px;
+    margin-bottom: 5px;
+
+    background: #050505;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    text-align: center;
+
+    font-size: 14px;
 }
 
 .menu-reportes a:hover {
-  background: #2f3e8f;
+    background: #040404;
 }
