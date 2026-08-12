@@ -19,18 +19,26 @@ const usuariosBloqueados = [
     "activacionyreparacionmerida@gmail.com"
 ];
 
-const usuarioActual = sessionStorage.getItem("correoUsuario");
+const usuarioActual = sessionStorage
+    .getItem("correoUsuario")
+    ?.trim()
+    .toLowerCase();
 
 if (usuariosBloqueados.includes(usuarioActual)) {
 
-    document.querySelectorAll(".navbar-nav .nav-link").forEach(menu => {
+    document.querySelectorAll(".navbar-nav .nav-item").forEach(item => {
 
-        const texto = menu.textContent.trim();
+        const texto = item.querySelector(".nav-link")
+            ?.textContent
+            .trim()
+            .toLowerCase();
 
-        if (texto === "Documentación" || texto === "Nosotros") {
-            menu.closest(".nav-item").style.display = "none";
+        if (
+            texto === "documentación" ||
+            texto === "nosotros"
+        ) {
+            item.style.display = "none";
         }
 
     });
-
 }
