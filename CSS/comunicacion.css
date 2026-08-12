@@ -1,149 +1,195 @@
-*{
-  font-family: "Saira", sans-serif;
+/* =========================================================
+   ESTILOS GENERALES
+========================================================= */
+
+* {
+    font-family: "Saira", sans-serif;
+    box-sizing: border-box;
 }
 
-main{
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+========================================================= */
+
+main {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    width: 100%;
 }
 
-.contenedor_informacion{
+
+/* =========================================================
+   CONTENEDOR GENERAL
+========================================================= */
+
+.contenedor_informacion {
     width: 90%;
-    height: auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2em;
-}
+    max-width: 1400px;
 
-.contenedor_imagen{
-    width: 20vw;
-    height: 30vh;
+    height: auto;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 2rem;
+
+    padding: 2rem 0;
 }
 
-.contenedor_imagen:empty{
+
+/* =========================================================
+   MINIATURAS
+========================================================= */
+
+.contenedor_imagen {
+    width: 20vw;
+    max-width: 280px;
+
+    height: 30vh;
+    min-height: 180px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex: 0 0 auto;
+}
+
+.contenedor_imagen:empty {
     display: none;
 }
 
-.contenedor_imagen img{
+
+/* Imágenes */
+
+.contenedor_imagen img {
+    display: block;
+
     max-width: 100%;
     max-height: 100%;
+
+    width: auto;
+    height: auto;
+
     object-fit: contain;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
+
+
+/* Pequeño efecto al pasar el mouse */
+
+.contenedor_imagen img:hover {
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   TÍTULOS DE SECCIÓN
+========================================================= */
 
 .titulo {
     width: 100%;
+
     background-color: #424242;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     color: white;
+
     letter-spacing: 3px;
+
     text-align: center;
-    
+
+    padding: 0.8rem 1rem;
+
+    margin-top: 1rem;
+
+    border-radius: 5px;
+}
+
+.titulo p {
+    margin: 0;
 }
 
 
-/* ===== MEDIA QUERIES PARA MINIATURAS Y MODALES ===== */
-
-/* Tabletas y móviles grandes */
-@media (max-width: 992px) {
-    .contenedor_informacion {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-    }
-
-    .contenedor_imagen img {
-        width: 250px;
-        height: auto;
-    }
-
-    .modal-content img,
-    .modal-content video {
-        height: 90vh;
-    }
-}
-
-/* Móviles medianos (<768px) */
-@media (max-width: 768px) {
-    .contenedor_imagen img {
-        width: 200px;
-        height: auto;
-    }
-
-    .modal-content img,
-    .modal-content video {
-        height: 80vh;
-    }
-}
-
-/* Móviles pequeños (<576px) */
-@media (max-width: 576px) {
-    .contenedor_imagen img {
-        width: 150px;
-        height: auto;
-    }
-
-    .modal-content img,
-    .modal-content video {
-        height: 70vh;
-    }
-}
-
-/* Móviles muy pequeños (<400px) */
-@media (max-width: 400px) {
-    .contenedor_imagen {
-        width: 300px;
-    }
-
-
-    .modal-content img,
-    .modal-content video {
-        height: 60vh;
-    }
-}
+/* =========================================================
+   SUBTÍTULOS
+========================================================= */
 
 .subtitulo {
     width: 100%;
+
     text-align: left;
+
     font-size: 1.6rem;
     font-weight: 700;
+
     color: #424242;
+
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
+
     padding-left: 1rem;
 }
 
 
+/* =========================================================
+   COMUNICADOS
+   Mantiene desplazamiento horizontal
+========================================================= */
+
 .scroll-comunicados {
+    width: 100%;
+
     display: flex;
     flex-direction: row;
+
     gap: 20px;
 
-    overflow-x: auto;   /* scroll horizontal */
+    overflow-x: auto;
     overflow-y: hidden;
 
     padding: 15px;
-    
+
     scroll-behavior: smooth;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: thin;
 }
 
-/* evita que bajen a otra fila */
-.contenedor_imagen {
-    flex: 0 0 auto;
+
+/* Las imágenes de comunicados NO deben bajar de fila */
+
+.scroll-comunicados .contenedor_imagen {
+    flex: 0 0 20vw;
+    width: 20vw;
 }
 
 
+/* =========================================================
+   SCROLLBAR
+========================================================= */
 
-/* opcional: scrollbar más limpio */
 .scroll-comunicados::-webkit-scrollbar {
     height: 8px;
+}
+
+.scroll-comunicados::-webkit-scrollbar-track {
+    background: #e5e5e5;
+    border-radius: 10px;
 }
 
 .scroll-comunicados::-webkit-scrollbar-thumb {
@@ -151,5 +197,236 @@ main{
     border-radius: 10px;
 }
 
+.scroll-comunicados::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 
- 
+
+/* =========================================================
+   MODALES
+========================================================= */
+
+.modal-content {
+    background-color: #fff;
+}
+
+.modal-content img,
+.modal-content video {
+    max-width: 100%;
+    max-height: 90vh;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .contenedor_informacion {
+        width: 94%;
+
+        gap: 1.5rem;
+
+        padding: 1.5rem 0;
+    }
+
+    .contenedor_imagen {
+        width: 28vw;
+        max-width: 260px;
+
+        height: 250px;
+        min-height: 0;
+    }
+
+    .scroll-comunicados .contenedor_imagen {
+        flex: 0 0 28vw;
+        width: 28vw;
+    }
+
+    .titulo {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    .subtitulo {
+        font-size: 1.4rem;
+    }
+
+    .modal-content img,
+    .modal-content video {
+        max-height: 85vh;
+    }
+}
+
+
+/* =========================================================
+   CELULARES
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .contenedor_informacion {
+        width: 94%;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 1rem;
+
+        padding: 1rem 0;
+    }
+
+
+    /*
+       Dos miniaturas por fila.
+       Así aprovechamos mucho mejor el espacio del celular.
+    */
+
+    .contenedor_imagen {
+        width: calc(50% - 0.5rem);
+
+        height: 190px;
+        min-height: 0;
+
+        max-width: none;
+    }
+
+
+    .contenedor_imagen img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+
+    /* =====================================================
+       COMUNICADOS EN CELULAR
+    ===================================================== */
+
+    .scroll-comunicados {
+        width: 100%;
+
+        gap: 12px;
+
+        padding: 10px 5px 15px;
+    }
+
+    .scroll-comunicados .contenedor_imagen {
+        width: 65vw;
+        flex: 0 0 65vw;
+
+        height: 190px;
+    }
+
+
+    /* =====================================================
+       TÍTULOS
+    ===================================================== */
+
+    .titulo {
+        font-size: 0.9rem;
+
+        letter-spacing: 2px;
+
+        padding: 0.7rem 0.5rem;
+
+        margin-top: 0.75rem;
+    }
+
+
+    .subtitulo {
+        font-size: 1.2rem;
+
+        padding-left: 0.5rem;
+    }
+
+
+    /* =====================================================
+       MODALES
+    ===================================================== */
+
+    .modal-content img,
+    .modal-content video {
+        max-width: 100%;
+        max-height: 80vh;
+
+        object-fit: contain;
+    }
+}
+
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .contenedor_informacion {
+        width: 96%;
+
+        gap: 0.75rem;
+    }
+
+
+    .contenedor_imagen {
+        width: calc(50% - 0.375rem);
+
+        height: 160px;
+    }
+
+
+    .scroll-comunicados {
+        gap: 10px;
+
+        padding: 8px 3px 12px;
+    }
+
+
+    .scroll-comunicados .contenedor_imagen {
+        width: 75vw;
+        flex: 0 0 75vw;
+
+        height: 170px;
+    }
+
+
+    .titulo {
+        font-size: 0.8rem;
+
+        letter-spacing: 1.5px;
+
+        padding: 0.6rem 0.4rem;
+    }
+
+
+    .subtitulo {
+        font-size: 1.05rem;
+    }
+
+
+    .modal-content img,
+    .modal-content video {
+        max-height: 75vh;
+    }
+}
+
+
+/* =========================================================
+   ACCESIBILIDAD
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contenedor_imagen img {
+        transition: none;
+    }
+
+    .scroll-comunicados {
+        scroll-behavior: auto;
+    }
+}
