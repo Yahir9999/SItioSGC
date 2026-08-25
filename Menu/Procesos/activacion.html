@@ -221,12 +221,13 @@
                     </button>
 
                     <!-- Manual de App de Activaciones -->
-                        <button class="btn open-offcanvas" 
-                                data-pdf="../../DocumentosProceso/manual aplicativo de activaciones.pdf"
-                                data-size="large"
-                                data-download="../../DocumentosProceso/manual aplicativo de activaciones.pdf">
-                            Manual "App Activaciones"
-                        </button>
+                    <button class="btn"
+                            type="button"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasPDF7"
+                            aria-controls="offcanvasPDF7">
+                        Manual "App Activaciones"
+                    </button>
                                             
                     <!-- Reporte de activacion -->
                     <button class="btn open-offcanvas" 
@@ -288,6 +289,39 @@
                     <iframe src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" width="100%" height="100%"></iframe>
                 </div>
             </div>
+
+
+            
+            <!-- manual -->
+            <!-- Manual App Activaciones -->
+<div class="offcanvas offcanvas-start" 
+     tabindex="-1" 
+     id="offcanvasPDF7" 
+     aria-labelledby="offcanvasPDFLabel" 
+     style="width: 70%;">
+
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasPDFLabel">
+            Manual "App Activaciones"
+        </h5>
+
+        <button type="button" 
+                class="btn-close" 
+                data-bs-dismiss="offcanvas" 
+                aria-label="Cerrar">
+        </button>
+    </div>
+
+    <div class="offcanvas-body" style="padding: 0;">
+        <iframe 
+            src="../../DocumentosProceso/manual aplicativo de activaciones.pdf"
+            width="100%" 
+            height="100%"
+            style="border: none;">
+        </iframe>
+    </div>
+
+</div>
 
             <!-- Modal Video -->
             <div class="modal fade" id="modalVideoActivaciones" tabindex="-1">
