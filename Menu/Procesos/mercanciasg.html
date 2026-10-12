@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../CSS/header_footer.css">
+  <link rel="stylesheet" href="../../CSS/procesos-g.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400&display=swap" rel="stylesheet">
+
+  <script src="../../Script/canvas.js"  defer></script>
+  <script src="../../Script/zoom.js" defer></script>
+  
+  <!-- Apartado para poder evitar que se acceda directamente a cualquier pagina sin iniciar sesión, esto verifica si ya hubo un inicio de sesion, de lo contrario te envia al inicio de sesión -->
+    <script>
+        if(sessionStorage.getItem("logueado") !== "true"){
+            window.location.href = "../Inicio de Sesion/Inicio.html";
+        }
+  </script>
+  <title>Mercancías Generales</title>
+</head>
+<body> 
+        <header>
+            <div class="logo">
+ 
+            </div>
+
+            <div class="menu">
+                <nav class="navbar navbar-expand-lg bg-white navbar-light">
+                <div class="container-fluid">
+                    <!-- Link que nos lleva al inicio de nuestra pagina -->
+                    <a class="navbar-brand" href="../../index.html">Inicio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <!-- Menu Despegable con todos los procesos de un CEDI -->
+                        <li class="nav-item dropdown custom-dropdown-hover">
+                            <a
+                              id="menuProcesos"
+                              class="nav-link active dropdown-toggle"
+                              href="../Menu Principal/procesoCEDIS.html"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                              onclick="window.location.href='../Menu Principal/procesoCEDIS.html'"
+                            >
+                              Procesos CEDIS
+                            </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="recibo.html">Recibo</a></li>
+                            <li><a class="dropdown-item" href="surtido.html">Surtido</a></li>
+                            <li><a class="dropdown-item" href="activacion.html">Activación</a></li>
+                            <li><a class="dropdown-item" href="embarque.html">Embarque</a></li>
+                            <li><a class="dropdown-item" href="reparaciones.html">Reparaciones</a></li>
+                            <li><a class="dropdown-item" href="recuperacion.html">Recuperación</a></li>
+                            
+                            <li><a class="dropdown-item" href="recolecciones.html">Recolecciones</a></li>
+                            <li><a class="dropdown-item" href="ecommerce.html">E-commerce surtido y consolidacion</a></li>
+                            <li><a class="dropdown-item" href="ecommerce2.html">E-commerce embarque y entrega</a></li>
+                            <li><a class="dropdown-item" href="mercanciasg.html">Mercancías Generales</a></li>
+
+                        </ul>
+                        </li>
+
+                        <!-- Menu despegable de los tipos de documentacion -->
+                        <li class="nav-item dropdown custom-dropdown-hover">
+                            <a
+                              class="nav-link dropdown-toggle"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              Documentación
+                            </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../Menu Principal/documentacion/documentacion_i.html">Interna</a></li>
+                            <li><a class="dropdown-item" href="../Menu Principal/documentacion/documentacion_soporte.html">Soporte</a></li>
+                        </ul>
+                        </li>
+
+                        <!-- Boton principal del menu principal que nos enseña un submeno donde viene la informacion de los CEDIS -->
+                        <li class="nav-item dropdown custom-dropdown-hover">
+                            <a
+                              class="nav-link dropdown-toggle"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              Nosotros
+                            </a>
+                         <!-- Submenu del menu despegable-->    
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../Menu Principal/CEDIS.html">Presencia CEDIS</a></li>
+                            <li><a class="dropdown-item" href="../Menu Principal/equipostaff.html">Equipo Staff</a></li>
+                            <li><a class="dropdown-item" href="../Menu Principal/tarifarios.html">Tarifarios</a></li>
+                            <li><a class="dropdown-item" href="../Menu Principal/agencias.html">Agencias</a></li>
+                            
+                            <li><a class="dropdown-item" href="../Menu Principal/capacidades.html">Capacidades</a></li>
+                            
+                        </ul>
+                        </li>
+
+                        <!-- Boton que nos manda a la seccion de indicadores -->
+                        <li class="nav-item">
+                        <a class="nav-link" href="../Menu Principal/indicadores.html">Indicadores</a>
+                        </li>
+
+                        <!-- Boton que nos manda a la seccion de comunicacion SGC -->
+                        <li class="nav-item">
+                        <a class="nav-link" href="../Menu Principal/comunicacion.html">Comunicación SGC</a>
+                        </li>
+
+                    </ul>
+                    </div>
+                </div>
+                </nav>
+            </div>
+        </header>
+
+<main>
+
+        <div class="general_container">
+        <h3>MERCANCÍAS GENERALES</h3>
+            <!-- Diagrama de flujo -->
+            <div class="diagrama-container">
+                
+                <img src="../../DocumentosProceso/Diagramas/Procesos CEDIS-MERCANCÍAS GENERALES.svg" 
+                     class="diagrama"
+                     data-bs-toggle="modal"
+                     data-bs-target="#modalImagen"
+                     alt="Diagrama de proceso CEDIS-MERCANCIAS-GENERALES">
+            </div>
+
+            <!-- Modal para el diagrama a pantalla completa -->
+
+            <div class="modal fade modal-diagrama" id="modalImagen" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-body text-center" style="overflow: hidden; position: relative;">
+                            <div class="zoom-container" style="display: inline-block; cursor: grab;">
+                            <img src="../../DocumentosProceso/Diagramas/Procesos CEDIS-MERCANCÍAS GENERALES.svg" 
+                                class="zoomable"
+                                style="max-width: 85%; transform-origin: center center; transition: transform 0.2s ease;"
+                                alt="Diagrama completo de proceso">
+                            </div>
+
+                            <!-- Controles de zoom -->
+                            <div class="zoom-controls position-absolute bottom-0 end-0 m-3 d-flex flex-column gap-2">
+                            <button class="zoom-in">+</button>
+                            <button class="zoom-out">−</button>
+                            <button class="zoom-reset">↺</button>
+                            </div>
+                        </div>
+                    <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- Formatos-->
+            <div class="formato">
+                
+
+                <!-- Linea divisora-->
+                <div class="linea-divisora"></div>
+
+                <!-- Titulo general -->
+                <div class="titulo">
+                    <h2>Formatos</h2>
+                </div>
+
+                <!-- En cada contenedor vamos a mandar el titulo del formato, la direccion de la imagen, tamaño (solo si es necesario), y la ruta para poder descargar el formato-->
+                <div class="contenedor">
+
+                     <!-- BITACORA-->
+                    <button class="btn open-offcanvas" 
+                            data-img="../../Documentos/imagenes-procesos/bitacora de distribuidores.png"
+                            data-size="xlarge"
+                            data-download="#">
+                    Bitácora de Distribuidores
+                    </button>
+
+                    <!-- Marbete de mercancia surtida-->
+                    <button class="btn open-offcanvas" 
+                            data-img="../../Documentos/imagenes-procesos/mercancia_surtida.png"
+                            data-size="large"
+                            data-download="https://docs.google.com/spreadsheets/d/1mOzwyYxNI6INDa-Ty7_xIM6i7rS55CAL/copy?usp=sharing&ouid=107262719651213961548&rtpof=true&sd=true">
+                    Marbete "MERCANCÍA SURTIDA"
+                    </button> 
+
+                     <button class="btn open-offcanvas"
+                            data-img="../../Documentos/imagenes-procesos/Marbete Caja.png"
+                            data-download="../../Documentos/imagenes-procesos/Provisional Caja - PROVISIONAL CAJA.pdf">
+                            Marbete "CAJA"
+                    </button>
+                    
+                    <!--  Checklist para unidades de transporte -->
+                    <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPDF1" aria-controls="offcanvasPDF">
+                    Checklist para unidades de transporte
+                    </button>
+
+                    <!-- Formato de devoluciones-->
+                    <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPDF3" aria-controls="offcanvasPDF">
+                    Formato de devoluciones 
+                    </button>
+         
+
+                        <!-- Texto informativo sobre el proceso-->
+                <div class="contenedor_texto">
+                    <div class="carril">
+                        <span class="texto2">
+                        Es responsabilidad del dueño del proceso comunicar al área del Sistema de Gestión de Calidad (SGC) cualquier cambio o modificación en los procesos operativos de los CEDIS, con el fin de garantizar la actualización, vigencia y correcta difusión.          
+                        </span>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Seccion donde el canvas recibe la informacion de los botones para poder mostrarla -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="dynamicOffcanvas" aria-labelledby="dynamicOffcanvasLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="dynamicOffcanvasLabel">Título por defecto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <img id="offcanvasImage" src="" alt="" class="img-offcanvas">
+                    <a id="offcanvasDownload" href="#" class="btn boton_dowload mt-3" target="_blank">Descargar documento</a>
+                </div>
+            </div>
+
+            <!-- Offcanvas para Checklist para unidades de transporte -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF1" aria-labelledby="offcanvasPDFLabel" style="width: 50%;">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                </div>
+                <div class="offcanvas-body" style="padding: 0;">
+                    <iframe src="../../Documentos/Checklist Unidades de transporte.pdf#toolbar=0&navpanes=0" width="85%" height="80%"></iframe>
+                        <div class="p-3">
+                            <a href="../../Documentos/Checklist Unidades de transporte.pdf" class="btn boton_dowload" download>
+                                        Descargar documento 
+                            </a>
+                        </div>
+                </div>
+            </div>
+
+            <!-- Offcanvas para el formato de devoluciones  -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF3" aria-labelledby="offcanvasPDFLabel" style="width: 30%;">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                </div>
+                <div class="offcanvas-body" style="padding: 0;">
+                    <img src="../../Documentos/formato_de_devoluciones.png" alt="" width="85%" height="80%">
+                    <div class="p-3">
+                        <a href="../../Documentos/Formato de devolución.pdf" class="btn boton_dowload" download>
+                                        Descargar documento 
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+document.querySelectorAll(".open-offcanvas").forEach(button => {
+    button.addEventListener("click", () => {
+        const imgSrc = button.getAttribute("data-img");
+        const downloadSrc = button.getAttribute("data-download");
+
+        // Imagen
+        const img = document.getElementById("offcanvasImage");
+        img.src = imgSrc;
+
+        // Botón descarga
+        const downloadBtn = document.getElementById("offcanvasDownload");
+        downloadBtn.href = downloadSrc;
+        downloadBtn.setAttribute("download", "");
+
+        // Título dinámico
+        document.getElementById("dynamicOffcanvasLabel").innerText = button.innerText;
+    });
+});
+</script>
+
+
+       
+           
+                    
+                   
+               
+            </div> 
+
+
+            
+        </div>     
+    </main>
+    <footer>
+            <div class="logo_informativo">
+
+            </div>
+
+            <!-- Footer informativo de la pagina -->
+            <div class="mensaje">
+                <p class="parrafo_info">La presente información es confidencial y de uso exclusivo de los centros de distribución, se prohíbe su reproducción, modificación, almacenamiento, o difusión a personas externas sin autorización previa.</p>
+            </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script>
+
+// correo del usuario que NO debe ver Procesos CEDIS
+const usuarioBloqueado = "andrea.jeronimovna@gmail.com";
+
+// obtener usuario logueado
+const usuarioActual = sessionStorage.getItem("correoUsuario");
+
+// si es el usuario bloqueado → ocultar menú
+if (usuarioActual === usuarioBloqueado) {
+
+  let menu = document.getElementById("menuProcesos");
+
+  if (menu) {
+    menu.style.display = "none";
+  }
+
+}
+
+</script>
+
+<script src="../../Script/permisos.js"></script>
+
+</body>
+</html>
