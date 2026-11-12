@@ -441,7 +441,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const pdf   = btn.getAttribute("data-pdf");
       const excel = btn.getAttribute("data-excel");
       const file  = btn.getAttribute("data-file"); // PDF normal (Operación)
-
+      const download = btn.getAttribute("data-download");
       titleEl.textContent = title || "";
       iframe.src = "";
       downloadBtn.style.display = "none";
@@ -458,16 +458,17 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // 📄 PDF NORMAL → ver y descargar PDF
-      if (pdf || file) {
-        const src = pdf || file;
-        iframe.src = src;
+      // 📄 PDF NORMAL → visualizar PDF y descargar archivo indicado
+        if (pdf || file) {
+            const src = pdf || file;
+            iframe.src = src;
 
-        downloadBtn.style.display = "inline-block";
-        downloadBtn.href = src;
-        downloadBtn.setAttribute("download", src.split("/").pop());
-        downloadBtn.textContent = "Descargar";
-        return;
-      }
+            downloadBtn.style.display = "inline-block";
+            downloadBtn.href = download || src;
+            downloadBtn.setAttribute("download", "");
+            downloadBtn.textContent = "Descargar";
+            return;
+        }
 
     });
 
