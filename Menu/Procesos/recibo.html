@@ -61,6 +61,7 @@
                             <li><a class="dropdown-item" href="ecommerce.html">E-commerce surtido y consolidacion</a></li>
                             <li><a class="dropdown-item" href="ecommerce2.html">E-commerce embarque y entrega</a></li>
                             <li><a class="dropdown-item" href="mercanciasg.html">Mercancías Generales</a></li>
+                            <li><a class="dropdown-item" href="soVPS.html">Surtido SO-VPS</a></li>
                         </ul>
                         </li>
 
@@ -125,39 +126,46 @@
 
             <h3>RECIBO Y ALMACENAMIENTO DE MERCANCÍA</h3>
 
-            <!-- Diagrama de flujo-->
+        
+                        <!-- Diagrama de flujo -->
             <div class="diagrama-container">
-                <img src="../../DocumentosProceso/Diagramas/Procesos CEDIS-RECIBO Y ALMACENAMIENTO DE MERCANCÍA.svg" 
-                     class="diagrama"
-                     data-bs-toggle="modal"
-                     data-bs-target="#modalImagen"
-                     alt="Diagrama de proceso CEDIS-SURTIDO DE PEDIDOS">
+                <iframe 
+                    src="../../DocumentosProceso/Diagramas/Procesos CEDIS-RECIBO Y ALMACENAMIENTO DE MERCANCÍA.drawio.html"
+                    class="diagrama"
+                    title="Diagrama de proceso CEDIS - Recibo y almacenamiento de mercancía">
+                </iframe>
             </div>
 
             <!-- Modal para el diagrama a pantalla completa -->
 
-            <div class="modal fade modal-diagrama" id="modalImagen" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-xl">
-                    <div class="modal-content">
-                        <div class="modal-body text-center" style="overflow: hidden; position: relative;">
-                            <div class="zoom-container" style="display: inline-block; cursor: grab;">
-                            <img src="../../DocumentosProceso/Diagramas/Procesos CEDIS-RECIBO Y ALMACENAMIENTO DE MERCANCÍA.svg" 
-                                class="zoomable"
-                                style="max-width: 70%; transform-origin: center center; transition: transform 0.2s ease;"
-                                alt="Diagrama completo de proceso">
-                            </div>
+            
+<div class="modal fade modal-diagrama" id="modalImagen" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
 
-                            <!-- Controles de zoom -->
-                            <div class="zoom-controls position-absolute bottom-0 end-0 m-3 d-flex flex-column gap-2">
-                            <button class="zoom-in">+</button>
-                            <button class="zoom-out">−</button>
-                            <button class="zoom-reset">↺</button>
-                            </div>
-                        </div>
-                    <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                </div>
+            <div class="modal-body" style="overflow: hidden; position: relative; padding: 0;">
+
+                <!-- Contenedor del diagrama -->
+                <iframe
+                    src="../../DocumentosProceso/Diagramas/Procesos CEDIS-RECIBO Y ALMACENAMIENTO DE MERCANCÍA.drawio.html"
+                    class="diagrama-modal"
+                    title="Diagrama completo de proceso"
+                    style="width: 100%; height: 85vh; border: none;">
+                </iframe>
+
             </div>
+
+            <!-- Botón cerrar -->
+            <button type="button"
+                    class="close-btn"
+                    data-bs-dismiss="modal"
+                    aria-label="Cerrar">
+            </button>
+
+        </div>
+    </div>
+</div>
+
 
             <!-- Formatos-->
             <div class="formato">
