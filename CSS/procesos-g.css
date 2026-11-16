@@ -436,20 +436,36 @@
     transform: scale(2.5);
 }
 
+
+/* Contenedor del diagrama */
 .diagrama-container {
     width: 100%;
     max-width: 1100px;
-    height: 650px;
-    margin: 20px auto;
-    overflow: hidden;
+    height: auto;
+    margin: 10px auto 0;
     display: flex;
     justify-content: center;
+    align-items: center;
+    overflow: visible;
 }
 
+/* Imagen del diagrama */
 .diagrama-container .diagrama {
-    width: 100% !important;
-    height: 650px !important;
-    border: none;
     display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 55vh;
+    object-fit: contain;
+    border: 2px solid #CCCCCC;
+    border-radius: 8px;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
+.diagrama-container .diagrama:hover {
+    transform: scale(1.01);
+}
