@@ -219,6 +219,21 @@
                             data-download="#">
                     Marbete "DAÑADA"
                     </button>
+
+                    <!-- App Reparaciones -->
+                    <button class="btn"
+                            onclick="window.open('https://reparacionesvento.netlify.app/', '_blank')">
+                        App Reparaciones
+                    </button>
+
+                    <!-- Manual de App de Activaciones -->
+                    <button class="btn"
+                            type="button"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasPDF7"
+                            aria-controls="offcanvasPDF7">
+                        Manual "App Reparaciones"
+                    </button>
                     
                     <!-- Boton que nos manda la link de la app-->
                     <a href="https://play.google.com/store/apps/details?id=com.vna.ventonet&pcampaignid=web_share" class="botonapp btn" target="_blank">
@@ -262,6 +277,36 @@
                     <a id="offcanvasDownload" href="#" class="btn boton_dowload mt-3" target="_blank">Descargar documento</a>
                 </div>
             </div>
+
+              <!-- Manual App Reparaciones -->
+                <div class="offcanvas offcanvas-start" 
+                    tabindex="-1" 
+                    id="offcanvasPDF7" 
+                    aria-labelledby="offcanvasPDFLabel" 
+                    style="width: 70%;">
+
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasPDFLabel">
+                            Manual "App Reparaciones"
+                        </h5>
+
+                        <button type="button" 
+                                class="btn-close" 
+                                data-bs-dismiss="offcanvas" 
+                                aria-label="Cerrar">
+                        </button>
+                    </div>
+
+                    <div class="offcanvas-body" style="padding: 0;">
+                        <iframe 
+                            src="../../DocumentosProceso/Manual de usuario App Reparaciones.pdf"
+                            width="100%" 
+                            height="100%"
+                            style="border: none;">
+                        </iframe>
+                    </div>
+
+                </div>
 
             <!-- Genera un canvas, pero este contiene un iframe con un documento pdf
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPDF1" aria-labelledby="offcanvasPDFLabel" style="width: 70%;">
